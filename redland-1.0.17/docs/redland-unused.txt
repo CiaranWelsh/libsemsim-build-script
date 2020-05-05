@@ -1,0 +1,5 @@
+LIBRDF_RDF11_HTML
+LIBRDF_RDF11_langString
+REDLAND_NORETURN
+librdf_storage_factory_s
+librdf_query_results_formatter_write(results)

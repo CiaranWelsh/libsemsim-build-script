@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-variables-table">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-variables-table.top_of_page">section-variables-table</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-variables-table</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-variables-table.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-variables-table"><returnvalue>rasqal_variables_table</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-variables-table">rasqal_new_variables_table</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-variables-table">rasqal_free_variables_table</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-variables-table-add">rasqal_variables_table_add</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-variables-table-add2">rasqal_variables_table_add2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-variables-table-add-variable">rasqal_variables_table_add_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-variables-table-get-by-name">rasqal_variables_table_get_by_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-variables-table-contains">rasqal_variables_table_contains</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-variables-table.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-variables-table">rasqal_variables_table</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-variables-table.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-variables-table.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-variables-table" role="function">
+<title>rasqal_new_variables_table&#160;()</title>
+<indexterm zone="rasqal-new-variables-table"><primary>rasqal_new_variables_table</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variables-table"><returnvalue>rasqal_variables_table</returnvalue></link>&#160;*
+rasqal_new_variables_table (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>);</programlisting>
+<para>Constructor - create a new variables table</para>
+<refsect3 id="rasqal-new-variables-table.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-variables-table.returns" role="returns">
+<title>Returns</title>
+<para> new variables table or NULL On failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-variables-table" role="function">
+<title>rasqal_free_variables_table&#160;()</title>
+<indexterm zone="rasqal-free-variables-table"><primary>rasqal_free_variables_table</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_variables_table (<parameter><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> *vt</parameter>);</programlisting>
+<para>Destructor - destroy a new variables table</para>
+<refsect3 id="rasqal-free-variables-table.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vt</para></entry>
+<entry role="parameter_description"><para>rasqal variables table</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-variables-table-add" role="function" condition="deprecated:">
+<title>rasqal_variables_table_add&#160;()</title>
+<indexterm zone="rasqal-variables-table-add" role="deprecated"><primary>rasqal_variables_table_add</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_variables_table_add (<parameter><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> *vt</parameter>,
+                            <parameter><link linkend="rasqal-variable-type"><type>rasqal_variable_type</type></link> type</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                            <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *value</parameter>);</programlisting>
+<warning><para><literal>rasqal_variables_table_add</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Constructor - Create a new variable and add it to the variables table</para>
+<para><parameter>Deprecated</parameter>
+: for <link linkend="rasqal-variables-table-add2"><function>rasqal_variables_table_add2()</function></link> which copies the <parameter>name</parameter>
+
+and <parameter>value</parameter>
+</para>
+<para>The <parameter>name</parameter>
+ and <parameter>value</parameter>
+ become owned by the rasqal_variable
+structure.  If a variable with the name already exists, that is
+returned and the new <parameter>value</parameter>
+ is ignored.</para>
+<refsect3 id="rasqal-variables-table-add.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vt</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> to associate the variable with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>variable type defined by enumeration rasqal_variable_type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>variable name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>variable <link linkend="rasqal-literal"><type>rasqal_literal</type></link> value (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-variables-table-add.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-variable"><type>rasqal_variable</type></link> or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-variables-table-add2" role="function">
+<title>rasqal_variables_table_add2&#160;()</title>
+<indexterm zone="rasqal-variables-table-add2"><primary>rasqal_variables_table_add2</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_variables_table_add2 (<parameter><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> *vt</parameter>,
+                             <parameter><link linkend="rasqal-variable-type"><type>rasqal_variable_type</type></link> type</parameter>,
+                             <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                             <parameter><link linkend="size-t"><type>size_t</type></link> name_len</parameter>,
+                             <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *value</parameter>);</programlisting>
+<para>Constructor - Create a new variable and add it to the variables table</para>
+<para>The <parameter>name</parameter>
+ and <parameter>value</parameter>
+ fields are copied.  If a variable with the
+name already exists, that is returned and the new <parameter>value</parameter>
+ is
+ignored.</para>
+<refsect3 id="rasqal-variables-table-add2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vt</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> to associate the variable with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>variable type defined by enumeration rasqal_variable_type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>variable name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name_len</para></entry>
+<entry role="parameter_description"><para>length of <parameter>name</parameter>
+(or 0)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>variable <link linkend="rasqal-literal"><type>rasqal_literal</type></link> value (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-variables-table-add2.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-variable"><type>rasqal_variable</type></link> or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-variables-table-add-variable" role="function">
+<title>rasqal_variables_table_add_variable&#160;()</title>
+<indexterm zone="rasqal-variables-table-add-variable"><primary>rasqal_variables_table_add_variable</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_variables_table_add_variable (<parameter><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> *vt</parameter>,
+                                     <parameter><link linkend="rasqal-variable"><type>rasqal_variable</type></link> *variable</parameter>);</programlisting>
+<para>Constructor - Add an existing variable to the variables table</para>
+<para>The variables table <parameter>vt</parameter>
+ takes a reference to <parameter>variable</parameter>
+.  This
+function will fail if the variable is already in the table.  Use
+<link linkend="rasqal-variables-table-contains"><function>rasqal_variables_table_contains()</function></link> to check before calling.</para>
+<refsect3 id="rasqal-variables-table-add-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vt</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> to associate the variable with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>variable</para></entry>
+<entry role="parameter_description"><para>existing variable to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-variables-table-add-variable.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure (such as name already exists)</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-variables-table-get-by-name" role="function">
+<title>rasqal_variables_table_get_by_name&#160;()</title>
+<indexterm zone="rasqal-variables-table-get-by-name"><primary>rasqal_variables_table_get_by_name</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_variables_table_get_by_name (<parameter><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> *vt</parameter>,
+                                    <parameter><link linkend="rasqal-variable-type"><type>rasqal_variable_type</type></link> type</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<para>Lookup a variable by type and name in the variables table.</para>
+<para>Note that looking up for any type <link linkend="RASQAL-VARIABLE-TYPE-UNKNOWN:CAPS"><type>RASQAL_VARIABLE_TYPE_UNKNOWN</type></link>
+may a name match but for any type so in cases where the query has
+both a named and anonymous (extensional) variable, an arbitrary one
+will be returned.</para>
+<refsect3 id="rasqal-variables-table-get-by-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vt</para></entry>
+<entry role="parameter_description"><para>the variables table</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the variable type to match or <link linkend="RASQAL-VARIABLE-TYPE-UNKNOWN:CAPS"><type>RASQAL_VARIABLE_TYPE_UNKNOWN</type></link> for any.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the variable type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-variables-table-get-by-name.returns" role="returns">
+<title>Returns</title>
+<para> a shared pointer to the <link linkend="rasqal-variable"><type>rasqal_variable</type></link> or NULL if not found</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-variables-table-contains" role="function">
+<title>rasqal_variables_table_contains&#160;()</title>
+<indexterm zone="rasqal-variables-table-contains"><primary>rasqal_variables_table_contains</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_variables_table_contains (<parameter><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> *vt</parameter>,
+                                 <parameter><link linkend="rasqal-variable-type"><type>rasqal_variable_type</type></link> type</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<para>Check if there is a variable with the given type and name in the variables table</para>
+<refsect3 id="rasqal-variables-table-contains.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vt</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variables-table"><type>rasqal_variables_table</type></link> to lookup</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>variable type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>variable name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-variables-table-contains.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the variable is present</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-variables-table.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-variables-table" role="typedef">
+<title>rasqal_variables_table</title>
+<indexterm zone="rasqal-variables-table"><primary>rasqal_variables_table</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_variables_table_s rasqal_variables_table;
+</programlisting>
+<para>Internal - for now</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

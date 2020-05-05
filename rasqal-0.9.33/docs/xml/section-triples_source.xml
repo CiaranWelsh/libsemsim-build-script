@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-triples-source">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-triples-source.top_of_page">section-triples_source</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-triples_source</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-triples-source.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="rasqal-triples-source-factory-register-fn">*rasqal_triples_source_factory_register_fn</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="rasqal-triples-error-handler">*rasqal_triples_error_handler</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="rasqal-triples-error-handler2">*rasqal_triples_error_handler2</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-set-triples-source-factory">rasqal_set_triples_source_factory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-triples-source.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-triple-meta">rasqal_triple_meta</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-triples-match">rasqal_triples_match</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-triples-source">rasqal_triples_source</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-triples-source-factory">rasqal_triples_source_factory</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-triples-source-feature">rasqal_triples_source_feature</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-TRIPLES-SOURCE-FACTORY-MIN-VERSION:CAPS">RASQAL_TRIPLES_SOURCE_FACTORY_MIN_VERSION</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-TRIPLES-SOURCE-FACTORY-MAX-VERSION:CAPS">RASQAL_TRIPLES_SOURCE_FACTORY_MAX_VERSION</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-TRIPLES-SOURCE-MIN-VERSION:CAPS">RASQAL_TRIPLES_SOURCE_MIN_VERSION</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-TRIPLES-SOURCE-MAX-VERSION:CAPS">RASQAL_TRIPLES_SOURCE_MAX_VERSION</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-triples-source.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-triples-source.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-triples-source-factory-register-fn" role="function">
+<title>rasqal_triples_source_factory_register_fn&#160;()</title>
+<indexterm zone="rasqal-triples-source-factory-register-fn"><primary>rasqal_triples_source_factory_register_fn</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*rasqal_triples_source_factory_register_fn<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="rasqal-triples-source-factory"><type>rasqal_triples_source_factory</type></link> *factory</parameter>);</programlisting>
+<para>Register a factory for generating triples sources <link linkend="rasqal-triples-source"><type>rasqal_triples_source</type></link></para>
+<refsect3 id="rasqal-triples-source-factory-register-fn.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>factory</para></entry>
+<entry role="parameter_description"><para>factory to register</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-triples-source-factory-register-fn.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-triples-error-handler" role="function">
+<title>rasqal_triples_error_handler&#160;()</title>
+<indexterm zone="rasqal-triples-error-handler"><primary>rasqal_triples_error_handler</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*rasqal_triples_error_handler<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                 <parameter><link linkend="raptor-locator"><type>raptor_locator</type></link> *locator</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *message</parameter>);</programlisting>
+<para>Triples source factory error handler callback.</para>
+<refsect3 id="rasqal-triples-error-handler.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>locator</para></entry>
+<entry role="parameter_description"><para>error locator (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>message</para></entry>
+<entry role="parameter_description"><para>error message</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-triples-error-handler2" role="function">
+<title>rasqal_triples_error_handler2&#160;()</title>
+<indexterm zone="rasqal-triples-error-handler2"><primary>rasqal_triples_error_handler2</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*rasqal_triples_error_handler2<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                  <parameter><link linkend="raptor-locator"><type>raptor_locator</type></link> *locator</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *message</parameter>);</programlisting>
+<para>Triples source factory error handler callback.</para>
+<refsect3 id="rasqal-triples-error-handler2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>locator</para></entry>
+<entry role="parameter_description"><para>error locator (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>message</para></entry>
+<entry role="parameter_description"><para>error message</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-set-triples-source-factory" role="function">
+<title>rasqal_set_triples_source_factory&#160;()</title>
+<indexterm zone="rasqal-set-triples-source-factory"><primary>rasqal_set_triples_source_factory</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_set_triples_source_factory (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                   <parameter><link linkend="rasqal-triples-source-factory-register-fn"><type>rasqal_triples_source_factory_register_fn</type></link> register_fn</parameter>,
+                                   <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>);</programlisting>
+<para>Register a factory to generate triple sources.</para>
+<para>Registers the factory that returns triples sources.  Note that
+there is only one of these per runtime. </para>
+<para>The <link linkend="rasqal-triples-source-factory"><type>rasqal_triples_source_factory</type></link> factory method new_triples_source is
+called with the user data for some query and <link linkend="rasqal-triples-source"><type>rasqal_triples_source</type></link>.</para>
+<refsect3 id="rasqal-set-triples-source-factory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>register_fn</para></entry>
+<entry role="parameter_description"><para>registration function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data for registration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-set-triples-source-factory.returns" role="returns">
+<title>Returns</title>
+<para> non-zero on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-triples-source.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-triple-meta" role="struct">
+<title>rasqal_triple_meta</title>
+<indexterm zone="rasqal-triple-meta"><primary>rasqal_triple_meta</primary></indexterm>
+<programlisting language="C">typedef struct {
+  /* triple (subject, predicate, object) and origin */
+  rasqal_variable* bindings[4];
+
+  rasqal_triples_match *triples_match;
+
+  void *context;
+
+  rasqal_triple_parts parts;
+
+  int is_exact;
+
+  int executed;
+} rasqal_triple_meta;
+</programlisting>
+<para>Metadata for triple pattern matching for one triple pattern.</para>
+<refsect3 id="rasqal-triple-meta.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-variable"><type>rasqal_variable</type></link>&#160;*<structfield id="rasqal-triple-meta.bindings">bindings</structfield>[4];</para></entry>
+<entry role="struct_member_description"><para>Variable bindings for this triple+origin to set.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-triples-match"><type>rasqal_triples_match</type></link>&#160;*<structfield id="rasqal-triple-meta.triples-match">triples_match</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The matcher that is setting these bindings.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="void"><type>void</type></link>&#160;*<structfield id="rasqal-triple-meta.context">context</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Context data used by the matcher.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-triple-parts"><type>rasqal_triple_parts</type></link>&#160;<structfield id="rasqal-triple-meta.parts">parts</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Bitmask of <link linkend="rasqal-triple-parts"><type>rasqal_triple_parts</type></link> flags describing the parts of the triple pattern that will bind to variables.  There may also be variables mentioned that are bound in other triple patterns even if <parameter>parts</parameter>
+is 0.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-triple-meta.is-exact">is_exact</structfield>;</para></entry>
+<entry role="struct_member_description"><para>unused</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-triple-meta.executed">executed</structfield>;</para></entry>
+<entry role="struct_member_description"><para>unused</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-triples-match" role="struct">
+<title>rasqal_triples_match</title>
+<indexterm zone="rasqal-triples-match"><primary>rasqal_triples_match</primary></indexterm>
+<programlisting language="C">typedef struct {
+  void *user_data;
+
+  rasqal_triple_parts (*bind_match)(struct rasqal_triples_match_s* rtm, void *user_data, rasqal_variable *bindings[4], rasqal_triple_parts parts);
+
+  void (*next_match)(struct rasqal_triples_match_s* rtm, void *user_data);
+
+  int (*is_end)(struct rasqal_triples_match_s* rtm, void *user_data);
+
+  void (*finish)(struct rasqal_triples_match_s* rtm, void *user_data);
+
+  rasqal_world *world;
+} rasqal_triples_match;
+</programlisting>
+<para>Triples match structure as initialised by <link linkend="rasqal-triples-source"><type>rasqal_triples_source</type></link>
+method init_triples_match.</para>
+<refsect3 id="rasqal-triples-match.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="void"><type>void</type></link>&#160;*<structfield id="rasqal-triples-match.user-data">user_data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>User data pointer for factory methods.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-match.bind-match">bind_match</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>The [4]array (s,p,o,origin) bindings against the current triple match only touching triple parts given. Returns parts that were bound or 0 on failure.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-match.next-match">next_match</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Move to next match.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-match.is-end">is_end</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Check for end of triple match - return non-0 if is end.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-match.finish">finish</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Finish triples match and destroy any allocated memory.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-world"><type>rasqal_world</type></link>&#160;*<structfield id="rasqal-triples-match.world">world</structfield>;</para></entry>
+<entry role="struct_member_description"><para>rasqal_world object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-triples-source" role="struct">
+<title>rasqal_triples_source</title>
+<indexterm zone="rasqal-triples-source"><primary>rasqal_triples_source</primary></indexterm>
+<programlisting language="C">typedef struct {
+  rasqal_query* query;
+
+  void *user_data;
+
+  int (*init_triples_match)(rasqal_triples_match* rtm, struct rasqal_triples_source_s* rts, void *user_data, rasqal_triple_meta *m, rasqal_triple *t);
+
+  int (*triple_present)(struct rasqal_triples_source_s* rts, void *user_data, rasqal_triple *t);
+
+  void (*free_triples_source)(void *user_data);
+} rasqal_triples_source;
+</programlisting>
+<para>Triples source as initialised by a <link linkend="rasqal-triples-source-factory"><type>rasqal_triples_source_factory</type></link>.</para>
+<refsect3 id="rasqal-triples-source.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-query"><type>rasqal_query</type></link>&#160;*<structfield id="rasqal-triples-source.query">query</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Source for this query.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="void"><type>void</type></link>&#160;*<structfield id="rasqal-triples-source.user-data">user_data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Context user data passed into the factory methods.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-source.init-triples-match">init_triples_match</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Factory method to initalise a new <link linkend="rasqal-triples-match"><type>rasqal_triples_match</type></link>.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-source.triple-present">triple_present</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Factory method to return presence or absence of a complete triple.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-source.free-triples-source">free_triples_source</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Factory method to deallocate resources.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-triples-source-factory" role="struct">
+<title>rasqal_triples_source_factory</title>
+<indexterm zone="rasqal-triples-source-factory"><primary>rasqal_triples_source_factory</primary></indexterm>
+<programlisting language="C">typedef struct {
+  int version;
+  
+  void *user_data;
+  size_t user_data_size;
+
+  /* API v1 */
+  int (*new_triples_source)(rasqal_query* query, void *factory_user_data, void *user_data, rasqal_triples_source* rts);
+  /* API v2 onwards */
+  int (*init_triples_source)(rasqal_query* query, void *factory_user_data, void *user_data, rasqal_triples_source* rts, rasqal_triples_error_handler handler);
+  /* API v3 onwards */
+  int (*init_triples_source2)(rasqal_world* world, raptor_sequence* data_graphs, void *factory_user_data, void *user_data, rasqal_triples_source *rts, rasqal_triples_error_handler2 handler, unsigned int flags);
+} rasqal_triples_source_factory;
+</programlisting>
+<para>A factory that initialises <link linkend="rasqal-triples-source"><type>rasqal_triples_source</type></link> structures to
+returning matches to a triple pattern across the dataset formed
+from the data graphs recorded in the <parameter>query</parameter>
+ object.</para>
+<refsect3 id="rasqal-triples-source-factory.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-triples-source-factory.version">version</structfield>;</para></entry>
+<entry role="struct_member_description"><para>API factory version from 1 to 3</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="void"><type>void</type></link>&#160;*<structfield id="rasqal-triples-source-factory.user-data">user_data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>User data for triples_source_factory.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="size-t"><type>size_t</type></link>&#160;<structfield id="rasqal-triples-source-factory.user-data-size">user_data_size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Size of <parameter>user_data</parameter>
+for new_triples_source.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-source-factory.new-triples-source">new_triples_source</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Create a new triples source - returns non-zero on failure &lt; 0 is a 'no rdf data error', &gt; 0 is an unspecified error. Error messages are generated by rasqal internally. (V1)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-source-factory.init-triples-source">init_triples_source</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Initialise a new triples source V2 for a particular source URI/base URI and syntax. Returns non-zero on failure with errors reported via the handler callback by the implementation. (V2)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="rasqal-triples-source-factory.init-triples-source2">init_triples_source2</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Initialise a new triples source V3 for a particular source URI/base URI and syntax and given data graphs. Returns non-zero on failure with errors reported via the handler callback by the implementation. If bit 0 of flags is 1, enforce RAPTOR_FEATURE_NO_NET (V3)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-triples-source-feature" role="enum">
+<title>enum rasqal_triples_source_feature</title>
+<indexterm zone="rasqal-triples-source-feature"><primary>rasqal_triples_source_feature</primary></indexterm>
+<para>Optional features that may be supported by a triple source factory</para>
+<refsect3 id="rasqal-triples-source-feature.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-TRIPLES-SOURCE-FEATURE-NONE:CAPS">RASQAL_TRIPLES_SOURCE_FEATURE_NONE</para></entry>
+<entry role="enum_member_description"><para>No feature</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-TRIPLES-SOURCE-FEATURE-IOSTREAM-DATA-GRAPH:CAPS">RASQAL_TRIPLES_SOURCE_FEATURE_IOSTREAM_DATA_GRAPH</para></entry>
+<entry role="enum_member_description"><para>Support raptor_iostream data graphs</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="RASQAL-TRIPLES-SOURCE-FACTORY-MIN-VERSION:CAPS" role="macro">
+<title>RASQAL_TRIPLES_SOURCE_FACTORY_MIN_VERSION</title>
+<indexterm zone="RASQAL-TRIPLES-SOURCE-FACTORY-MIN-VERSION:CAPS"><primary>RASQAL_TRIPLES_SOURCE_FACTORY_MIN_VERSION</primary></indexterm>
+<programlisting language="C">#define RASQAL_TRIPLES_SOURCE_FACTORY_MIN_VERSION 1
+</programlisting>
+<para>Lowest accepted <parameter>rasqal_triples_source_factory</parameter>
+ API version</para>
+</refsect2>
+<refsect2 id="RASQAL-TRIPLES-SOURCE-FACTORY-MAX-VERSION:CAPS" role="macro">
+<title>RASQAL_TRIPLES_SOURCE_FACTORY_MAX_VERSION</title>
+<indexterm zone="RASQAL-TRIPLES-SOURCE-FACTORY-MAX-VERSION:CAPS"><primary>RASQAL_TRIPLES_SOURCE_FACTORY_MAX_VERSION</primary></indexterm>
+<programlisting language="C">#define RASQAL_TRIPLES_SOURCE_FACTORY_MAX_VERSION 3
+</programlisting>
+<para>Highest accepted <parameter>rasqal_triples_source_factory</parameter>
+ API version</para>
+</refsect2>
+<refsect2 id="RASQAL-TRIPLES-SOURCE-MIN-VERSION:CAPS" role="macro">
+<title>RASQAL_TRIPLES_SOURCE_MIN_VERSION</title>
+<indexterm zone="RASQAL-TRIPLES-SOURCE-MIN-VERSION:CAPS"><primary>RASQAL_TRIPLES_SOURCE_MIN_VERSION</primary></indexterm>
+<programlisting language="C">#define RASQAL_TRIPLES_SOURCE_MIN_VERSION 1
+</programlisting>
+<para>Lowest accepted <parameter>rasqal_triples_source</parameter>
+ API version</para>
+</refsect2>
+<refsect2 id="RASQAL-TRIPLES-SOURCE-MAX-VERSION:CAPS" role="macro">
+<title>RASQAL_TRIPLES_SOURCE_MAX_VERSION</title>
+<indexterm zone="RASQAL-TRIPLES-SOURCE-MAX-VERSION:CAPS"><primary>RASQAL_TRIPLES_SOURCE_MAX_VERSION</primary></indexterm>
+<programlisting language="C">#define RASQAL_TRIPLES_SOURCE_MAX_VERSION 2
+</programlisting>
+<para>Highest accepted <parameter>rasqal_triples_source</parameter>
+ API version</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

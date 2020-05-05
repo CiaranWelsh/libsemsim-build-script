@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<indexdiv id="api-index-deprecated">
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="rasqal-expression-evaluate"><link linkend="rasqal-expression-evaluate">rasqal_expression_evaluate</link>, function in <link linkend="rasqal-section-expression">section-expression</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>L</title>
+<indexentry><primaryie linkends="rasqal-languages-enumerate"><link linkend="rasqal-languages-enumerate">rasqal_languages_enumerate</link>, function in <link linkend="rasqal-section-general">section-general</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>N</title>
+<indexentry><primaryie linkends="rasqal-new-float-literal"><link linkend="rasqal-new-float-literal">rasqal_new_float_literal</link>, function in <link linkend="rasqal-section-literal">section-literal</link></primaryie></indexentry>
+<indexentry><primaryie linkends="rasqal-new-query-results"><link linkend="rasqal-new-query-results">rasqal_new_query_results</link>, function in <link linkend="rasqal-section-query-results">section-query_results</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>Q</title>
+<indexentry><primaryie linkends="rasqal-query-graph-pattern-visit"><link linkend="rasqal-query-graph-pattern-visit">rasqal_query_graph_pattern_visit</link>, function in <link linkend="rasqal-section-query">section-query</link></primaryie></indexentry>
+<indexentry><primaryie linkends="rasqal-query-has-variable"><link linkend="rasqal-query-has-variable">rasqal_query_has_variable</link>, function in <link linkend="rasqal-section-query">section-query</link></primaryie></indexentry>
+<indexentry><primaryie linkends="rasqal-query-results-formats-check"><link linkend="rasqal-query-results-formats-check">rasqal_query_results_formats_check</link>, function in <link linkend="rasqal-section-query-results-formatter">section-query_results_formatter</link></primaryie></indexentry>
+<indexentry><primaryie linkends="rasqal-query-set-variable"><link linkend="rasqal-query-set-variable">rasqal_query_set_variable</link>, function in <link linkend="rasqal-section-query">section-query</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>V</title>
+<indexentry><primaryie linkends="rasqal-variables-table-add"><link linkend="rasqal-variables-table-add">rasqal_variables_table_add</link>, function in <link linkend="rasqal-section-variables-table">section-variables-table</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>X</title>
+<indexentry><primaryie linkends="rasqal-xsd-datetime-compare"><link linkend="rasqal-xsd-datetime-compare">rasqal_xsd_datetime_compare</link>, function in <link linkend="rasqal-section-xsd">section-xsd</link></primaryie></indexentry>
+<indexentry><primaryie linkends="rasqal-xsd-datetime-equals"><link linkend="rasqal-xsd-datetime-equals">rasqal_xsd_datetime_equals</link>, function in <link linkend="rasqal-section-xsd">section-xsd</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

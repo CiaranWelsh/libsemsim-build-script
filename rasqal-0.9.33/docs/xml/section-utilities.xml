@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-utilities">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-utilities.top_of_page">section-utilities</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-utilities</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-utilities.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-regex-replace">rasqal_regex_replace</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-utilities.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-utilities.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-regex-replace" role="function">
+<title>rasqal_regex_replace&#160;()</title>
+<indexterm zone="rasqal-regex-replace"><primary>rasqal_regex_replace</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_regex_replace (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                      <parameter><link linkend="raptor-locator"><type>raptor_locator</type></link> *locator</parameter>,
+                      <parameter>const <link linkend="char"><type>char</type></link> *pattern</parameter>,
+                      <parameter>const <link linkend="char"><type>char</type></link> *regex_flags</parameter>,
+                      <parameter>const <link linkend="char"><type>char</type></link> *subject</parameter>,
+                      <parameter><link linkend="size-t"><type>size_t</type></link> subject_len</parameter>,
+                      <parameter>const <link linkend="char"><type>char</type></link> *replace</parameter>,
+                      <parameter><link linkend="size-t"><type>size_t</type></link> replace_len</parameter>,
+                      <parameter><link linkend="size-t"><type>size_t</type></link> *result_len_p</parameter>);</programlisting>
+<para>Replace all copies of matches to a pattern with a replacement with subsitution</para>
+<para>Intended to be used for SPARQL 1.1 <link linkend="REPLACE:CAPS"><function>REPLACE()</function></link> implementation.</para>
+<refsect3 id="rasqal-regex-replace.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>locator</para></entry>
+<entry role="parameter_description"><para>locator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pattern</para></entry>
+<entry role="parameter_description"><para>regex pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>regex_flags</para></entry>
+<entry role="parameter_description"><para>regex flags string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>subject</para></entry>
+<entry role="parameter_description"><para>input string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>subject_len</para></entry>
+<entry role="parameter_description"><para>input string length</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>replace</para></entry>
+<entry role="parameter_description"><para>replacement string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>replace_len</para></entry>
+<entry role="parameter_description"><para>Length of replacement string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>result_len_p</para></entry>
+<entry role="parameter_description"><para>pointer to store result length (output)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-regex-replace.returns" role="returns">
+<title>Returns</title>
+<para> result string or NULL on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-utilities.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-xsd">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-xsd.top_of_page">section-xsd</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-xsd</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-xsd.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-xsd-date"><returnvalue>rasqal_xsd_date</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-xsd-date">rasqal_new_xsd_date</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-xsd-date">rasqal_free_xsd_date</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-date-to-counted-string">rasqal_xsd_date_to_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-date-to-string">rasqal_xsd_date_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-date-equals">rasqal_xsd_date_equals</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-date-compare">rasqal_xsd_date_compare</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-xsd-datetime">rasqal_new_xsd_datetime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-xsd-datetime-from-timeval">rasqal_new_xsd_datetime_from_timeval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-xsd-datetime-from-unixtime">rasqal_new_xsd_datetime_from_unixtime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-xsd-datetime-from-xsd-date">rasqal_new_xsd_datetime_from_xsd_date</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-xsd-datetime">rasqal_free_xsd_datetime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-compare">rasqal_xsd_datetime_compare</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-compare2">rasqal_xsd_datetime_compare2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-equals">rasqal_xsd_datetime_equals</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-equals2">rasqal_xsd_datetime_equals2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">struct <link linkend="timeval"><returnvalue>timeval</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-get-as-timeval">rasqal_xsd_datetime_get_as_timeval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="time-t"><returnvalue>time_t</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-get-as-unixtime">rasqal_xsd_datetime_get_as_unixtime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-xsd-decimal"><returnvalue>rasqal_xsd_decimal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-get-seconds-as-decimal">rasqal_xsd_datetime_get_seconds_as_decimal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-get-timezone-as-counted-string">rasqal_xsd_datetime_get_timezone_as_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-get-tz-as-counted-string">rasqal_xsd_datetime_get_tz_as_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-set-from-timeval">rasqal_xsd_datetime_set_from_timeval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-set-from-unixtime">rasqal_xsd_datetime_set_from_unixtime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-to-counted-string">rasqal_xsd_datetime_to_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-datetime-to-string">rasqal_xsd_datetime_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-xsd-decimal">rasqal_free_xsd_decimal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-xsd-decimal"><returnvalue>rasqal_xsd_decimal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-xsd-decimal">rasqal_new_xsd_decimal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-abs">rasqal_xsd_decimal_abs</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-add">rasqal_xsd_decimal_add</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-as-counted-string">rasqal_xsd_decimal_as_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-as-string">rasqal_xsd_decimal_as_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-ceil">rasqal_xsd_decimal_ceil</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-compare">rasqal_xsd_decimal_compare</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-divide">rasqal_xsd_decimal_divide</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-equals">rasqal_xsd_decimal_equals</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-floor">rasqal_xsd_decimal_floor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="double"><returnvalue>double</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-get-double">rasqal_xsd_decimal_get_double</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="long"><returnvalue>long</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-get-long">rasqal_xsd_decimal_get_long</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-is-zero">rasqal_xsd_decimal_is_zero</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-multiply">rasqal_xsd_decimal_multiply</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-negate">rasqal_xsd_decimal_negate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-print">rasqal_xsd_decimal_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-round">rasqal_xsd_decimal_round</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-set-double">rasqal_xsd_decimal_set_double</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-set-long">rasqal_xsd_decimal_set_long</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-set-string">rasqal_xsd_decimal_set_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal-subtract">rasqal_xsd_decimal_subtract</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-xsd.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-xsd-date">rasqal_xsd_date</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-xsd-datetime">rasqal_xsd_datetime</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-XSD-DATETIME-NO-TZ:CAPS">RASQAL_XSD_DATETIME_NO_TZ</link></entry></row>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-xsd-decimal">rasqal_xsd_decimal</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-xsd.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-xsd.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-xsd-date" role="function">
+<title>rasqal_new_xsd_date&#160;()</title>
+<indexterm zone="rasqal-new-xsd-date"><primary>rasqal_new_xsd_date</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-date"><returnvalue>rasqal_xsd_date</returnvalue></link>&#160;*
+rasqal_new_xsd_date (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                     <parameter>const <link linkend="char"><type>char</type></link> *date_string</parameter>);</programlisting>
+<para>Constructor - make a new XSD date object from a string</para>
+<refsect3 id="rasqal-new-xsd-date.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>date_string</para></entry>
+<entry role="parameter_description"><para>XSD date string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-xsd-date.returns" role="returns">
+<title>Returns</title>
+<para> new datetime or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-xsd-date" role="function">
+<title>rasqal_free_xsd_date&#160;()</title>
+<indexterm zone="rasqal-free-xsd-date"><primary>rasqal_free_xsd_date</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_xsd_date (<parameter><link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *d</parameter>);</programlisting>
+<para>Destroy XSD date object.</para>
+<refsect3 id="rasqal-free-xsd-date.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>d</para></entry>
+<entry role="parameter_description"><para>date object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-date-to-counted-string" role="function">
+<title>rasqal_xsd_date_to_counted_string&#160;()</title>
+<indexterm zone="rasqal-xsd-date-to-counted-string"><primary>rasqal_xsd_date_to_counted_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_date_to_counted_string (<parameter>const <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *date</parameter>,
+                                   <parameter><link linkend="size-t"><type>size_t</type></link> *len_p</parameter>);</programlisting>
+<para>Convert a <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> struct to a xsd:date lexical form string.</para>
+<para>Caller should <link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link> the returned string.</para>
+<para>See http://www.w3.org/TR/xmlschema-2/<link linkend="date-canonical-representation"><type>date-canonical-representation</type></link></para>
+<refsect3 id="rasqal-xsd-date-to-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>date</para></entry>
+<entry role="parameter_description"><para>date struct</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len_p</para></entry>
+<entry role="parameter_description"><para>output length (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-date-to-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> lexical form string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-date-to-string" role="function">
+<title>rasqal_xsd_date_to_string&#160;()</title>
+<indexterm zone="rasqal-xsd-date-to-string"><primary>rasqal_xsd_date_to_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_date_to_string (<parameter>const <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *d</parameter>);</programlisting>
+<para>Convert a <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> struct to a xsd:date lexical form string.</para>
+<para>Caller should <link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link> the returned string.</para>
+<refsect3 id="rasqal-xsd-date-to-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>d</para></entry>
+<entry role="parameter_description"><para>date struct</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-date-to-string.returns" role="returns">
+<title>Returns</title>
+<para> lexical form string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-date-equals" role="function">
+<title>rasqal_xsd_date_equals&#160;()</title>
+<indexterm zone="rasqal-xsd-date-equals"><primary>rasqal_xsd_date_equals</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_date_equals (<parameter>const <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *d1</parameter>,
+                        <parameter>const <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *d2</parameter>,
+                        <parameter><link linkend="int"><type>int</type></link> *incomparible_p</parameter>);</programlisting>
+<para>Compare two XSD dates for equality.</para>
+<refsect3 id="rasqal-xsd-date-equals.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>d1</para></entry>
+<entry role="parameter_description"><para>first XSD date</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>d2</para></entry>
+<entry role="parameter_description"><para>second XSD date</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>incomparible_p</para></entry>
+<entry role="parameter_description"><para>address to store incomparable flag (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-date-equals.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if equal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-date-compare" role="function">
+<title>rasqal_xsd_date_compare&#160;()</title>
+<indexterm zone="rasqal-xsd-date-compare"><primary>rasqal_xsd_date_compare</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_date_compare (<parameter>const <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *d1</parameter>,
+                         <parameter>const <link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *d2</parameter>,
+                         <parameter><link linkend="int"><type>int</type></link> *incomparible_p</parameter>);</programlisting>
+<para>Compare two XSD dates</para>
+<para>If the only one of the two dates have timezones, the results
+may be incomparible and that will return &gt;0 and set the
+value of the int point to by <parameter>incomparible_p</parameter>
+ to non-0</para>
+<refsect3 id="rasqal-xsd-date-compare.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>d1</para></entry>
+<entry role="parameter_description"><para>first XSD date</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>d2</para></entry>
+<entry role="parameter_description"><para>second XSD date</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>incomparible_p</para></entry>
+<entry role="parameter_description"><para>address to store incomparable flag (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-date-compare.returns" role="returns">
+<title>Returns</title>
+<para> &lt;0 if <parameter>d1</parameter>
+is less than <parameter>d2</parameter>
+, 0 if equal, &gt;0 otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-xsd-datetime" role="function">
+<title>rasqal_new_xsd_datetime&#160;()</title>
+<indexterm zone="rasqal-new-xsd-datetime"><primary>rasqal_new_xsd_datetime</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+rasqal_new_xsd_datetime (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                         <parameter>const <link linkend="char"><type>char</type></link> *datetime_string</parameter>);</programlisting>
+<para>Constructor - make a new XSD datetime object from a string</para>
+<refsect3 id="rasqal-new-xsd-datetime.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>datetime_string</para></entry>
+<entry role="parameter_description"><para>XSD Datetime string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-xsd-datetime.returns" role="returns">
+<title>Returns</title>
+<para> new datetime or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-xsd-datetime-from-timeval" role="function">
+<title>rasqal_new_xsd_datetime_from_timeval&#160;()</title>
+<indexterm zone="rasqal-new-xsd-datetime-from-timeval"><primary>rasqal_new_xsd_datetime_from_timeval</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+rasqal_new_xsd_datetime_from_timeval (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                      <parameter><type>struct timeval</type> *tv</parameter>);</programlisting>
+<para>Constructor - make a new XSD datetime object from a timeval</para>
+<refsect3 id="rasqal-new-xsd-datetime-from-timeval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tv</para></entry>
+<entry role="parameter_description"><para>pointer to struct timeval</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-xsd-datetime-from-timeval.returns" role="returns">
+<title>Returns</title>
+<para> new datetime or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-xsd-datetime-from-unixtime" role="function">
+<title>rasqal_new_xsd_datetime_from_unixtime&#160;()</title>
+<indexterm zone="rasqal-new-xsd-datetime-from-unixtime"><primary>rasqal_new_xsd_datetime_from_unixtime</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+rasqal_new_xsd_datetime_from_unixtime (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                       <parameter><link linkend="time-t"><type>time_t</type></link> secs</parameter>);</programlisting>
+<para>Constructor - make a new XSD datetime object from unixtime seconds</para>
+<refsect3 id="rasqal-new-xsd-datetime-from-unixtime.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>secs</para></entry>
+<entry role="parameter_description"><para>unixtime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-xsd-datetime-from-unixtime.returns" role="returns">
+<title>Returns</title>
+<para> new datetime or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-xsd-datetime-from-xsd-date" role="function">
+<title>rasqal_new_xsd_datetime_from_xsd_date&#160;()</title>
+<indexterm zone="rasqal-new-xsd-datetime-from-xsd-date"><primary>rasqal_new_xsd_datetime_from_xsd_date</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-datetime"><returnvalue>rasqal_xsd_datetime</returnvalue></link>&#160;*
+rasqal_new_xsd_datetime_from_xsd_date (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                       <parameter><link linkend="rasqal-xsd-date"><type>rasqal_xsd_date</type></link> *date</parameter>);</programlisting>
+<para>Constructor - make a new XSD datetime object from an XSD date</para>
+<refsect3 id="rasqal-new-xsd-datetime-from-xsd-date.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>date</para></entry>
+<entry role="parameter_description"><para>pointer to XSD date</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-xsd-datetime-from-xsd-date.returns" role="returns">
+<title>Returns</title>
+<para> new datetime or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-xsd-datetime" role="function">
+<title>rasqal_free_xsd_datetime&#160;()</title>
+<indexterm zone="rasqal-free-xsd-datetime"><primary>rasqal_free_xsd_datetime</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_xsd_datetime (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>);</programlisting>
+<para>Destroy XSD datetime object.</para>
+<refsect3 id="rasqal-free-xsd-datetime.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-compare" role="function" condition="deprecated:">
+<title>rasqal_xsd_datetime_compare&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-compare" role="deprecated"><primary>rasqal_xsd_datetime_compare</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_datetime_compare (<parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt1</parameter>,
+                             <parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt2</parameter>);</programlisting>
+<warning><para><literal>rasqal_xsd_datetime_compare</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Compare two XSD dateTimes</para>
+<para><parameter>Deprecated</parameter>
+ for <link linkend="rasqal-xsd-datetime-compare2"><function>rasqal_xsd_datetime_compare2()</function></link> which can return the incomparible result.</para>
+<refsect3 id="rasqal-xsd-datetime-compare.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt1</para></entry>
+<entry role="parameter_description"><para>first XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dt2</para></entry>
+<entry role="parameter_description"><para>second XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-compare.returns" role="returns">
+<title>Returns</title>
+<para> &lt;0 if <parameter>dt1</parameter>
+is less than <parameter>dt2</parameter>
+, 0 if equal, &gt;0 otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-compare2" role="function">
+<title>rasqal_xsd_datetime_compare2&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-compare2"><primary>rasqal_xsd_datetime_compare2</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_datetime_compare2 (<parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt1</parameter>,
+                              <parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt2</parameter>,
+                              <parameter><link linkend="int"><type>int</type></link> *incomparible_p</parameter>);</programlisting>
+<para>Compare two XSD dateTimes</para>
+<para>If the only one of the two dateTimes have timezones, the results
+may be incomparible and that will return &gt;0 and set the
+value of the int point to by <parameter>incomparible_p</parameter>
+ to non-0</para>
+<refsect3 id="rasqal-xsd-datetime-compare2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt1</para></entry>
+<entry role="parameter_description"><para>first XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dt2</para></entry>
+<entry role="parameter_description"><para>second XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>incomparible_p</para></entry>
+<entry role="parameter_description"><para>address to store incomparable flag (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-compare2.returns" role="returns">
+<title>Returns</title>
+<para> &lt;0 if <parameter>dt1</parameter>
+is less than <parameter>dt2</parameter>
+, 0 if equal, &gt;0 otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-equals" role="function" condition="deprecated:">
+<title>rasqal_xsd_datetime_equals&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-equals" role="deprecated"><primary>rasqal_xsd_datetime_equals</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_datetime_equals (<parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt1</parameter>,
+                            <parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt2</parameter>);</programlisting>
+<warning><para><literal>rasqal_xsd_datetime_equals</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Compare two XSD dateTimes for equality.</para>
+<para><parameter>Deprecated</parameter>
+: for rasqal_xsd_datetime_equals2 that returns incomparibility.</para>
+<refsect3 id="rasqal-xsd-datetime-equals.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt1</para></entry>
+<entry role="parameter_description"><para>first XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dt2</para></entry>
+<entry role="parameter_description"><para>second XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-equals.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if equal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-equals2" role="function">
+<title>rasqal_xsd_datetime_equals2&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-equals2"><primary>rasqal_xsd_datetime_equals2</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_datetime_equals2 (<parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt1</parameter>,
+                             <parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt2</parameter>,
+                             <parameter><link linkend="int"><type>int</type></link> *incomparible_p</parameter>);</programlisting>
+<para>Compare two XSD dateTimes for equality.</para>
+<refsect3 id="rasqal-xsd-datetime-equals2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt1</para></entry>
+<entry role="parameter_description"><para>first XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dt2</para></entry>
+<entry role="parameter_description"><para>second XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>incomparible_p</para></entry>
+<entry role="parameter_description"><para>address to store incomparable flag (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-equals2.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if equal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-get-as-timeval" role="function">
+<title>rasqal_xsd_datetime_get_as_timeval&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-get-as-timeval"><primary>rasqal_xsd_datetime_get_as_timeval</primary></indexterm>
+<programlisting language="C">struct <link linkend="timeval"><returnvalue>timeval</returnvalue></link>&#160;*
+rasqal_xsd_datetime_get_as_timeval (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>);</programlisting>
+<para>Get a datetime as struct timeval</para>
+<para>The returned timeval must be freed by the caller such as using
+<link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link>.</para>
+<refsect3 id="rasqal-xsd-datetime-get-as-timeval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-get-as-timeval.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a new timeval structure or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-get-as-unixtime" role="function">
+<title>rasqal_xsd_datetime_get_as_unixtime&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-get-as-unixtime"><primary>rasqal_xsd_datetime_get_as_unixtime</primary></indexterm>
+<programlisting language="C"><link linkend="time-t"><returnvalue>time_t</returnvalue></link>
+rasqal_xsd_datetime_get_as_unixtime (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>);</programlisting>
+<para>Get a datetime as unix seconds</para>
+<refsect3 id="rasqal-xsd-datetime-get-as-unixtime.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-get-as-unixtime.returns" role="returns">
+<title>Returns</title>
+<para> unix seconds or 0 if <parameter>dt</parameter>
+is NULL</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-get-seconds-as-decimal" role="function">
+<title>rasqal_xsd_datetime_get_seconds_as_decimal&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-get-seconds-as-decimal"><primary>rasqal_xsd_datetime_get_seconds_as_decimal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-decimal"><returnvalue>rasqal_xsd_decimal</returnvalue></link>&#160;*
+rasqal_xsd_datetime_get_seconds_as_decimal
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>);</programlisting>
+<para>Get the seconds component of a dateTime as a decimal</para>
+<refsect3 id="rasqal-xsd-datetime-get-seconds-as-decimal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>XSD dateTime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-get-seconds-as-decimal.returns" role="returns">
+<title>Returns</title>
+<para> decimal object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-get-timezone-as-counted-string" role="function">
+<title>rasqal_xsd_datetime_get_timezone_as_counted_string&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-get-timezone-as-counted-string"><primary>rasqal_xsd_datetime_get_timezone_as_counted_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_datetime_get_timezone_as_counted_string
+                               (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>,
+                                <parameter><link linkend="size-t"><type>size_t</type></link> *len_p</parameter>);</programlisting>
+<para>Get the timezone of a datetime as a duration format string with optional length count</para>
+<para>The returned string is owned by the caller and must be freed
+by <link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link>.</para>
+<refsect3 id="rasqal-xsd-datetime-get-timezone-as-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len_p</para></entry>
+<entry role="parameter_description"><para>pointer to store returned string length</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-get-timezone-as-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a new string or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-get-tz-as-counted-string" role="function">
+<title>rasqal_xsd_datetime_get_tz_as_counted_string&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-get-tz-as-counted-string"><primary>rasqal_xsd_datetime_get_tz_as_counted_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_datetime_get_tz_as_counted_string
+                               (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>,
+                                <parameter><link linkend="size-t"><type>size_t</type></link> *len_p</parameter>);</programlisting>
+<para>Get the timezone of a datetime as a timezone string</para>
+<para>The returned string is owned by the caller and must be freed
+by <link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link>.</para>
+<refsect3 id="rasqal-xsd-datetime-get-tz-as-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len_p</para></entry>
+<entry role="parameter_description"><para>pointer to store returned string length</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-get-tz-as-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a new string or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-set-from-timeval" role="function">
+<title>rasqal_xsd_datetime_set_from_timeval&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-set-from-timeval"><primary>rasqal_xsd_datetime_set_from_timeval</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_datetime_set_from_timeval (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>,
+                                      <parameter><type>struct timeval</type> *tv</parameter>);</programlisting>
+<para>Set an XSD dateTime from a struct timeval pointer</para>
+<refsect3 id="rasqal-xsd-datetime-set-from-timeval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tv</para></entry>
+<entry role="parameter_description"><para>timeval</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-set-from-timeval.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-set-from-unixtime" role="function">
+<title>rasqal_xsd_datetime_set_from_unixtime&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-set-from-unixtime"><primary>rasqal_xsd_datetime_set_from_unixtime</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_datetime_set_from_unixtime (<parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>,
+                                       <parameter><link linkend="time-t"><type>time_t</type></link> clock</parameter>);</programlisting>
+<para>Set an XSD dateTime from unixtime seconds</para>
+<refsect3 id="rasqal-xsd-datetime-set-from-unixtime.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>date time</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>clock</para></entry>
+<entry role="parameter_description"><para>unix time in seconds</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-set-from-unixtime.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-to-counted-string" role="function">
+<title>rasqal_xsd_datetime_to_counted_string&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-to-counted-string"><primary>rasqal_xsd_datetime_to_counted_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_datetime_to_counted_string (<parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>,
+                                       <parameter><link linkend="size-t"><type>size_t</type></link> *len_p</parameter>);</programlisting>
+<para>Convert a <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> struct to a xsd:dateTime lexical form counted string.</para>
+<para>Caller should <link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link> the returned string.</para>
+<para>See http://www.w3.org/TR/xmlschema-2/<link linkend="dateTime-canonical-representation"><type>dateTime-canonical-representation</type></link></para>
+<refsect3 id="rasqal-xsd-datetime-to-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime struct</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len_p</para></entry>
+<entry role="parameter_description"><para>output length (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-to-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> lexical form string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-datetime-to-string" role="function">
+<title>rasqal_xsd_datetime_to_string&#160;()</title>
+<indexterm zone="rasqal-xsd-datetime-to-string"><primary>rasqal_xsd_datetime_to_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_datetime_to_string (<parameter>const <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>);</programlisting>
+<para>Convert a <link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> struct to a xsd:dateTime lexical form string.</para>
+<para>Caller should <link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link> the returned string.</para>
+<refsect3 id="rasqal-xsd-datetime-to-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>datetime struct</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-datetime-to-string.returns" role="returns">
+<title>Returns</title>
+<para> lexical form string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-xsd-decimal" role="function">
+<title>rasqal_free_xsd_decimal&#160;()</title>
+<indexterm zone="rasqal-free-xsd-decimal"><primary>rasqal_free_xsd_decimal</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_xsd_decimal (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>);</programlisting>
+<para>Destroy XSD Decimal object.</para>
+<refsect3 id="rasqal-free-xsd-decimal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>Decimal object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-xsd-decimal" role="function">
+<title>rasqal_new_xsd_decimal&#160;()</title>
+<indexterm zone="rasqal-new-xsd-decimal"><primary>rasqal_new_xsd_decimal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-xsd-decimal"><returnvalue>rasqal_xsd_decimal</returnvalue></link>&#160;*
+rasqal_new_xsd_decimal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>);</programlisting>
+<para>Create a new XSD Decimal object.</para>
+<refsect3 id="rasqal-new-xsd-decimal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-xsd-decimal.returns" role="returns">
+<title>Returns</title>
+<para> new xsd:decimal object or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-abs" role="function">
+<title>rasqal_xsd_decimal_abs&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-abs"><primary>rasqal_xsd_decimal_abs</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_abs (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                        <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>);</programlisting>
+<para>Return the absolute value of an XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-abs.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-abs.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-add" role="function">
+<title>rasqal_xsd_decimal_add&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-add"><primary>rasqal_xsd_decimal_add</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_add (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                        <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>,
+                        <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *b</parameter>);</programlisting>
+<para>Add two XSD Decimals and store in result XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-add.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal 1</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>b</para></entry>
+<entry role="parameter_description"><para>argument decimal 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-add.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-as-counted-string" role="function">
+<title>rasqal_xsd_decimal_as_counted_string&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-as-counted-string"><primary>rasqal_xsd_decimal_as_counted_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_decimal_as_counted_string (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>,
+                                      <parameter><link linkend="size-t"><type>size_t</type></link> *len_p</parameter>);</programlisting>
+<para>Get an XSD Decimal as a string lexical form with optional length.</para>
+<para>The returned string is shared and owned by the <parameter>dec</parameter>
+ object and
+must be copied.  If <parameter>len_p</parameter>
+ is not NULL, the length of the returned
+string is stored.</para>
+<refsect3 id="rasqal-xsd-decimal-as-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len_p</para></entry>
+<entry role="parameter_description"><para>pointer to length variable (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-as-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> lexical form string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-as-string" role="function">
+<title>rasqal_xsd_decimal_as_string&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-as-string"><primary>rasqal_xsd_decimal_as_string</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_xsd_decimal_as_string (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>);</programlisting>
+<para>Get an XSD Decimal as a string lexical form.</para>
+<para>The returned string is shared and owned by the <parameter>dec</parameter>
+ object and
+must be copied.</para>
+<refsect3 id="rasqal-xsd-decimal-as-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-as-string.returns" role="returns">
+<title>Returns</title>
+<para> lexical form string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-ceil" role="function">
+<title>rasqal_xsd_decimal_ceil&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-ceil"><primary>rasqal_xsd_decimal_ceil</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_ceil (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                         <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>);</programlisting>
+<para>Return the number with no fractional part closes to argument for an XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-ceil.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-ceil.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-compare" role="function">
+<title>rasqal_xsd_decimal_compare&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-compare"><primary>rasqal_xsd_decimal_compare</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_compare (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>,
+                            <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *b</parameter>);</programlisting>
+<para>Compare two XSD Decimals</para>
+<refsect3 id="rasqal-xsd-decimal-compare.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>first XSD decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>b</para></entry>
+<entry role="parameter_description"><para>second XSD decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-compare.returns" role="returns">
+<title>Returns</title>
+<para> &lt;0 if <parameter>a</parameter>
+is less than <parameter>b</parameter>
+, 0 if equal, &gt;1 otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-divide" role="function">
+<title>rasqal_xsd_decimal_divide&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-divide"><primary>rasqal_xsd_decimal_divide</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_divide (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                           <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>,
+                           <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *b</parameter>);</programlisting>
+<para>Divide two XSD Decimals and store in result XSD Decimal</para>
+<para>If the divisor <parameter>b</parameter>
+ is 0, failure is returned</para>
+<refsect3 id="rasqal-xsd-decimal-divide.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal 1</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>b</para></entry>
+<entry role="parameter_description"><para>argument decimal 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-divide.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-equals" role="function">
+<title>rasqal_xsd_decimal_equals&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-equals"><primary>rasqal_xsd_decimal_equals</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_equals (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>,
+                           <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *b</parameter>);</programlisting>
+<para>Compare two XSD Decimals for equality.</para>
+<refsect3 id="rasqal-xsd-decimal-equals.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>first XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>b</para></entry>
+<entry role="parameter_description"><para>second XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-equals.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if equal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-floor" role="function">
+<title>rasqal_xsd_decimal_floor&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-floor"><primary>rasqal_xsd_decimal_floor</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_floor (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                          <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>);</programlisting>
+<para>Return the number with no fractional part closes to argument for an XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-floor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-floor.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-get-double" role="function">
+<title>rasqal_xsd_decimal_get_double&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-get-double"><primary>rasqal_xsd_decimal_get_double</primary></indexterm>
+<programlisting language="C"><link linkend="double"><returnvalue>double</returnvalue></link>
+rasqal_xsd_decimal_get_double (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>);</programlisting>
+<para>Get an XSD Decimal as a double (may lose precision)</para>
+<refsect3 id="rasqal-xsd-decimal-get-double.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-get-double.returns" role="returns">
+<title>Returns</title>
+<para> double value.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-get-long" role="function">
+<title>rasqal_xsd_decimal_get_long&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-get-long"><primary>rasqal_xsd_decimal_get_long</primary></indexterm>
+<programlisting language="C"><link linkend="long"><returnvalue>long</returnvalue></link>
+rasqal_xsd_decimal_get_long (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>,
+                             <parameter><link linkend="int"><type>int</type></link> *error_p</parameter>);</programlisting>
+<para>Get an XSD Decimal as a long (may lose precision)</para>
+<refsect3 id="rasqal-xsd-decimal-get-long.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error_p</para></entry>
+<entry role="parameter_description"><para>pointer to error flag</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-get-long.returns" role="returns">
+<title>Returns</title>
+<para> long value or 0 on failure and *error_p is non-0</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-is-zero" role="function">
+<title>rasqal_xsd_decimal_is_zero&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-is-zero"><primary>rasqal_xsd_decimal_is_zero</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_is_zero (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *d</parameter>);</programlisting>
+<para>Test if an XSD decimal is zero.</para>
+<refsect3 id="rasqal-xsd-decimal-is-zero.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>d</para></entry>
+<entry role="parameter_description"><para>decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-is-zero.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if decimal is zero</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-multiply" role="function">
+<title>rasqal_xsd_decimal_multiply&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-multiply"><primary>rasqal_xsd_decimal_multiply</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_multiply (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                             <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>,
+                             <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *b</parameter>);</programlisting>
+<para>Multiply two XSD Decimals and store in result XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-multiply.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal 1</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>b</para></entry>
+<entry role="parameter_description"><para>argument decimal 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-multiply.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-negate" role="function">
+<title>rasqal_xsd_decimal_negate&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-negate"><primary>rasqal_xsd_decimal_negate</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_negate (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                           <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>);</programlisting>
+<para>Negate an XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-negate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-negate.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-print" role="function">
+<title>rasqal_xsd_decimal_print&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-print"><primary>rasqal_xsd_decimal_print</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_print (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>,
+                          <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *stream</parameter>);</programlisting>
+<para>Print an XSD Decimal to a stream</para>
+<refsect3 id="rasqal-xsd-decimal-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stream</para></entry>
+<entry role="parameter_description"><para>FILE* handle to print to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-print.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-round" role="function">
+<title>rasqal_xsd_decimal_round&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-round"><primary>rasqal_xsd_decimal_round</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_round (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                          <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>);</programlisting>
+<para>Return the number with no fractional part closes to argument for an XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-round.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-round.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-set-double" role="function">
+<title>rasqal_xsd_decimal_set_double&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-set-double"><primary>rasqal_xsd_decimal_set_double</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_set_double (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>,
+                               <parameter><link linkend="double"><type>double</type></link> d</parameter>);</programlisting>
+<para>Set an XSD Decimal value from a double.</para>
+<refsect3 id="rasqal-xsd-decimal-set-double.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>d</para></entry>
+<entry role="parameter_description"><para>double</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-set-double.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-set-long" role="function">
+<title>rasqal_xsd_decimal_set_long&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-set-long"><primary>rasqal_xsd_decimal_set_long</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_set_long (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>,
+                             <parameter>long <link linkend="l"><type>l</type></link> Param2</parameter>);</programlisting>
+<para>Set an XSD Decimal value from a long.</para>
+<refsect3 id="rasqal-xsd-decimal-set-long.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para>long</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-set-long.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-set-string" role="function">
+<title>rasqal_xsd_decimal_set_string&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-set-string"><primary>rasqal_xsd_decimal_set_string</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_set_string (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *dec</parameter>,
+                               <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>);</programlisting>
+<para>Set an XSD Decimal value from a string lexical form</para>
+<refsect3 id="rasqal-xsd-decimal-set-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dec</para></entry>
+<entry role="parameter_description"><para>XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>lexical form</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-set-string.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-xsd-decimal-subtract" role="function">
+<title>rasqal_xsd_decimal_subtract&#160;()</title>
+<indexterm zone="rasqal-xsd-decimal-subtract"><primary>rasqal_xsd_decimal_subtract</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_xsd_decimal_subtract (<parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *result</parameter>,
+                             <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *a</parameter>,
+                             <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *b</parameter>);</programlisting>
+<para>Subtract two XSD Decimals and store in result XSD Decimal</para>
+<refsect3 id="rasqal-xsd-decimal-subtract.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>result</para></entry>
+<entry role="parameter_description"><para>result variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>a</para></entry>
+<entry role="parameter_description"><para>argment decimal 1</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>b</para></entry>
+<entry role="parameter_description"><para>argument decimal 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-xsd-decimal-subtract.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-xsd.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-xsd-date" role="struct">
+<title>rasqal_xsd_date</title>
+<indexterm zone="rasqal-xsd-date"><primary>rasqal_xsd_date</primary></indexterm>
+<programlisting language="C">typedef struct {
+  signed int year;
+  /* the following fields are integer values not characters */
+  unsigned char month;
+  unsigned char day;
+  signed short timezone_minutes;
+  time_t time_on_timeline;
+  char have_tz;
+} rasqal_xsd_date;
+</programlisting>
+<para>XML schema date datatype (xsd:date)</para>
+<para>Examples of timezone fields:
+ "2010-01-02" : timezone_minutes RASQAL_XSD_DATETIME_NO_TZ, have_tz 'N'
+ "2010-01-02Z" : timezone_minutes 0, have_tz 'Z'
+ "2010-01-02+00:00" : timezone_minutes 0, have_tz 'Y'
+ "2010-01-02-01:00" : timezone_minutes -60, have_tz 'Y'</para>
+<refsect3 id="rasqal-xsd-date.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-xsd-date.year">year</structfield>;</para></entry>
+<entry role="struct_member_description"><para>year</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-date.month">month</structfield>;</para></entry>
+<entry role="struct_member_description"><para>month 1-12</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-date.day">day</structfield>;</para></entry>
+<entry role="struct_member_description"><para>1-31</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="short"><type>short</type></link>&#160;<structfield id="rasqal-xsd-date.timezone-minutes">timezone_minutes</structfield>;</para></entry>
+<entry role="struct_member_description"><para>minutes +/- against UTC or RASQAL_XSD_DATETIME_NO_TZ if there is no timezone in the dateTime.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="time-t"><type>time_t</type></link>&#160;<structfield id="rasqal-xsd-date.time-on-timeline">time_on_timeline</structfield>;</para></entry>
+<entry role="struct_member_description"><para>time on timeline of first instant of date in timezone</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-date.have-tz">have_tz</structfield>;</para></entry>
+<entry role="struct_member_description"><para>timezone flag: 'Z' if Zulu, 'Y' if has other timezone offset in <parameter>timezone_minutes</parameter>
+, 'N' if there is no timezone</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-xsd-datetime" role="struct">
+<title>rasqal_xsd_datetime</title>
+<indexterm zone="rasqal-xsd-datetime"><primary>rasqal_xsd_datetime</primary></indexterm>
+<programlisting language="C">typedef struct {
+  signed int year;
+  unsigned char month;
+  unsigned char day;
+  /* the following fields are integer values not characters */
+  signed char hour;
+  signed char minute;
+  signed char second;
+  signed int microseconds;
+  signed short timezone_minutes;
+  time_t time_on_timeline;
+  char have_tz;
+} rasqal_xsd_datetime;
+</programlisting>
+<para>XML Schema dateTime datatype (xsd:dateTime)</para>
+<para>Signed types are required for normalization process where a value
+can be negative temporarily.</para>
+<para>Examples of timezone fields:
+ "2010-01-02T01:02:03" : timezone_minutes RASQAL_XSD_DATETIME_NO_TZ, have_tz 'N'
+ "2010-01-02T01:02:03Z" : timezone_minutes 0, have_tz 'Z'
+ "2010-01-02T01:02:03+00:00" : timezone_minutes 0, have_tz 'Y'
+ "2010-01-02T01:02:03-01:00" : timezone_minutes -60, have_tz 'Y'</para>
+<refsect3 id="rasqal-xsd-datetime.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-xsd-datetime.year">year</structfield>;</para></entry>
+<entry role="struct_member_description"><para>year</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-datetime.month">month</structfield>;</para></entry>
+<entry role="struct_member_description"><para>month 1-12</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-datetime.day">day</structfield>;</para></entry>
+<entry role="struct_member_description"><para>1-31</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-datetime.hour">hour</structfield>;</para></entry>
+<entry role="struct_member_description"><para>hour 0-23</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-datetime.minute">minute</structfield>;</para></entry>
+<entry role="struct_member_description"><para>minute 0-59</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-datetime.second">second</structfield>;</para></entry>
+<entry role="struct_member_description"><para>second 0-60 (yes 60 is allowed for leap seconds)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-xsd-datetime.microseconds">microseconds</structfield>;</para></entry>
+<entry role="struct_member_description"><para>microseconds</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>signed&#160;<link linkend="short"><type>short</type></link>&#160;<structfield id="rasqal-xsd-datetime.timezone-minutes">timezone_minutes</structfield>;</para></entry>
+<entry role="struct_member_description"><para>minutes +/- against UTC or RASQAL_XSD_DATETIME_NO_TZ if there is no timezone in the dateTime.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="time-t"><type>time_t</type></link>&#160;<structfield id="rasqal-xsd-datetime.time-on-timeline">time_on_timeline</structfield>;</para></entry>
+<entry role="struct_member_description"><para>time on timeline</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="char"><type>char</type></link>&#160;<structfield id="rasqal-xsd-datetime.have-tz">have_tz</structfield>;</para></entry>
+<entry role="struct_member_description"><para>timezone flag: 'Z' if Zulu, 'Y' if has other timezone offset in <parameter>timezone_minutes</parameter>
+, 'N' if there is no timezone</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="RASQAL-XSD-DATETIME-NO-TZ:CAPS" role="macro">
+<title>RASQAL_XSD_DATETIME_NO_TZ</title>
+<indexterm zone="RASQAL-XSD-DATETIME-NO-TZ:CAPS"><primary>RASQAL_XSD_DATETIME_NO_TZ</primary></indexterm>
+<programlisting language="C">#define RASQAL_XSD_DATETIME_NO_TZ (9999)
+</programlisting>
+<para>Sentinel XSD Decimal timezone value indicating no timezone is present.</para>
+</refsect2>
+<refsect2 id="rasqal-xsd-decimal" role="typedef">
+<title>rasqal_xsd_decimal</title>
+<indexterm zone="rasqal-xsd-decimal"><primary>rasqal_xsd_decimal</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_xsd_decimal_s rasqal_xsd_decimal;
+</programlisting>
+<para>Rasqal XSD Decimal class.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

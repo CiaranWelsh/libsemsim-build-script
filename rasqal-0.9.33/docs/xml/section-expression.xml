@@ -1,0 +1,1663 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-expression">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-expression.top_of_page">section-expression</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-expression</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-expression.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-0op-expression">rasqal_new_0op_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-1op-expression">rasqal_new_1op_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-2op-expression">rasqal_new_2op_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-3op-expression">rasqal_new_3op_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-4op-expression">rasqal_new_4op_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-aggregate-function-expression">rasqal_new_aggregate_function_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-cast-expression">rasqal_new_cast_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-function-expression">rasqal_new_function_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-group-concat-expression">rasqal_new_group_concat_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-literal-expression">rasqal_new_literal_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-set-expression">rasqal_new_set_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-string-op-expression">rasqal_new_string_op_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-expression-from-expression">rasqal_new_expression_from_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-expr-seq-expression">rasqal_new_expr_seq_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-expression">rasqal_free_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-expression-compare">rasqal_expression_compare</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-expression-evaluate">rasqal_expression_evaluate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-expression-evaluate2">rasqal_expression_evaluate2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-expression-op-label">rasqal_expression_op_label</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-expression-print">rasqal_expression_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-expression-print-op">rasqal_expression_print_op</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="rasqal-expression-visit-fn">*rasqal_expression_visit_fn</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-expression-visit">rasqal_expression_visit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-evaluation-context"><returnvalue>rasqal_evaluation_context</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-evaluation-context">rasqal_new_evaluation_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-evaluation-context">rasqal_free_evaluation_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-evaluation-context-set-base-uri">rasqal_evaluation_context_set_base_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-evaluation-context-set-rand-seed">rasqal_evaluation_context_set_rand_seed</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-expression.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-expression">rasqal_expression</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-expression-flags">rasqal_expression_flags</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-evaluation-context">rasqal_evaluation_context</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-op">rasqal_op</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-compare-flags">rasqal_compare_flags</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-pattern-flags">rasqal_pattern_flags</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-expression.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-expression.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-0op-expression" role="function">
+<title>rasqal_new_0op_expression&#160;()</title>
+<indexterm zone="rasqal-new-0op-expression"><primary>rasqal_new_0op_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_0op_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>);</programlisting>
+<para>Constructor - create a new 0-operand (constant) expression.</para>
+<para>The operators are:
+<parameter>RASQAL_EXPR_VARSTAR</parameter>
+</para>
+<para>The only operator here is the '*' in COUNT(*) as used by LAQRS.</para>
+<refsect3 id="rasqal-new-0op-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>Expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-0op-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-1op-expression" role="function">
+<title>rasqal_new_1op_expression&#160;()</title>
+<indexterm zone="rasqal-new-1op-expression"><primary>rasqal_new_1op_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_1op_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg</parameter>);</programlisting>
+<para>Constructor - create a new 1-operand expression.
+Takes ownership of the operand expression.</para>
+<para>The operators are:
+<parameter>RASQAL_EXPR_TILDE</parameter>
+ <parameter>RASQAL_EXPR_BANG</parameter>
+ <parameter>RASQAL_EXPR_UMINUS</parameter>
+
+<parameter>RASQAL_EXPR_BOUND</parameter>
+ <parameter>RASQAL_EXPR_STR</parameter>
+ <parameter>RASQAL_EXPR_LANG</parameter>
+
+<parameter>RASQAL_EXPR_LANGMATCHES</parameter>
+
+<parameter>RASQAL_EXPR_DATATYPE</parameter>
+ <parameter>RASQAL_EXPR_ISURI</parameter>
+ <parameter>RASQAL_EXPR_ISBLANK</parameter>
+
+<parameter>RASQAL_EXPR_ISLITERAL</parameter>
+ <parameter>RASQAL_EXPR_ORDER_COND_ASC</parameter>
+
+<parameter>RASQAL_EXPR_ORDER_COND_DESC</parameter>
+ <parameter>RASQAL_EXPR_COUNT</parameter>
+ <parameter>RASQAL_EXPR_SUM</parameter>
+
+<parameter>RASQAL_EXPR_AVG</parameter>
+ <parameter>RASQAL_EXPR_MIN</parameter>
+ <parameter>RASQAL_EXPR_MAX</parameter>
+</para>
+<para>The operator <parameter>RASQAL_EXPR_TILDE</parameter>
+ is not used by SPARQL (formerly RDQL).</para>
+<refsect3 id="rasqal-new-1op-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>Expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg</para></entry>
+<entry role="parameter_description"><para>Operand 1 </para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-1op-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-2op-expression" role="function">
+<title>rasqal_new_2op_expression&#160;()</title>
+<indexterm zone="rasqal-new-2op-expression"><primary>rasqal_new_2op_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_2op_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg1</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg2</parameter>);</programlisting>
+<para>Constructor - create a new 2-operand expression.
+Takes ownership of the operand expressions.</para>
+<para>The operators are:
+<parameter>RASQAL_EXPR_AND</parameter>
+ <parameter>RASQAL_EXPR_OR</parameter>
+ <parameter>RASQAL_EXPR_EQ</parameter>
+
+<parameter>RASQAL_EXPR_NEQ</parameter>
+ <parameter>RASQAL_EXPR_LT</parameter>
+ <parameter>RASQAL_EXPR_GT</parameter>
+ <parameter>RASQAL_EXPR_LE</parameter>
+
+<parameter>RASQAL_EXPR_GE</parameter>
+ <parameter>RASQAL_EXPR_PLUS</parameter>
+ <parameter>RASQAL_EXPR_MINUS</parameter>
+
+<parameter>RASQAL_EXPR_STAR</parameter>
+ <parameter>RASQAL_EXPR_SLASH</parameter>
+ <parameter>RASQAL_EXPR_REM</parameter>
+
+<parameter>RASQAL_EXPR_STR_EQ</parameter>
+ <parameter>RASQAL_EXPR_STR_NEQ</parameter>
+</para>
+<para><parameter>RASQAL_EXPR_REM</parameter>
+ <parameter>RASQAL_EXPR_STR_EQ</parameter>
+, <parameter>RASQAL_EXPR_STR_NEQ</parameter>
+ and
+<parameter>RASQAL_EXPR_REM</parameter>
+ are unused (formerly RDQL).</para>
+<refsect3 id="rasqal-new-2op-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>Expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg1</para></entry>
+<entry role="parameter_description"><para>Operand 1 </para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg2</para></entry>
+<entry role="parameter_description"><para>Operand 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-2op-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-3op-expression" role="function">
+<title>rasqal_new_3op_expression&#160;()</title>
+<indexterm zone="rasqal-new-3op-expression"><primary>rasqal_new_3op_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_3op_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg1</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg2</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg3</parameter>);</programlisting>
+<para>Constructor - create a new 3-operand expression.
+Takes ownership of the operands.</para>
+<para>The operators are:
+<link linkend="RASQAL-EXPR-REGEX:CAPS"><type>RASQAL_EXPR_REGEX</type></link> <link linkend="RASQAL-EXPR-IF:CAPS"><type>RASQAL_EXPR_IF</type></link> <link linkend="RASQAL-EXPR-SUBSTR:CAPS"><type>RASQAL_EXPR_SUBSTR</type></link></para>
+<refsect3 id="rasqal-new-3op-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>Expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg1</para></entry>
+<entry role="parameter_description"><para>Operand 1 </para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg2</para></entry>
+<entry role="parameter_description"><para>Operand 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg3</para></entry>
+<entry role="parameter_description"><para>Operand 3 (may be NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-3op-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-4op-expression" role="function">
+<title>rasqal_new_4op_expression&#160;()</title>
+<indexterm zone="rasqal-new-4op-expression"><primary>rasqal_new_4op_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_4op_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg1</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg2</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg3</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg4</parameter>);</programlisting>
+<para>Constructor - create a new 4-operand expression.
+Takes ownership of the operands.</para>
+<para>The operators are:
+<link linkend="RASQAL-EXPR-REPLACE:CAPS"><type>RASQAL_EXPR_REPLACE</type></link></para>
+<refsect3 id="rasqal-new-4op-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>Expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg1</para></entry>
+<entry role="parameter_description"><para>Operand 1 </para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg2</para></entry>
+<entry role="parameter_description"><para>Operand 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg3</para></entry>
+<entry role="parameter_description"><para>Operand 3</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg4</para></entry>
+<entry role="parameter_description"><para>Operand 4 (may be NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-4op-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-aggregate-function-expression" role="function">
+<title>rasqal_new_aggregate_function_expression&#160;()</title>
+<indexterm zone="rasqal-new-aggregate-function-expression"><primary>rasqal_new_aggregate_function_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_aggregate_function_expression
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                                <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg1</parameter>,
+                                <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *params</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> flags</parameter>);</programlisting>
+<para>Constructor - create a new 1-arg aggregate function expression for a builtin aggregate function</para>
+<para>Takes ownership of the <parameter>args</parameter>
+ and <parameter>params</parameter>
+</para>
+<refsect3 id="rasqal-new-aggregate-function-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>built-in aggregate function expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg1</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> argument to aggregate function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> function parameters (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>extension function bitflags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-aggregate-function-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-cast-expression" role="function">
+<title>rasqal_new_cast_expression&#160;()</title>
+<indexterm zone="rasqal-new-cast-expression"><primary>rasqal_new_cast_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_cast_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *name</parameter>,
+                            <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *value</parameter>);</programlisting>
+<para>Constructor - create a new expression for casting and expression to a datatype.
+Takes ownership of the datatype uri and expression value.</para>
+<refsect3 id="rasqal-new-cast-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>cast datatype URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>expression value to cast to <parameter>datatype</parameter>
+type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-cast-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-function-expression" role="function">
+<title>rasqal_new_function_expression&#160;()</title>
+<indexterm zone="rasqal-new-function-expression"><primary>rasqal_new_function_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_function_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *name</parameter>,
+                                <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *args</parameter>,
+                                <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *params</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> flags</parameter>);</programlisting>
+<para>Constructor - create a new expression for a URI-named function with arguments and optional parameters.</para>
+<para>Takes ownership of the <parameter>name</parameter>
+, <parameter>args</parameter>
+ and <parameter>params</parameter>
+ arguments.</para>
+<refsect3 id="rasqal-new-function-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>function name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>args</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> function arguments</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> function parameters (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>extension function bitflags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-function-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-group-concat-expression" role="function">
+<title>rasqal_new_group_concat_expression&#160;()</title>
+<indexterm zone="rasqal-new-group-concat-expression"><primary>rasqal_new_group_concat_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_group_concat_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                    <parameter>unsigned <link linkend="int"><type>int</type></link> flags</parameter>,
+                                    <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *args</parameter>,
+                                    <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *separator</parameter>);</programlisting>
+<para>Constructor - create a new SPARQL group concat expression</para>
+<para>Takes an optional distinct flag, a list of expressions and an optional separator string.</para>
+<para>Takes ownership of the <parameter>args</parameter>
+ and <parameter>separator</parameter>
+</para>
+<refsect3 id="rasqal-new-group-concat-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>bitset of flags.  Only <link linkend="RASQAL-EXPR-FLAG-DISTINCT:CAPS"><type>RASQAL_EXPR_FLAG_DISTINCT</type></link> is defined</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>args</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> list arguments</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>separator</para></entry>
+<entry role="parameter_description"><para>SEPARATOR string literal or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-group-concat-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-literal-expression" role="function">
+<title>rasqal_new_literal_expression&#160;()</title>
+<indexterm zone="rasqal-new-literal-expression"><primary>rasqal_new_literal_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_literal_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                               <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *literal</parameter>);</programlisting>
+<para>Constructor - create a new expression for a <link linkend="rasqal-literal"><type>rasqal_literal</type></link>
+Takes ownership of the operand literal.</para>
+<refsect3 id="rasqal-new-literal-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>literal</para></entry>
+<entry role="parameter_description"><para>Literal operand 1</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-literal-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-set-expression" role="function">
+<title>rasqal_new_set_expression&#160;()</title>
+<indexterm zone="rasqal-new-set-expression"><primary>rasqal_new_set_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_set_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg1</parameter>,
+                           <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *args</parameter>);</programlisting>
+<para>Constructor - create a new set IN/NOT IN operation with expression arguments.</para>
+<para>Takes ownership of the <parameter>arg1</parameter>
+ and <parameter>args</parameter>
+</para>
+<refsect3 id="rasqal-new-set-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>list operation</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg1</para></entry>
+<entry role="parameter_description"><para>expression to look for in list</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>args</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> list arguments</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-set-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-string-op-expression" role="function">
+<title>rasqal_new_string_op_expression&#160;()</title>
+<indexterm zone="rasqal-new-string-op-expression"><primary>rasqal_new_string_op_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_string_op_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                 <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                                 <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *arg1</parameter>,
+                                 <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *literal</parameter>);</programlisting>
+<para>Constructor - create a new expression with one expression and one string operand.
+Takes ownership of the operands.</para>
+<para>The operators are:
+<parameter>RASQAL_EXPR_STR_MATCH</parameter>
+ and
+<parameter>RASQAL_EXPR_STR_NMATCH</parameter>
+ (unused: formerly for RDQL)</para>
+<refsect3 id="rasqal-new-string-op-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>Expression operator</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>arg1</para></entry>
+<entry role="parameter_description"><para>Operand 1 </para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>literal</para></entry>
+<entry role="parameter_description"><para>Literal operand 2</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-string-op-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-expression-from-expression" role="function">
+<title>rasqal_new_expression_from_expression&#160;()</title>
+<indexterm zone="rasqal-new-expression-from-expression"><primary>rasqal_new_expression_from_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_expression_from_expression (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>);</programlisting>
+<para>Copy Constructor - create a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object from an existing rasqal_expression object.</para>
+<refsect3 id="rasqal-new-expression-from-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> object to copy or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-expression-from-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL if <parameter>e</parameter>
+is NULL</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-expr-seq-expression" role="function">
+<title>rasqal_new_expr_seq_expression&#160;()</title>
+<indexterm zone="rasqal-new-expr-seq-expression"><primary>rasqal_new_expr_seq_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_new_expr_seq_expression (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>,
+                                <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *args</parameter>);</programlisting>
+<para>Constructor - create a new expression with a sequence of expression arguments.</para>
+<para>Takes ownership of the <parameter>args</parameter>
+</para>
+<refsect3 id="rasqal-new-expr-seq-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>expression operation</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>args</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> arguments</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-expr-seq-expression.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-expression" role="function">
+<title>rasqal_free_expression&#160;()</title>
+<indexterm zone="rasqal-free-expression"><primary>rasqal_free_expression</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_expression (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>);</programlisting>
+<para>Destructor - destroy a <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object.</para>
+<refsect3 id="rasqal-free-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-compare" role="function">
+<title>rasqal_expression_compare&#160;()</title>
+<indexterm zone="rasqal-expression-compare"><primary>rasqal_expression_compare</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_expression_compare (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e1</parameter>,
+                           <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e2</parameter>,
+                           <parameter><link linkend="int"><type>int</type></link> flags</parameter>,
+                           <parameter><link linkend="int"><type>int</type></link> *error_p</parameter>);</programlisting>
+<para>Compare two expressions</para>
+<para>The two literals are compared.  The comparison returned is as for
+strcmp, first before second returns &lt;0.  equal returns 0, and
+first after second returns &gt;0.  For URIs, the string value is used
+for the comparsion.</para>
+<para>See <link linkend="rasqal-literal-compare"><function>rasqal_literal_compare()</function></link> for comparison flags.</para>
+<para>If <parameter>error</parameter>
+ is not NULL, *error is set to non-0 on error</para>
+<refsect3 id="rasqal-expression-compare.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e1</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> first expression</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>e2</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> second expression</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>comparison flags: see <link linkend="rasqal-literal-compare"><function>rasqal_literal_compare()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error_p</para></entry>
+<entry role="parameter_description"><para>pointer to error</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-compare.returns" role="returns">
+<title>Returns</title>
+<para> &lt;0, 0, or &gt;0 as described above.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-evaluate" role="function" condition="deprecated:">
+<title>rasqal_expression_evaluate&#160;()</title>
+<indexterm zone="rasqal-expression-evaluate" role="deprecated"><primary>rasqal_expression_evaluate</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_expression_evaluate (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter><link linkend="raptor-locator"><type>raptor_locator</type></link> *locator</parameter>,
+                            <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>,
+                            <parameter><link linkend="int"><type>int</type></link> flags</parameter>);</programlisting>
+<warning><para><literal>rasqal_expression_evaluate</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Evaluate a <link linkend="rasqal-expression"><type>rasqal_expression</type></link> tree to give a <link linkend="rasqal-literal"><type>rasqal_literal</type></link> result
+or error.</para>
+<para><parameter>Deprecated</parameter>
+: use <link linkend="rasqal-expression-evaluate2"><function>rasqal_expression_evaluate2()</function></link> using a <link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link></para>
+<refsect3 id="rasqal-expression-evaluate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-world"><type>rasqal_world</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>locator</para></entry>
+<entry role="parameter_description"><para>error locator (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para>The expression to evaluate.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>Flags for <link linkend="rasqal-literal-compare"><function>rasqal_literal_compare()</function></link> and RASQAL_COMPARE_NOCASE for string matches.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-evaluate.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-literal"><type>rasqal_literal</type></link> value or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-evaluate2" role="function">
+<title>rasqal_expression_evaluate2&#160;()</title>
+<indexterm zone="rasqal-expression-evaluate2"><primary>rasqal_expression_evaluate2</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_expression_evaluate2 (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>,
+                             <parameter><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> *eval_context</parameter>,
+                             <parameter><link linkend="int"><type>int</type></link> *error_p</parameter>);</programlisting>
+<para>Evaluate a <link linkend="rasqal-expression"><type>rasqal_expression</type></link> tree in the context of a
+<link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> to give a <link linkend="rasqal-literal"><type>rasqal_literal</type></link> result or error.</para>
+<refsect3 id="rasqal-expression-evaluate2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para>The expression to evaluate.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>eval_context</para></entry>
+<entry role="parameter_description"><para>expression context</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error_p</para></entry>
+<entry role="parameter_description"><para>pointer to error return flag</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-evaluate2.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-literal"><type>rasqal_literal</type></link> value or NULL (a valid value).  <parameter>error_p</parameter>
+is set to non-0 on failure.  </para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-op-label" role="function">
+<title>rasqal_expression_op_label&#160;()</title>
+<indexterm zone="rasqal-expression-op-label"><primary>rasqal_expression_op_label</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_expression_op_label (<parameter><link linkend="rasqal-op"><type>rasqal_op</type></link> op</parameter>);</programlisting>
+<para>Get a label for the rasqal expression operator</para>
+<refsect3 id="rasqal-expression-op-label.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-expression-op"><type>rasqal_expression_op</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-op-label.returns" role="returns">
+<title>Returns</title>
+<para> the label (shared string) or NULL if op is out of range or unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-print" role="function">
+<title>rasqal_expression_print&#160;()</title>
+<indexterm zone="rasqal-expression-print"><primary>rasqal_expression_print</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_expression_print (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>,
+                         <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a Rasqal expression in a debug format.</para>
+<para>The print debug format may change in any release.</para>
+<refsect3 id="rasqal-expression-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> object.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>The FILE* handle to print to.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-print.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-print-op" role="function">
+<title>rasqal_expression_print_op&#160;()</title>
+<indexterm zone="rasqal-expression-print-op"><primary>rasqal_expression_print_op</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_expression_print_op (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>,
+                            <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a rasqal expression operator in a debug format.</para>
+<para>The print debug format may change in any release.</para>
+<refsect3 id="rasqal-expression-print-op.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-expression"><type>rasqal_expression</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>the FILE* handle to print to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-visit-fn" role="function">
+<title>rasqal_expression_visit_fn&#160;()</title>
+<indexterm zone="rasqal-expression-visit-fn"><primary>rasqal_expression_visit_fn</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*rasqal_expression_visit_fn<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="void"><type>void</type></link> *user_data</parameter>,
+                               <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>);</programlisting>
+<para>User function to visit an expression and operate on it with
+<link linkend="rasqal-expression-visit"><function>rasqal_expression_visit()</function></link></para>
+<refsect3 id="rasqal-expression-visit-fn.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data passed in with <link linkend="rasqal-expression-visit"><function>rasqal_expression_visit()</function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para>current expression</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-visit-fn.returns" role="returns">
+<title>Returns</title>
+<para> non-0 to truncate the visit</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-expression-visit" role="function">
+<title>rasqal_expression_visit&#160;()</title>
+<indexterm zone="rasqal-expression-visit"><primary>rasqal_expression_visit</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_expression_visit (<parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *e</parameter>,
+                         <parameter><link linkend="rasqal-expression-visit-fn"><type>rasqal_expression_visit_fn</type></link> fn</parameter>,
+                         <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>);</programlisting>
+<para>Visit a user function over a <link linkend="rasqal-expression"><type>rasqal_expression</type></link></para>
+<para>If the user function <parameter>fn</parameter>
+ returns non-0, the visit is truncated
+and the value is returned.</para>
+<refsect3 id="rasqal-expression-visit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>e</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> to visit</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fn</para></entry>
+<entry role="parameter_description"><para>visit function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data to pass to visit function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-expression-visit.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the visit was truncated.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-evaluation-context" role="function">
+<title>rasqal_new_evaluation_context&#160;()</title>
+<indexterm zone="rasqal-new-evaluation-context"><primary>rasqal_new_evaluation_context</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-evaluation-context"><returnvalue>rasqal_evaluation_context</returnvalue></link>&#160;*
+rasqal_new_evaluation_context (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                               <parameter><link linkend="raptor-locator"><type>raptor_locator</type></link> *locator</parameter>,
+                               <parameter><link linkend="int"><type>int</type></link> flags</parameter>);</programlisting>
+<para>Constructor - create a <link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> for use with
+<link linkend="rasqal-expression-evaluate2"><function>rasqal_expression_evaluate2()</function></link></para>
+<refsect3 id="rasqal-new-evaluation-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>locator</para></entry>
+<entry role="parameter_description"><para>locator or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>expression comparison flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-evaluation-context.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-evaluation-context" role="function">
+<title>rasqal_free_evaluation_context&#160;()</title>
+<indexterm zone="rasqal-free-evaluation-context"><primary>rasqal_free_evaluation_context</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_evaluation_context (<parameter><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> *eval_context</parameter>);</programlisting>
+<para>Destructor - destroy a <link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> object.</para>
+<refsect3 id="rasqal-free-evaluation-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>eval_context</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-evaluation-context-set-base-uri" role="function">
+<title>rasqal_evaluation_context_set_base_uri&#160;()</title>
+<indexterm zone="rasqal-evaluation-context-set-base-uri"><primary>rasqal_evaluation_context_set_base_uri</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_evaluation_context_set_base_uri
+                               (<parameter><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> *eval_context</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *base_uri</parameter>);</programlisting>
+<para>Set the URI for a <link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link></para>
+<refsect3 id="rasqal-evaluation-context-set-base-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>eval_context</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base_uri</para></entry>
+<entry role="parameter_description"><para>base URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-evaluation-context-set-base-uri.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-evaluation-context-set-rand-seed" role="function">
+<title>rasqal_evaluation_context_set_rand_seed&#160;()</title>
+<indexterm zone="rasqal-evaluation-context-set-rand-seed"><primary>rasqal_evaluation_context_set_rand_seed</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_evaluation_context_set_rand_seed
+                               (<parameter><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> *eval_context</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> seed</parameter>);</programlisting>
+<para>Set the random seed for a <link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link></para>
+<refsect3 id="rasqal-evaluation-context-set-rand-seed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>eval_context</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-evaluation-context"><type>rasqal_evaluation_context</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>seed</para></entry>
+<entry role="parameter_description"><para>random seed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-evaluation-context-set-rand-seed.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-expression.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-expression" role="typedef">
+<title>rasqal_expression</title>
+<indexterm zone="rasqal-expression"><primary>rasqal_expression</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_expression_s rasqal_expression;
+</programlisting>
+<para>Expression with arguments</para>
+</refsect2>
+<refsect2 id="rasqal-expression-flags" role="enum">
+<title>enum rasqal_expression_flags</title>
+<indexterm zone="rasqal-expression-flags"><primary>rasqal_expression_flags</primary></indexterm>
+<para>Flags for expressions.</para>
+<refsect3 id="rasqal-expression-flags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-FLAG-DISTINCT:CAPS">RASQAL_EXPR_FLAG_DISTINCT</para></entry>
+<entry role="enum_member_description"><para>Distinct</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-FLAG-AGGREGATE:CAPS">RASQAL_EXPR_FLAG_AGGREGATE</para></entry>
+<entry role="enum_member_description"><para>Aggregate function expression</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-evaluation-context" role="struct">
+<title>rasqal_evaluation_context</title>
+<indexterm zone="rasqal-evaluation-context"><primary>rasqal_evaluation_context</primary></indexterm>
+<programlisting language="C">typedef struct {
+  rasqal_world *world;
+  raptor_uri* base_uri;
+  raptor_locator *locator;
+  int flags;
+  unsigned int seed;
+  rasqal_random* random;
+} rasqal_evaluation_context;
+</programlisting>
+<para>A context for evaluating an expression such as with
+<link linkend="rasqal-expression-evaluate2"><function>rasqal_expression_evaluate2()</function></link></para>
+<refsect3 id="rasqal-evaluation-context.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-world"><type>rasqal_world</type></link>&#160;*<structfield id="rasqal-evaluation-context.world">world</structfield>;</para></entry>
+<entry role="struct_member_description"><para>rasqal world</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-uri"><type>raptor_uri</type></link>&#160;*<structfield id="rasqal-evaluation-context.base-uri">base_uri</structfield>;</para></entry>
+<entry role="struct_member_description"><para>base URI of expression context (or NULL)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-locator"><type>raptor_locator</type></link>&#160;*<structfield id="rasqal-evaluation-context.locator">locator</structfield>;</para></entry>
+<entry role="struct_member_description"><para>locator or NULL</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-evaluation-context.flags">flags</structfield>;</para></entry>
+<entry role="struct_member_description"><para>expression comparison flags</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-evaluation-context.seed">seed</structfield>;</para></entry>
+<entry role="struct_member_description"><para>random seeed</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-random"><type>rasqal_random</type></link>&#160;*<structfield id="rasqal-evaluation-context.random">random</structfield>;</para></entry>
+<entry role="struct_member_description"><para>random number generator object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-op" role="enum">
+<title>enum rasqal_op</title>
+<indexterm zone="rasqal-op"><primary>rasqal_op</primary></indexterm>
+<para>Rasqal expression operators.  A mixture of unary, binary and
+tertiary operators (string matches).  Also includes casting and
+two ordering operators from ORDER BY in SPARQL.</para>
+<refsect3 id="rasqal-op.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-UNKNOWN:CAPS">RASQAL_EXPR_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>Internal</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-AND:CAPS">RASQAL_EXPR_AND</para></entry>
+<entry role="enum_member_description"><para>Expression for AND(A, B)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-OR:CAPS">RASQAL_EXPR_OR</para></entry>
+<entry role="enum_member_description"><para>Expression for OR(A, B)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-EQ:CAPS">RASQAL_EXPR_EQ</para></entry>
+<entry role="enum_member_description"><para>Expression for A equals B</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-NEQ:CAPS">RASQAL_EXPR_NEQ</para></entry>
+<entry role="enum_member_description"><para>Expression for A not equals B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LT:CAPS">RASQAL_EXPR_LT</para></entry>
+<entry role="enum_member_description"><para>Expression for A less than B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-GT:CAPS">RASQAL_EXPR_GT</para></entry>
+<entry role="enum_member_description"><para>Expression for A greather than B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LE:CAPS">RASQAL_EXPR_LE</para></entry>
+<entry role="enum_member_description"><para>Expression for A less than or equal to B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-GE:CAPS">RASQAL_EXPR_GE</para></entry>
+<entry role="enum_member_description"><para>Expression for A greater than or equal to B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-UMINUS:CAPS">RASQAL_EXPR_UMINUS</para></entry>
+<entry role="enum_member_description"><para>Expression for -A.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-PLUS:CAPS">RASQAL_EXPR_PLUS</para></entry>
+<entry role="enum_member_description"><para>Expression for +A.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-MINUS:CAPS">RASQAL_EXPR_MINUS</para></entry>
+<entry role="enum_member_description"><para>Expression for A-B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STAR:CAPS">RASQAL_EXPR_STAR</para></entry>
+<entry role="enum_member_description"><para>Expression for A*B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SLASH:CAPS">RASQAL_EXPR_SLASH</para></entry>
+<entry role="enum_member_description"><para>Expression for A/B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-REM:CAPS">RASQAL_EXPR_REM</para></entry>
+<entry role="enum_member_description"><para>Expression for A/B remainder.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STR-EQ:CAPS">RASQAL_EXPR_STR_EQ</para></entry>
+<entry role="enum_member_description"><para>Expression for A string equals B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STR-NEQ:CAPS">RASQAL_EXPR_STR_NEQ</para></entry>
+<entry role="enum_member_description"><para>Expression for A string not-equals B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STR-MATCH:CAPS">RASQAL_EXPR_STR_MATCH</para></entry>
+<entry role="enum_member_description"><para>Expression for string A matches literal regex B with flags.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STR-NMATCH:CAPS">RASQAL_EXPR_STR_NMATCH</para></entry>
+<entry role="enum_member_description"><para>Expression for string A not-matches literal regex B with flags.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-TILDE:CAPS">RASQAL_EXPR_TILDE</para></entry>
+<entry role="enum_member_description"><para>Expression for binary not A.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-BANG:CAPS">RASQAL_EXPR_BANG</para></entry>
+<entry role="enum_member_description"><para>Expression for logical not A.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LITERAL:CAPS">RASQAL_EXPR_LITERAL</para></entry>
+<entry role="enum_member_description"><para>Expression for a <link linkend="rasqal-literal"><type>rasqal_literal</type></link>.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-FUNCTION:CAPS">RASQAL_EXPR_FUNCTION</para></entry>
+<entry role="enum_member_description"><para>Expression for a function A with arguments (B...).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-BOUND:CAPS">RASQAL_EXPR_BOUND</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL ISBOUND(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STR:CAPS">RASQAL_EXPR_STR</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL STR(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LANG:CAPS">RASQAL_EXPR_LANG</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL LANG(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-DATATYPE:CAPS">RASQAL_EXPR_DATATYPE</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL DATATYPE(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ISURI:CAPS">RASQAL_EXPR_ISURI</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL ISURI(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ISBLANK:CAPS">RASQAL_EXPR_ISBLANK</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL ISBLANK(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ISLITERAL:CAPS">RASQAL_EXPR_ISLITERAL</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL ISLITERAL(A).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-CAST:CAPS">RASQAL_EXPR_CAST</para></entry>
+<entry role="enum_member_description"><para>Expression for cast literal A to type B.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ORDER-COND-ASC:CAPS">RASQAL_EXPR_ORDER_COND_ASC</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL order condition ascending.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ORDER-COND-DESC:CAPS">RASQAL_EXPR_ORDER_COND_DESC</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL order condition descending.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LANGMATCHES:CAPS">RASQAL_EXPR_LANGMATCHES</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL LANGMATCHES(A, B).</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-REGEX:CAPS">RASQAL_EXPR_REGEX</para></entry>
+<entry role="enum_member_description"><para>Expression for string A matches expression regex B with flags.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-GROUP-COND-ASC:CAPS">RASQAL_EXPR_GROUP_COND_ASC</para></entry>
+<entry role="enum_member_description"><para>Obsolete - not used</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-GROUP-COND-DESC:CAPS">RASQAL_EXPR_GROUP_COND_DESC</para></entry>
+<entry role="enum_member_description"><para>Obsolete - not used</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-COUNT:CAPS">RASQAL_EXPR_COUNT</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS select <link linkend="COUNT:CAPS"><function>COUNT()</function></link> aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-VARSTAR:CAPS">RASQAL_EXPR_VARSTAR</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS select Variable *</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SAMETERM:CAPS">RASQAL_EXPR_SAMETERM</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL sameTerm</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SUM:CAPS">RASQAL_EXPR_SUM</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS select <link linkend="SUM:CAPS"><function>SUM()</function></link> aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-AVG:CAPS">RASQAL_EXPR_AVG</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS select <link linkend="AVG:CAPS"><function>AVG()</function></link> aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-MIN:CAPS">RASQAL_EXPR_MIN</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS select <link linkend="MIN:CAPS"><function>MIN()</function></link> aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-MAX:CAPS">RASQAL_EXPR_MAX</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS select <link linkend="MAX:CAPS"><function>MAX()</function></link> aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-COALESCE:CAPS">RASQAL_EXPR_COALESCE</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS COALESCE(Expr+)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-IF:CAPS">RASQAL_EXPR_IF</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS IF(expr, expr, expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-URI:CAPS">RASQAL_EXPR_URI</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS URI(expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-IRI:CAPS">RASQAL_EXPR_IRI</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS IRI(expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRLANG:CAPS">RASQAL_EXPR_STRLANG</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS STRLANG(expr, expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRDT:CAPS">RASQAL_EXPR_STRDT</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS STRDT(expr, expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-BNODE:CAPS">RASQAL_EXPR_BNODE</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS <link linkend="BNODE:CAPS"><function>BNODE()</function></link> and BNODE(expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-GROUP-CONCAT:CAPS">RASQAL_EXPR_GROUP_CONCAT</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS GROUP_CONCAT(arglist) aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SAMPLE:CAPS">RASQAL_EXPR_SAMPLE</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS SAMPLE(expr) aggregate function</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-IN:CAPS">RASQAL_EXPR_IN</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS expr IN ( list of expr )</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-NOT-IN:CAPS">RASQAL_EXPR_NOT_IN</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS expr NOT IN ( list of expr ) </para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ISNUMERIC:CAPS">RASQAL_EXPR_ISNUMERIC</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 isNUMERIC(expr)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-YEAR:CAPS">RASQAL_EXPR_YEAR</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 YEAR(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-MONTH:CAPS">RASQAL_EXPR_MONTH</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 MONTH(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-DAY:CAPS">RASQAL_EXPR_DAY</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 DAY(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-HOURS:CAPS">RASQAL_EXPR_HOURS</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 HOURS(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-MINUTES:CAPS">RASQAL_EXPR_MINUTES</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 MINUTES(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SECONDS:CAPS">RASQAL_EXPR_SECONDS</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 SECONDS(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-TIMEZONE:CAPS">RASQAL_EXPR_TIMEZONE</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 TIMEZONE(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-CURRENT-DATETIME:CAPS">RASQAL_EXPR_CURRENT_DATETIME</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS CURRENT_DATETIME( void )</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-NOW:CAPS">RASQAL_EXPR_NOW</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS NOW( void )</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-FROM-UNIXTIME:CAPS">RASQAL_EXPR_FROM_UNIXTIME</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS FROM_UNIXTIME(int)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-TO-UNIXTIME:CAPS">RASQAL_EXPR_TO_UNIXTIME</para></entry>
+<entry role="enum_member_description"><para>Expression for LAQRS TO_UNIXTIME(datetime)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-CONCAT:CAPS">RASQAL_EXPR_CONCAT</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 CONCAT(strings)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRLEN:CAPS">RASQAL_EXPR_STRLEN</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 STRLEN(str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SUBSTR:CAPS">RASQAL_EXPR_SUBSTR</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 SUBSTR(str, start[,offset])</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-UCASE:CAPS">RASQAL_EXPR_UCASE</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 UCASE(str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LCASE:CAPS">RASQAL_EXPR_LCASE</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 LCASE(str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRSTARTS:CAPS">RASQAL_EXPR_STRSTARTS</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 STRSTARTS(str, str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRENDS:CAPS">RASQAL_EXPR_STRENDS</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 STRENDS(str, str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-CONTAINS:CAPS">RASQAL_EXPR_CONTAINS</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 CONTAINS(str, str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ENCODE-FOR-URI:CAPS">RASQAL_EXPR_ENCODE_FOR_URI</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 ENCODE_FOR_URI(str)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-TZ:CAPS">RASQAL_EXPR_TZ</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="TZ:CAPS"><function>TZ()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-RAND:CAPS">RASQAL_EXPR_RAND</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="RAND:CAPS"><function>RAND()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ABS:CAPS">RASQAL_EXPR_ABS</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="ABS:CAPS"><function>ABS()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-ROUND:CAPS">RASQAL_EXPR_ROUND</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="ROUND:CAPS"><function>ROUND()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-CEIL:CAPS">RASQAL_EXPR_CEIL</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="CEIL:CAPS"><function>CEIL()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-FLOOR:CAPS">RASQAL_EXPR_FLOOR</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="FLOOR:CAPS"><function>FLOOR()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-MD5:CAPS">RASQAL_EXPR_MD5</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="MD5:CAPS"><function>MD5()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SHA1:CAPS">RASQAL_EXPR_SHA1</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="SHA1:CAPS"><function>SHA1()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SHA224:CAPS">RASQAL_EXPR_SHA224</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="SHA224:CAPS"><function>SHA224()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SHA256:CAPS">RASQAL_EXPR_SHA256</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="SHA256:CAPS"><function>SHA256()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SHA384:CAPS">RASQAL_EXPR_SHA384</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="SHA384:CAPS"><function>SHA384()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-SHA512:CAPS">RASQAL_EXPR_SHA512</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="SHA512:CAPS"><function>SHA512()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRBEFORE:CAPS">RASQAL_EXPR_STRBEFORE</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="STRBEFORE:CAPS"><function>STRBEFORE()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRAFTER:CAPS">RASQAL_EXPR_STRAFTER</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="STRAFTER:CAPS"><function>STRAFTER()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-REPLACE:CAPS">RASQAL_EXPR_REPLACE</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="REPLACE:CAPS"><function>REPLACE()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-UUID:CAPS">RASQAL_EXPR_UUID</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="UUID:CAPS"><function>UUID()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-STRUUID:CAPS">RASQAL_EXPR_STRUUID</para></entry>
+<entry role="enum_member_description"><para>Expression for SPARQL 1.1 <link linkend="STRUUID:CAPS"><function>STRUUID()</function></link></para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-EXPR-LAST:CAPS">RASQAL_EXPR_LAST</para></entry>
+<entry role="enum_member_description"><para>Internal</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-compare-flags" role="enum">
+<title>enum rasqal_compare_flags</title>
+<indexterm zone="rasqal-compare-flags"><primary>rasqal_compare_flags</primary></indexterm>
+<para>Flags for <link linkend="rasqal-expression-evaluate"><function>rasqal_expression_evaluate()</function></link>, <link linkend="rasqal-literal-compare"><function>rasqal_literal_compare()</function></link> or
+<link linkend="rasqal-literal-as-string-flags"><function>rasqal_literal_as_string_flags()</function></link></para>
+<refsect3 id="rasqal-compare-flags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-COMPARE-NOCASE:CAPS">RASQAL_COMPARE_NOCASE</para></entry>
+<entry role="enum_member_description"><para>String comparisons are case independent.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-COMPARE-XQUERY:CAPS">RASQAL_COMPARE_XQUERY</para></entry>
+<entry role="enum_member_description"><para>XQuery comparsion rules apply.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-COMPARE-RDF:CAPS">RASQAL_COMPARE_RDF</para></entry>
+<entry role="enum_member_description"><para>RDF Term comparsion rules apply.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-COMPARE-URI:CAPS">RASQAL_COMPARE_URI</para></entry>
+<entry role="enum_member_description"><para>Allow comparison of URIs and allow strings to have a boolean value (unused; was for RDQL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-COMPARE-SAMETERM:CAPS">RASQAL_COMPARE_SAMETERM</para></entry>
+<entry role="enum_member_description"><para>SPARQL <link linkend="sameTerm"><function>sameTerm()</function></link> builtin rules apply.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-pattern-flags" role="enum">
+<title>enum rasqal_pattern_flags</title>
+<indexterm zone="rasqal-pattern-flags"><primary>rasqal_pattern_flags</primary></indexterm>
+<para>Flags for <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link>.</para>
+<refsect3 id="rasqal-pattern-flags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-PATTERN-FLAGS-OPTIONAL:CAPS">RASQAL_PATTERN_FLAGS_OPTIONAL</para></entry>
+<entry role="enum_member_description"><para>True when the graph pattern is an optional match.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-PATTERN-FLAGS-LAST:CAPS">RASQAL_PATTERN_FLAGS_LAST</para></entry>
+<entry role="enum_member_description"><para>Internal</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

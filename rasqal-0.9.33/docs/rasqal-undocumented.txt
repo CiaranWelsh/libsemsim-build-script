@@ -1,0 +1,48 @@
+0% symbol docs coverage.
+525 symbols documented.
+2 symbols incomplete.
+39 not documented.
+
+
+RASQAL_DEPRECATED
+rasqal_new_numeric_literal_from_long (Param3)
+rasqal_xsd_decimal_set_long (Param2)
+
+section-data:Long_Description
+section-data:Short_Description
+section-expression:Long_Description
+section-expression:Short_Description
+section-general:Long_Description
+section-general:Short_Description
+section-graph_pattern:Long_Description
+section-graph_pattern:Short_Description
+section-literal:Long_Description
+section-literal:Short_Description
+section-prefix:Long_Description
+section-prefix:Short_Description
+section-query:Long_Description
+section-query:Short_Description
+section-query_results:Long_Description
+section-query_results:Short_Description
+section-query_results_formatter:Long_Description
+section-query_results_formatter:Short_Description
+section-row:Long_Description
+section-row:Short_Description
+section-service:Long_Description
+section-service:Short_Description
+section-triple:Long_Description
+section-triple:Short_Description
+section-triples_source:Long_Description
+section-triples_source:Short_Description
+section-unused:Long_Description
+section-unused:Short_Description
+section-updates:Long_Description
+section-updates:Short_Description
+section-utilities:Long_Description
+section-utilities:Short_Description
+section-variable:Long_Description
+section-variable:Short_Description
+section-variables-table:Long_Description
+section-variables-table:Short_Description
+section-xsd:Long_Description
+section-xsd:Short_Description

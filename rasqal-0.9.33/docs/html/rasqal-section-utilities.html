@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>section-utilities: Rasqal RDF Query Library Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Rasqal RDF Query Library Manual">
+<link rel="up" href="reference-manual.html" title="Part I. Reference Manual">
+<link rel="prev" href="rasqal-section-updates.html" title="section-updates">
+<link rel="next" href="rasqal-section-xsd.html" title="section-xsd">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#rasqal-section-utilities.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="reference-manual.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="rasqal-section-updates.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="rasqal-section-xsd.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="rasqal-section-utilities"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="rasqal-section-utilities.top_of_page"></a>section-utilities</span></h2>
+<p>section-utilities</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="rasqal-section-utilities.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody><tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="rasqal-section-utilities.html#rasqal-regex-replace" title="rasqal_regex_replace ()">rasqal_regex_replace</a> <span class="c_punctuation">()</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-utilities.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-utilities.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="rasqal-regex-replace"></a><h3>rasqal_regex_replace ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+rasqal_regex_replace (<em class="parameter"><code><a class="link" href="rasqal-section-general.html#rasqal-world" title="rasqal_world"><span class="type">rasqal_world</span></a> *world</code></em>,
+                      <em class="parameter"><code><a href="../raptor2/raptor2-section-locator.html#raptor-locator"><span class="type">raptor_locator</span></a> *locator</code></em>,
+                      <em class="parameter"><code>const <span class="type">char</span> *pattern</code></em>,
+                      <em class="parameter"><code>const <span class="type">char</span> *regex_flags</code></em>,
+                      <em class="parameter"><code>const <span class="type">char</span> *subject</code></em>,
+                      <em class="parameter"><code><span class="type">size_t</span> subject_len</code></em>,
+                      <em class="parameter"><code>const <span class="type">char</span> *replace</code></em>,
+                      <em class="parameter"><code><span class="type">size_t</span> replace_len</code></em>,
+                      <em class="parameter"><code><span class="type">size_t</span> *result_len_p</code></em>);</pre>
+<p>Replace all copies of matches to a pattern with a replacement with subsitution</p>
+<p>Intended to be used for SPARQL 1.1 <code class="function">REPLACE()</code> implementation.</p>
+<div class="refsect3">
+<a name="rasqal-regex-replace.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>world</p></td>
+<td class="parameter_description"><p>world</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>locator</p></td>
+<td class="parameter_description"><p>locator</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>pattern</p></td>
+<td class="parameter_description"><p>regex pattern</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>regex_flags</p></td>
+<td class="parameter_description"><p>regex flags string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>subject</p></td>
+<td class="parameter_description"><p>input string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>subject_len</p></td>
+<td class="parameter_description"><p>input string length</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace</p></td>
+<td class="parameter_description"><p>replacement string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>replace_len</p></td>
+<td class="parameter_description"><p>Length of replacement string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>result_len_p</p></td>
+<td class="parameter_description"><p>pointer to store result length (output)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rasqal-regex-replace.returns"></a><h4>Returns</h4>
+<p> result string or NULL on failure</p>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-utilities.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-service">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-service.top_of_page">section-service</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-service</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-service.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-service"><returnvalue>rasqal_service</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-service">rasqal_new_service</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-service">rasqal_free_service</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-query-results"><returnvalue>rasqal_query_results</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-service-execute">rasqal_service_execute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-service-set-format">rasqal_service_set_format</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-service-set-www">rasqal_service_set_www</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-service.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-service">rasqal_service</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-service.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-service.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-service" role="function">
+<title>rasqal_new_service&#160;()</title>
+<indexterm zone="rasqal-new-service"><primary>rasqal_new_service</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-service"><returnvalue>rasqal_service</returnvalue></link>&#160;*
+rasqal_new_service (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                    <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *service_uri</parameter>,
+                    <parameter>const unsigned <link linkend="char"><type>char</type></link> *query_string</parameter>,
+                    <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *data_graphs</parameter>);</programlisting>
+<para>Constructor - create a new rasqal protocol service object.</para>
+<para>Create a structure to execute a sparql protocol service at
+<parameter>service_uri</parameter>
+ running the query <parameter>query_string</parameter>
+ and returning
+a sparql result set.</para>
+<para>All arguments are copied by the service object</para>
+<refsect3 id="rasqal-new-service.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>service_uri</para></entry>
+<entry role="parameter_description"><para>sparql protocol service URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query_string</para></entry>
+<entry role="parameter_description"><para>query string (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_graphs</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> graphs for service</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-service.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-query"><type>rasqal_query</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-service" role="function">
+<title>rasqal_free_service&#160;()</title>
+<indexterm zone="rasqal-free-service"><primary>rasqal_free_service</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_service (<parameter><link linkend="rasqal-service"><type>rasqal_service</type></link> *svc</parameter>);</programlisting>
+<para>Destructor - destroy a <link linkend="rasqal-service"><type>rasqal_service</type></link> object.</para>
+<refsect3 id="rasqal-free-service.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>svc</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-service"><type>rasqal_service</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-service-execute" role="function">
+<title>rasqal_service_execute&#160;()</title>
+<indexterm zone="rasqal-service-execute"><primary>rasqal_service_execute</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query-results"><returnvalue>rasqal_query_results</returnvalue></link>&#160;*
+rasqal_service_execute (<parameter><link linkend="rasqal-service"><type>rasqal_service</type></link> *svc</parameter>);</programlisting>
+<para>Execute a rasqal sparql protocol service</para>
+<refsect3 id="rasqal-service-execute.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>svc</para></entry>
+<entry role="parameter_description"><para>rasqal service</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-service-execute.returns" role="returns">
+<title>Returns</title>
+<para> query results or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-service-set-format" role="function">
+<title>rasqal_service_set_format&#160;()</title>
+<indexterm zone="rasqal-service-set-format"><primary>rasqal_service_set_format</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_service_set_format (<parameter><link linkend="rasqal-service"><type>rasqal_service</type></link> *svc</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *format</parameter>);</programlisting>
+<para>Set the MIME Type to use in HTTP Accept when executing the service</para>
+<refsect3 id="rasqal-service-set-format.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>svc</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-service"><type>rasqal_service</type></link> service object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>service mime type (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-service-set-format.returns" role="returns">
+<title>Returns</title>
+<para> non 0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-service-set-www" role="function">
+<title>rasqal_service_set_www&#160;()</title>
+<indexterm zone="rasqal-service-set-www"><primary>rasqal_service_set_www</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_service_set_www (<parameter><link linkend="rasqal-service"><type>rasqal_service</type></link> *svc</parameter>,
+                        <parameter><link linkend="raptor-www"><type>raptor_www</type></link> *www</parameter>);</programlisting>
+<para>Set the WWW object to use when executing the service</para>
+<refsect3 id="rasqal-service-set-www.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>svc</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-service"><type>rasqal_service</type></link> service object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>www</para></entry>
+<entry role="parameter_description"><para>WWW object (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-service-set-www.returns" role="returns">
+<title>Returns</title>
+<para> non 0 on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-service.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-service" role="typedef">
+<title>rasqal_service</title>
+<indexterm zone="rasqal-service"><primary>rasqal_service</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_service_s rasqal_service;
+</programlisting>
+<para>Rasqal SPARQL Protocol Service</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

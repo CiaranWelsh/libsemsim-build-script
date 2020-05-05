@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-unused">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-unused.top_of_page">section-unused</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-unused</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-unused.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-API:CAPS">RASQAL_API</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-LITERAL-UDT-DEFINED:CAPS">RASQAL_LITERAL_UDT_DEFINED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-QUERY-RESULTS-FORMATTER-DECLARED:CAPS">RASQAL_QUERY_RESULTS_FORMATTER_DECLARED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-WORLD-DECLARED:CAPS">RASQAL_WORLD_DECLARED</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="rasqal-expression-s">rasqal_expression_s</link></entry></row>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-random">rasqal_random</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-unused.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-unused.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="rasqal-section-unused.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="RASQAL-API:CAPS" role="macro">
+<title>RASQAL_API</title>
+<indexterm zone="RASQAL-API:CAPS"><primary>RASQAL_API</primary></indexterm>
+<programlisting language="C">#      define RASQAL_API
+</programlisting>
+<para>Macro for wrapping API function call declarations.</para>
+</refsect2>
+<refsect2 id="RASQAL-LITERAL-UDT-DEFINED:CAPS" role="macro">
+<title>RASQAL_LITERAL_UDT_DEFINED</title>
+<indexterm zone="RASQAL-LITERAL-UDT-DEFINED:CAPS"><primary>RASQAL_LITERAL_UDT_DEFINED</primary></indexterm>
+<programlisting language="C">#define RASQAL_LITERAL_UDT_DEFINED 1
+</programlisting>
+<para>Internal</para>
+</refsect2>
+<refsect2 id="RASQAL-QUERY-RESULTS-FORMATTER-DECLARED:CAPS" role="macro">
+<title>RASQAL_QUERY_RESULTS_FORMATTER_DECLARED</title>
+<indexterm zone="RASQAL-QUERY-RESULTS-FORMATTER-DECLARED:CAPS"><primary>RASQAL_QUERY_RESULTS_FORMATTER_DECLARED</primary></indexterm>
+<programlisting language="C">#define RASQAL_QUERY_RESULTS_FORMATTER_DECLARED 1
+</programlisting>
+<para>Internal</para>
+</refsect2>
+<refsect2 id="RASQAL-WORLD-DECLARED:CAPS" role="macro">
+<title>RASQAL_WORLD_DECLARED</title>
+<indexterm zone="RASQAL-WORLD-DECLARED:CAPS"><primary>RASQAL_WORLD_DECLARED</primary></indexterm>
+<programlisting language="C">#define RASQAL_WORLD_DECLARED 1
+</programlisting>
+<para>Internal</para>
+</refsect2>
+<refsect2 id="rasqal-expression-s" role="struct">
+<title>struct rasqal_expression_s</title>
+<indexterm zone="rasqal-expression-s"><primary>rasqal_expression_s</primary></indexterm>
+<programlisting language="C">struct rasqal_expression_s {
+  rasqal_world* world;
+
+  int usage;
+  
+  rasqal_op op;
+
+  struct rasqal_expression_s* arg1;
+  struct rasqal_expression_s* arg2;
+  struct rasqal_expression_s* arg3;
+  rasqal_literal* literal;
+  unsigned char *value;
+
+  raptor_uri* name;
+  raptor_sequence* args;
+
+  raptor_sequence* params;
+  unsigned int flags;
+  struct rasqal_expression_s* arg4;
+};
+</programlisting>
+<para>Internal - see <link linkend="rasqal-expression"><type>rasqal_expression</type></link>.</para>
+<refsect3 id="rasqal-expression-s.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-world"><type>rasqal_world</type></link>&#160;*<structfield id="rasqal-expression-s.world">world</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-expression-s.usage">usage</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-op"><type>rasqal_op</type></link>&#160;<structfield id="rasqal-expression-s.op">op</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>struct&#160;<link linkend="rasqal-expression-s"><type>rasqal_expression_s</type></link>&#160;*<structfield id="rasqal-expression-s.arg1">arg1</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>struct&#160;<link linkend="rasqal-expression-s"><type>rasqal_expression_s</type></link>&#160;*<structfield id="rasqal-expression-s.arg2">arg2</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>struct&#160;<link linkend="rasqal-expression-s"><type>rasqal_expression_s</type></link>&#160;*<structfield id="rasqal-expression-s.arg3">arg3</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link>&#160;*<structfield id="rasqal-expression-s.literal">literal</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="char"><type>char</type></link>&#160;*<structfield id="rasqal-expression-s.value">value</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-uri"><type>raptor_uri</type></link>&#160;*<structfield id="rasqal-expression-s.name">name</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-sequence"><type>raptor_sequence</type></link>&#160;*<structfield id="rasqal-expression-s.args">args</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-sequence"><type>raptor_sequence</type></link>&#160;*<structfield id="rasqal-expression-s.params">params</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-expression-s.flags">flags</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>struct&#160;<link linkend="rasqal-expression-s"><type>rasqal_expression_s</type></link>&#160;*<structfield id="rasqal-expression-s.arg4">arg4</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Internal</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-random" role="typedef">
+<title>rasqal_random</title>
+<indexterm zone="rasqal-random"><primary>rasqal_random</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_random_s rasqal_random;
+</programlisting>
+<para>Internal</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

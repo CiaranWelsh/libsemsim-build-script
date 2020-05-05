@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-literal">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-literal.top_of_page">section-literal</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-literal</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-literal.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-typed-literal">rasqal_new_typed_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-boolean-literal">rasqal_new_boolean_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-datetime-literal-from-datetime">rasqal_new_datetime_literal_from_datetime</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-decimal-literal">rasqal_new_decimal_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-decimal-literal-from-decimal">rasqal_new_decimal_literal_from_decimal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-double-literal">rasqal_new_double_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-float-literal">rasqal_new_float_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-floating-literal">rasqal_new_floating_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-integer-literal">rasqal_new_integer_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-numeric-literal-from-long">rasqal_new_numeric_literal_from_long</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-pattern-literal">rasqal_new_pattern_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-simple-literal">rasqal_new_simple_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-string-literal">rasqal_new_string_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-uri-literal">rasqal_new_uri_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-variable-literal">rasqal_new_variable_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-literal-from-literal">rasqal_new_literal_from_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-literal">rasqal_free_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-as-node">rasqal_literal_as_node</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-as-counted-string">rasqal_literal_as_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-as-string">rasqal_literal_as_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-as-string-flags">rasqal_literal_as_string_flags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-as-variable">rasqal_literal_as_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-compare">rasqal_literal_compare</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-uri"><returnvalue>raptor_uri</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-datatype">rasqal_literal_datatype</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-equals">rasqal_literal_equals</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-get-language">rasqal_literal_get_language</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal-type"><returnvalue>rasqal_literal_type</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-get-rdf-term-type">rasqal_literal_get_rdf_term_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal-type"><returnvalue>rasqal_literal_type</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-get-type">rasqal_literal_get_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-is-rdf-literal">rasqal_literal_is_rdf_literal</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-print">rasqal_literal_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-print-type">rasqal_literal_print_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-type-label">rasqal_literal_type_label</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-literal-same-term">rasqal_literal_same_term</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-literal-value">rasqal_literal_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-literal.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-literal">rasqal_literal</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-literal-type">rasqal_literal_type</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-literal.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-literal.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-typed-literal" role="function">
+<title>rasqal_new_typed_literal&#160;()</title>
+<indexterm zone="rasqal-new-typed-literal"><primary>rasqal_new_typed_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_typed_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                          <parameter><link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> type</parameter>,
+                          <parameter>const unsigned <link linkend="char"><type>char</type></link> *string</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal integer literal from a string</para>
+<para>The integer decimal number is turned into a rasqal integer literal
+and given a datatype of xsd:integer</para>
+<refsect3 id="rasqal-new-typed-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>Type of literal such as RASQAL_LITERAL_INTEGER or RASQAL_LITERAL_BOOLEAN</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>lexical form - ownership not taken</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-typed-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-boolean-literal" role="function">
+<title>rasqal_new_boolean_literal&#160;()</title>
+<indexterm zone="rasqal-new-boolean-literal"><primary>rasqal_new_boolean_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_boolean_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal boolean literal.</para>
+<refsect3 id="rasqal-new-boolean-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>non-0 for true, 0 for false</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-boolean-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-datetime-literal-from-datetime" role="function">
+<title>rasqal_new_datetime_literal_from_datetime&#160;()</title>
+<indexterm zone="rasqal-new-datetime-literal-from-datetime"><primary>rasqal_new_datetime_literal_from_datetime</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_datetime_literal_from_datetime
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="rasqal-xsd-datetime"><type>rasqal_xsd_datetime</type></link> *dt</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal datetime literal from an existing datetime.</para>
+<para>Takes ownership of <parameter>dt</parameter>
+</para>
+<refsect3 id="rasqal-new-datetime-literal-from-datetime.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dt</para></entry>
+<entry role="parameter_description"><para>rasqal XSD Datetime</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-datetime-literal-from-datetime.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-decimal-literal" role="function">
+<title>rasqal_new_decimal_literal&#160;()</title>
+<indexterm zone="rasqal-new-decimal-literal"><primary>rasqal_new_decimal_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_decimal_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal decimal literal.</para>
+<refsect3 id="rasqal-new-decimal-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>decimal literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-decimal-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-decimal-literal-from-decimal" role="function">
+<title>rasqal_new_decimal_literal_from_decimal&#160;()</title>
+<indexterm zone="rasqal-new-decimal-literal-from-decimal"><primary>rasqal_new_decimal_literal_from_decimal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_decimal_literal_from_decimal
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>,
+                                <parameter><link linkend="rasqal-xsd-decimal"><type>rasqal_xsd_decimal</type></link> *decimal</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal decimal literal.</para>
+<refsect3 id="rasqal-new-decimal-literal-from-decimal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>decimal literal string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>decimal</para></entry>
+<entry role="parameter_description"><para>rasqal XSD Decimal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-decimal-literal-from-decimal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-double-literal" role="function">
+<title>rasqal_new_double_literal&#160;()</title>
+<indexterm zone="rasqal-new-double-literal"><primary>rasqal_new_double_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_double_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="double"><type>double</type></link> d</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal double literal.</para>
+<refsect3 id="rasqal-new-double-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>d</para></entry>
+<entry role="parameter_description"><para>double literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-double-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-float-literal" role="function" condition="deprecated:">
+<title>rasqal_new_float_literal&#160;()</title>
+<indexterm zone="rasqal-new-float-literal" role="deprecated"><primary>rasqal_new_float_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_float_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                          <parameter><link linkend="float"><type>float</type></link> f</parameter>);</programlisting>
+<warning><para><literal>rasqal_new_float_literal</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Constructor - Create a new Rasqal float literal.</para>
+<para><parameter>Deprecated</parameter>
+: Use <link linkend="rasqal-new-floating-literal"><function>rasqal_new_floating_literal()</function></link> with type
+<link linkend="RASQAL-LITERAL-FLOAT:CAPS"><type>RASQAL_LITERAL_FLOAT</type></link> and double value.</para>
+<refsect3 id="rasqal-new-float-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>f</para></entry>
+<entry role="parameter_description"><para>float literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-float-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-floating-literal" role="function">
+<title>rasqal_new_floating_literal&#160;()</title>
+<indexterm zone="rasqal-new-floating-literal"><primary>rasqal_new_floating_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_floating_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                             <parameter><link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> type</parameter>,
+                             <parameter><link linkend="double"><type>double</type></link> d</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal float literal from a double.</para>
+<refsect3 id="rasqal-new-floating-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>type - <link linkend="RASQAL-LITERAL-FLOAT:CAPS"><type>RASQAL_LITERAL_FLOAT</type></link> or <link linkend="RASQAL-LITERAL-DOUBLE:CAPS"><type>RASQAL_LITERAL_DOUBLE</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>d</para></entry>
+<entry role="parameter_description"><para>floating literal (double)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-floating-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-integer-literal" role="function">
+<title>rasqal_new_integer_literal&#160;()</title>
+<indexterm zone="rasqal-new-integer-literal"><primary>rasqal_new_integer_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_integer_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter><link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> type</parameter>,
+                            <parameter><link linkend="int"><type>int</type></link> integer</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal integer literal.</para>
+<para>The integer decimal number is turned into a rasqal integer literal
+and given a datatype of xsd:integer</para>
+<refsect3 id="rasqal-new-integer-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>Type of literal such as RASQAL_LITERAL_INTEGER or RASQAL_LITERAL_BOOLEAN</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>integer</para></entry>
+<entry role="parameter_description"><para>int value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-integer-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-numeric-literal-from-long" role="function">
+<title>rasqal_new_numeric_literal_from_long&#160;()</title>
+<indexterm zone="rasqal-new-numeric-literal-from-long"><primary>rasqal_new_numeric_literal_from_long</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_numeric_literal_from_long (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                      <parameter><link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> type</parameter>,
+                                      <parameter>long <link linkend="value"><type>value</type></link> Param3</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal numeric literal from a long.</para>
+<para>The value is turned into a rasqal integer or decimal literal and
+given a datatype of xsd:integer</para>
+<refsect3 id="rasqal-new-numeric-literal-from-long.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>Type of literal such as RASQAL_LITERAL_INTEGER or RASQAL_LITERAL_BOOLEAN</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>long value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-numeric-literal-from-long.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-pattern-literal" role="function">
+<title>rasqal_new_pattern_literal&#160;()</title>
+<indexterm zone="rasqal-new-pattern-literal"><primary>rasqal_new_pattern_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_pattern_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *pattern</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *flags</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal pattern literal.</para>
+<para>The pattern and flags are input parameters and are stored in the
+literal, not copied. They are freed also on failure.
+The set of flags recognised depends on the regex library and the query
+language.</para>
+<refsect3 id="rasqal-new-pattern-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>pattern</para></entry>
+<entry role="parameter_description"><para>regex pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>regex flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-pattern-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-simple-literal" role="function">
+<title>rasqal_new_simple_literal&#160;()</title>
+<indexterm zone="rasqal-new-simple-literal"><primary>rasqal_new_simple_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_simple_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter><link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> type</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal simple literal.</para>
+<para>The string is an input parameter and is stored in the
+literal, not copied. It is freed also on failure.</para>
+<refsect3 id="rasqal-new-simple-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>RASQAL_LITERAL_BLANK or RASQAL_LITERAL_BLANK_QNAME</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>the UTF-8 string value to store</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-simple-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-string-literal" role="function">
+<title>rasqal_new_string_literal&#160;()</title>
+<indexterm zone="rasqal-new-string-literal"><primary>rasqal_new_string_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_string_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *language</parameter>,
+                           <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *datatype</parameter>,
+                           <parameter>const unsigned <link linkend="char"><type>char</type></link> *datatype_qname</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal string literal.</para>
+<para>All parameters are input parameters and if present are stored in
+the literal, not copied. They are freed also on failure.</para>
+<para>The datatype and datatype_qname parameters are alternatives; the
+qname is a datatype that cannot be resolved till later since the
+prefixes have not yet been declared or checked.</para>
+<para>If the string literal is datatyped and of certain types recognised
+it may be converted to a different literal type.</para>
+<refsect3 id="rasqal-new-string-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>UTF-8 string lexical form</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>language</para></entry>
+<entry role="parameter_description"><para>RDF language (xml:lang) (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>datatype</para></entry>
+<entry role="parameter_description"><para>datatype URI (or NULL for plain literal)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>datatype_qname</para></entry>
+<entry role="parameter_description"><para>datatype qname string (or NULL for plain literal)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-string-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-uri-literal" role="function">
+<title>rasqal_new_uri_literal&#160;()</title>
+<indexterm zone="rasqal-new-uri-literal"><primary>rasqal_new_uri_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_uri_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                        <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal URI literal from a raptor URI.</para>
+<para>The uri is an input parameter and is stored in the literal, not copied.
+The uri is freed also on failure.</para>
+<refsect3 id="rasqal-new-uri-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> uri</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-uri-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-variable-literal" role="function">
+<title>rasqal_new_variable_literal&#160;()</title>
+<indexterm zone="rasqal-new-variable-literal"><primary>rasqal_new_variable_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_variable_literal (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                             <parameter><link linkend="rasqal-variable"><type>rasqal_variable</type></link> *variable</parameter>);</programlisting>
+<para>Constructor - Create a new Rasqal variable literal.</para>
+<para>variable is an input parameter and stored in the literal, not copied.</para>
+<refsect3 id="rasqal-new-variable-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>variable</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variable"><type>rasqal_variable</type></link> to use</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-variable-literal.returns" role="returns">
+<title>Returns</title>
+<para> New <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-literal-from-literal" role="function">
+<title>rasqal_new_literal_from_literal&#160;()</title>
+<indexterm zone="rasqal-new-literal-from-literal"><primary>rasqal_new_literal_from_literal</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_new_literal_from_literal (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Copy Constructor - create a new rasqal_literal object from an existing rasqal_literal object.</para>
+<refsect3 id="rasqal-new-literal-from-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object to copy or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-literal-from-literal.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-literal"><type>rasqal_literal</type></link> object or NULL if <parameter>l</parameter>
+was NULL.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-literal" role="function">
+<title>rasqal_free_literal&#160;()</title>
+<indexterm zone="rasqal-free-literal"><primary>rasqal_free_literal</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_literal (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Destructor - destroy an rasqal_literal object.</para>
+<refsect3 id="rasqal-free-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-as-node" role="function">
+<title>rasqal_literal_as_node&#160;()</title>
+<indexterm zone="rasqal-literal-as-node"><primary>rasqal_literal_as_node</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_literal_as_node (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Turn a literal into a new RDF string, URI or blank literal.</para>
+<refsect3 id="rasqal-literal-as-node.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-as-node.returns" role="returns">
+<title>Returns</title>
+<para> the new <link linkend="rasqal-literal"><type>rasqal_literal</type></link> or NULL on failure or if the literal was an unbound variable.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-as-counted-string" role="function">
+<title>rasqal_literal_as_counted_string&#160;()</title>
+<indexterm zone="rasqal-literal-as-counted-string"><primary>rasqal_literal_as_counted_string</primary></indexterm>
+<programlisting language="C">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_literal_as_counted_string (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>,
+                                  <parameter><link linkend="size-t"><type>size_t</type></link> *len_p</parameter>,
+                                  <parameter><link linkend="int"><type>int</type></link> flags</parameter>,
+                                  <parameter><link linkend="int"><type>int</type></link> *error_p</parameter>);</programlisting>
+<para>Return a counted string format of a literal according to flags.</para>
+<para>flag bits affects conversion:
+  RASQAL_COMPARE_XQUERY: use XQuery conversion rules</para>
+<para>If <parameter>error</parameter>
+ is not NULL, *error is set to non-0 on error</para>
+<refsect3 id="rasqal-literal-as-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len_p</para></entry>
+<entry role="parameter_description"><para>pointer to store length of string (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>comparison flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error_p</para></entry>
+<entry role="parameter_description"><para>pointer to error</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-as-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a shared string format of the literal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-as-string" role="function">
+<title>rasqal_literal_as_string&#160;()</title>
+<indexterm zone="rasqal-literal-as-string"><primary>rasqal_literal_as_string</primary></indexterm>
+<programlisting language="C">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_literal_as_string (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Return the string format of a literal.</para>
+<refsect3 id="rasqal-literal-as-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-as-string.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a shared string format of the literal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-as-string-flags" role="function">
+<title>rasqal_literal_as_string_flags&#160;()</title>
+<indexterm zone="rasqal-literal-as-string-flags"><primary>rasqal_literal_as_string_flags</primary></indexterm>
+<programlisting language="C">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_literal_as_string_flags (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> flags</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> *error_p</parameter>);</programlisting>
+<para>Return the string format of a literal according to flags.</para>
+<para>flag bits affects conversion:
+  RASQAL_COMPARE_XQUERY: use XQuery conversion rules</para>
+<para>If <parameter>error</parameter>
+ is not NULL, *error is set to non-0 on error</para>
+<refsect3 id="rasqal-literal-as-string-flags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>comparison flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error_p</para></entry>
+<entry role="parameter_description"><para>pointer to error</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-as-string-flags.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a shared string format of the literal.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-as-variable" role="function">
+<title>rasqal_literal_as_variable&#160;()</title>
+<indexterm zone="rasqal-literal-as-variable"><primary>rasqal_literal_as_variable</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_literal_as_variable (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Get the variable inside a literal.</para>
+<refsect3 id="rasqal-literal-as-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-as-variable.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="rasqal-variable"><type>rasqal_variable</type></link> or NULL if the literal is not a variable</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-compare" role="function">
+<title>rasqal_literal_compare&#160;()</title>
+<indexterm zone="rasqal-literal-compare"><primary>rasqal_literal_compare</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_literal_compare (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l1</parameter>,
+                        <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l2</parameter>,
+                        <parameter><link linkend="int"><type>int</type></link> flags</parameter>,
+                        <parameter><link linkend="int"><type>int</type></link> *error_p</parameter>);</programlisting>
+<para>Compare two literals with type promotion.</para>
+<para>The two literals are compared across their range.  If the types
+are not the same, they are promoted.  If one is a double or float, the
+other is promoted to double, otherwise for integers, otherwise
+to strings (all literals have a string value).</para>
+<para>The comparison returned is as for strcmp, first before second
+returns &lt;0.  equal returns 0, and first after second returns &gt;0.
+For URIs, the string value is used for the comparsion.</para>
+<para>flag bits affects comparisons:
+  RASQAL_COMPARE_NOCASE: use case independent string comparisons
+  RASQAL_COMPARE_XQUERY: use XQuery comparison and type promotion rules
+  RASQAL_COMPARE_RDF: use RDF term comparison
+  RASQAL_COMPARE_URI: allow comparison of URIs (typically for SPARQL ORDER)</para>
+<para>If <parameter>error</parameter>
+ is not NULL, *error is set to non-0 on error</para>
+<refsect3 id="rasqal-literal-compare.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l1</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> first literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>l2</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> second literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>comparison flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error_p</para></entry>
+<entry role="parameter_description"><para>pointer to error</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-compare.returns" role="returns">
+<title>Returns</title>
+<para> &lt;0, 0, or &gt;0 as described above.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-datatype" role="function">
+<title>rasqal_literal_datatype&#160;()</title>
+<indexterm zone="rasqal-literal-datatype"><primary>rasqal_literal_datatype</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-uri"><returnvalue>raptor_uri</returnvalue></link>&#160;*
+rasqal_literal_datatype (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Get the datatype URI of a literal</para>
+<refsect3 id="rasqal-literal-datatype.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-datatype.returns" role="returns">
+<title>Returns</title>
+<para> shared pointer to <link linkend="raptor-uri"><type>raptor_uri</type></link> of datatype or NULL on failure or no value</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-equals" role="function">
+<title>rasqal_literal_equals&#160;()</title>
+<indexterm zone="rasqal-literal-equals"><primary>rasqal_literal_equals</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_literal_equals (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l1</parameter>,
+                       <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l2</parameter>);</programlisting>
+<para>Compare two literals with no type promotion.</para>
+<para>If the l2 data literal value is a boolean, it will match
+the string "true" or "false" in the first literal l1.</para>
+<refsect3 id="rasqal-literal-equals.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l1</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>l2</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> data literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-equals.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if equal</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-get-language" role="function">
+<title>rasqal_literal_get_language&#160;()</title>
+<indexterm zone="rasqal-literal-get-language"><primary>rasqal_literal_get_language</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_literal_get_language (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Get the language of a literal (if set)</para>
+<refsect3 id="rasqal-literal-get-language.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para>literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-get-language.returns" role="returns">
+<title>Returns</title>
+<para> the literal language or NULL</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-get-rdf-term-type" role="function">
+<title>rasqal_literal_get_rdf_term_type&#160;()</title>
+<indexterm zone="rasqal-literal-get-rdf-term-type"><primary>rasqal_literal_get_rdf_term_type</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal-type"><returnvalue>rasqal_literal_type</returnvalue></link>
+rasqal_literal_get_rdf_term_type (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Get the RDF term type of a literal</para>
+<para>An RDF term can be one of three choices:</para>
+<orderedlist>
+<listitem><para>URI:  RASQAL_LITERAL_URI</para></listitem>
+<listitem><para>literal: RASQAL_LITERAL_STRING</para></listitem>
+<listitem>
+<para>blank node: RASQAL_LITERAL_BLANK</para>
+</listitem>
+</orderedlist>
+<para>Other non RDF-term cases include: NULL pointer, invalid literal,
+unknown type, a variable or other special cases (such as XML QName
+or Regex pattern) which all turn into RASQAL_LITERAL_UNKNOWN</para>
+<refsect3 id="rasqal-literal-get-rdf-term-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para>literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-get-rdf-term-type.returns" role="returns">
+<title>Returns</title>
+<para> type or RASQAL_LITERAL_UNKNOWN if cannot be an RDF term</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-get-type" role="function">
+<title>rasqal_literal_get_type&#160;()</title>
+<indexterm zone="rasqal-literal-get-type"><primary>rasqal_literal_get_type</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal-type"><returnvalue>rasqal_literal_type</returnvalue></link>
+rasqal_literal_get_type (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Get the type of a literal</para>
+<refsect3 id="rasqal-literal-get-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para>literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-get-type.returns" role="returns">
+<title>Returns</title>
+<para> the rasqal literal type or RASQAL_LITERAL_UNKNOWN if l is NULL</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-is-rdf-literal" role="function">
+<title>rasqal_literal_is_rdf_literal&#160;()</title>
+<indexterm zone="rasqal-literal-is-rdf-literal"><primary>rasqal_literal_is_rdf_literal</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_literal_is_rdf_literal (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Check if a literal is any RDF term literal - plain or typed literal</para>
+<refsect3 id="rasqal-literal-is-rdf-literal.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-is-rdf-literal.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the value is an RDF term literal</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-print" role="function">
+<title>rasqal_literal_print&#160;()</title>
+<indexterm zone="rasqal-literal-print"><primary>rasqal_literal_print</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_literal_print (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>,
+                      <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a Rasqal literal in a debug format.</para>
+<para>The print debug format may change in any release.</para>
+<refsect3 id="rasqal-literal-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>the FILE handle to print to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-print.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-print-type" role="function">
+<title>rasqal_literal_print_type&#160;()</title>
+<indexterm zone="rasqal-literal-print-type"><primary>rasqal_literal_print_type</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_literal_print_type (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>,
+                           <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a string form for a rasqal literal type.</para>
+<refsect3 id="rasqal-literal-print-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>the FILE* handle to print to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-type-label" role="function">
+<title>rasqal_literal_type_label&#160;()</title>
+<indexterm zone="rasqal-literal-type-label"><primary>rasqal_literal_type_label</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_literal_type_label (<parameter><link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> type</parameter>);</programlisting>
+<para>Get a label for the rasqal literal type</para>
+<refsect3 id="rasqal-literal-type-label.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-literal-type"><type>rasqal_literal_type</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-type-label.returns" role="returns">
+<title>Returns</title>
+<para> the label (shared string) or NULL if type is out of
+range or unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-same-term" role="function">
+<title>rasqal_literal_same_term&#160;()</title>
+<indexterm zone="rasqal-literal-same-term"><primary>rasqal_literal_same_term</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_literal_same_term (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l1</parameter>,
+                          <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l2</parameter>);</programlisting>
+<para>Check if literals are same term (URI, literal, blank)</para>
+<refsect3 id="rasqal-literal-same-term.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l1</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>l2</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> data literal</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-same-term.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if same</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-literal-value" role="function">
+<title>rasqal_literal_value&#160;()</title>
+<indexterm zone="rasqal-literal-value"><primary>rasqal_literal_value</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_literal_value (<parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *l</parameter>);</programlisting>
+<para>Get the literal value looking up any variables needed</para>
+<refsect3 id="rasqal-literal-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>l</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-literal-value.returns" role="returns">
+<title>Returns</title>
+<para> literal value or NULL if has no value</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-literal.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-literal" role="typedef">
+<title>rasqal_literal</title>
+<indexterm zone="rasqal-literal"><primary>rasqal_literal</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_literal_s rasqal_literal;
+</programlisting>
+<para>Rasqal literal class.</para>
+</refsect2>
+<refsect2 id="rasqal-literal-type" role="enum">
+<title>enum rasqal_literal_type</title>
+<indexterm zone="rasqal-literal-type"><primary>rasqal_literal_type</primary></indexterm>
+<para>Types of literal.</para>
+<para>The order in the enumeration is significant as it encodes
+the SPARQL term ordering conditions:</para>
+<para>  Blank Nodes &lt;&lt; IRIs &lt;&lt; RDF literals &lt;&lt; typed literals</para>
+<para>which coresponds to in enum values</para>
+<para>  BLANK &lt;&lt; URI &lt;&lt; STRING &lt;&lt; 
+    (BOOLEAN | INTEGER | DOUBLE | FLOAT | DECIMAL | DATETIME | XSD_STRING)</para>
+<para>    (RASQAL_LITERAL_FIRST_XSD ... RASQAL_LITERAL_LAST_XSD)</para>
+<para>Not used (internal): PATTERN, QNAME, VARIABLE</para>
+<para>See <link linkend="rasqal-literal-compare"><function>rasqal_literal_compare()</function></link> when used with flags
+<link linkend="RASQAL-COMPARE-XQUERY:CAPS"><literal>RASQAL_COMPARE_XQUERY</literal></link></para>
+<refsect3 id="rasqal-literal-type.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-UNKNOWN:CAPS">RASQAL_LITERAL_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-BLANK:CAPS">RASQAL_LITERAL_BLANK</para></entry>
+<entry role="enum_member_description"><para>RDF blank node literal (SPARQL r:bNode)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-URI:CAPS">RASQAL_LITERAL_URI</para></entry>
+<entry role="enum_member_description"><para>RDF URI Literal (SPARQL r:URI)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-STRING:CAPS">RASQAL_LITERAL_STRING</para></entry>
+<entry role="enum_member_description"><para>RDF Plain Literal - no datatype (SPARQL r:Literal)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-XSD-STRING:CAPS">RASQAL_LITERAL_XSD_STRING</para></entry>
+<entry role="enum_member_description"><para>String xsd:string</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-BOOLEAN:CAPS">RASQAL_LITERAL_BOOLEAN</para></entry>
+<entry role="enum_member_description"><para>Boolean literal xsd:boolean.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-INTEGER:CAPS">RASQAL_LITERAL_INTEGER</para></entry>
+<entry role="enum_member_description"><para>Integer literal xsd:integer.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-FLOAT:CAPS">RASQAL_LITERAL_FLOAT</para></entry>
+<entry role="enum_member_description"><para>Floating point literal xsd:float.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-DOUBLE:CAPS">RASQAL_LITERAL_DOUBLE</para></entry>
+<entry role="enum_member_description"><para>Double floating point literal xsd:double.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-DECIMAL:CAPS">RASQAL_LITERAL_DECIMAL</para></entry>
+<entry role="enum_member_description"><para>Decimal integer xsd:decimal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-DATETIME:CAPS">RASQAL_LITERAL_DATETIME</para></entry>
+<entry role="enum_member_description"><para>Date/Time literal xsd:dateTime.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-FIRST-XSD:CAPS">RASQAL_LITERAL_FIRST_XSD</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-LAST-XSD:CAPS">RASQAL_LITERAL_LAST_XSD</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-UDT:CAPS">RASQAL_LITERAL_UDT</para></entry>
+<entry role="enum_member_description"><para>User defined typed literal with unknown datatype URI</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-PATTERN:CAPS">RASQAL_LITERAL_PATTERN</para></entry>
+<entry role="enum_member_description"><para>Pattern literal for a regex.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-QNAME:CAPS">RASQAL_LITERAL_QNAME</para></entry>
+<entry role="enum_member_description"><para>XML Qname literal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-VARIABLE:CAPS">RASQAL_LITERAL_VARIABLE</para></entry>
+<entry role="enum_member_description"><para>Variable literal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-INTEGER-SUBTYPE:CAPS">RASQAL_LITERAL_INTEGER_SUBTYPE</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-DATE:CAPS">RASQAL_LITERAL_DATE</para></entry>
+<entry role="enum_member_description"><para>Date literal xsd:date.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-LITERAL-LAST:CAPS">RASQAL_LITERAL_LAST</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

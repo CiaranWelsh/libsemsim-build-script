@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>section-updates: Rasqal RDF Query Library Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Rasqal RDF Query Library Manual">
+<link rel="up" href="reference-manual.html" title="Part I. Reference Manual">
+<link rel="prev" href="rasqal-section-variables-table.html" title="section-variables-table">
+<link rel="next" href="rasqal-section-utilities.html" title="section-utilities">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#rasqal-section-updates.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="reference-manual.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="rasqal-section-variables-table.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="rasqal-section-utilities.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="rasqal-section-updates"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="rasqal-section-updates.top_of_page"></a>section-updates</span></h2>
+<p>section-updates</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="rasqal-section-updates.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="rasqal-section-updates.html#rasqal-update-operation" title="rasqal_update_operation">rasqal_update_operation</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="rasqal-section-updates.html#rasqal-update-type" title="enum rasqal_update_type">rasqal_update_type</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="rasqal-section-updates.html#rasqal-update-flags" title="enum rasqal_update_flags">rasqal_update_flags</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="rasqal-section-updates.html#rasqal-update-graph-applies" title="enum rasqal_update_graph_applies">rasqal_update_graph_applies</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-updates.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-updates.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-updates.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="rasqal-update-operation"></a><h3>rasqal_update_operation</h3>
+<pre class="programlisting">typedef struct {
+  rasqal_update_type type;
+
+  raptor_uri* graph_uri;
+
+  raptor_uri* document_uri;
+
+  raptor_sequence* insert_templates;
+
+  raptor_sequence* delete_templates;
+
+  rasqal_graph_pattern* where;
+
+  int flags;
+
+  rasqal_update_graph_applies applies;
+} rasqal_update_operation;
+</pre>
+<p>Update operation - changing the dataset</p>
+<p>For LOAD and CLEAR if <em class="parameter"><code>applies</code></em>
+ is set (not 0) then the operation
+applies to just those <code class="function">graph()</code>, otherwise it applies to the <em class="parameter"><code>graph_uri</code></em>
+.</p>
+<p>For ADD, MOVE and COPY the source graph is stored in <em class="parameter"><code>graph_uri</code></em>
+
+field and the destination graph in the <em class="parameter"><code>document_uri</code></em>
+ field.  The
+field names have no meaning in this case since both values are
+always present, always graphs and a NULL value signifies the
+default graph.</p>
+<div class="refsect3">
+<a name="rasqal-update-operation.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="rasqal-section-updates.html#rasqal-update-type" title="enum rasqal_update_type"><span class="type">rasqal_update_type</span></a> <em class="structfield"><code><a name="rasqal-update-operation.type"></a>type</code></em>;</p></td>
+<td class="struct_member_description"><p>type of update</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../raptor2/raptor2-section-uri.html#raptor-uri"><span class="type">raptor_uri</span></a> *<em class="structfield"><code><a name="rasqal-update-operation.graph-uri"></a>graph_uri</code></em>;</p></td>
+<td class="struct_member_description"><p>optional graph URI (clear, drop, load, with ... delete, insert); source graph (add, move, copy)</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../raptor2/raptor2-section-uri.html#raptor-uri"><span class="type">raptor_uri</span></a> *<em class="structfield"><code><a name="rasqal-update-operation.document-uri"></a>document_uri</code></em>;</p></td>
+<td class="struct_member_description"><p>optional document URI (load); destination graph (add, move, copy)</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../raptor2/raptor2-section-sequence.html#raptor-sequence"><span class="type">raptor_sequence</span></a> *<em class="structfield"><code><a name="rasqal-update-operation.insert-templates"></a>insert_templates</code></em>;</p></td>
+<td class="struct_member_description"><p>optional sequence of <a class="link" href="rasqal-section-triple.html#rasqal-triple" title="rasqal_triple"><span class="type">rasqal_triple</span></a> to insert. Data triples if <em class="parameter"><code>flags</code></em>
+is <a class="link" href="rasqal-section-updates.html#RASQAL-UPDATE-FLAGS-DATA:CAPS"><span class="type">RASQAL_UPDATE_FLAGS_DATA</span></a> set, templates otherwise.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a href="../raptor2/raptor2-section-sequence.html#raptor-sequence"><span class="type">raptor_sequence</span></a> *<em class="structfield"><code><a name="rasqal-update-operation.delete-templates"></a>delete_templates</code></em>;</p></td>
+<td class="struct_member_description"><p>optional sequence of <a class="link" href="rasqal-section-triple.html#rasqal-triple" title="rasqal_triple"><span class="type">rasqal_triple</span></a> templates to delete</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="rasqal-section-graph-pattern.html#rasqal-graph-pattern" title="rasqal_graph_pattern"><span class="type">rasqal_graph_pattern</span></a> *<em class="structfield"><code><a name="rasqal-update-operation.where"></a>where</code></em>;</p></td>
+<td class="struct_member_description"><p>optional where template (insert/delete)</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="rasqal-update-operation.flags"></a>flags</code></em>;</p></td>
+<td class="struct_member_description"><p>update flags - bit-or of flags defined in <a class="link" href="rasqal-section-updates.html#rasqal-update-flags" title="enum rasqal_update_flags"><span class="type">rasqal_update_flags</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="rasqal-section-updates.html#rasqal-update-graph-applies" title="enum rasqal_update_graph_applies"><span class="type">rasqal_update_graph_applies</span></a> <em class="structfield"><code><a name="rasqal-update-operation.applies"></a>applies</code></em>;</p></td>
+<td class="struct_member_description"><p>the graph(s) that the update operation applies to, or <em class="parameter"><code>graph_uri</code></em>
+if <a class="link" href="rasqal-section-updates.html#RASQAL-UPDATE-GRAPH-ONE:CAPS"><span class="type">RASQAL_UPDATE_GRAPH_ONE</span></a></p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-update-type"></a><h3>enum rasqal_update_type</h3>
+<p>Update type being performed.</p>
+<div class="refsect3">
+<a name="rasqal-update-type.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-UNKNOWN:CAPS"></a>RASQAL_UPDATE_TYPE_UNKNOWN</p></td>
+<td class="enum_member_description">
+<p>Internal</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-CLEAR:CAPS"></a>RASQAL_UPDATE_TYPE_CLEAR</p></td>
+<td class="enum_member_description">
+<p>Clear graph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-CREATE:CAPS"></a>RASQAL_UPDATE_TYPE_CREATE</p></td>
+<td class="enum_member_description">
+<p>Create graph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-DROP:CAPS"></a>RASQAL_UPDATE_TYPE_DROP</p></td>
+<td class="enum_member_description">
+<p>Drop graph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-LOAD:CAPS"></a>RASQAL_UPDATE_TYPE_LOAD</p></td>
+<td class="enum_member_description">
+<p>Load graph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-UPDATE:CAPS"></a>RASQAL_UPDATE_TYPE_UPDATE</p></td>
+<td class="enum_member_description">
+<p>Insert or Delete graph or triples.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-ADD:CAPS"></a>RASQAL_UPDATE_TYPE_ADD</p></td>
+<td class="enum_member_description">
+<p>Add graph to another graph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-MOVE:CAPS"></a>RASQAL_UPDATE_TYPE_MOVE</p></td>
+<td class="enum_member_description">
+<p>Move graph to another grpah.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-COPY:CAPS"></a>RASQAL_UPDATE_TYPE_COPY</p></td>
+<td class="enum_member_description">
+<p>Copy graph to another graph.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-TYPE-LAST:CAPS"></a>RASQAL_UPDATE_TYPE_LAST</p></td>
+<td class="enum_member_description">
+<p>Internal</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-update-flags"></a><h3>enum rasqal_update_flags</h3>
+<p>Bitflags for graph update operations</p>
+<div class="refsect3">
+<a name="rasqal-update-flags.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-FLAGS-SILENT:CAPS"></a>RASQAL_UPDATE_FLAGS_SILENT</p></td>
+<td class="enum_member_description">
+<p>the update operation should be silent</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-FLAGS-DATA:CAPS"></a>RASQAL_UPDATE_FLAGS_DATA</p></td>
+<td class="enum_member_description">
+<p>the update operation is triple data not templates</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-update-graph-applies"></a><h3>enum rasqal_update_graph_applies</h3>
+<p>The graph(s) that the update operation applies to.</p>
+<div class="refsect3">
+<a name="rasqal-update-graph-applies.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-GRAPH-ONE:CAPS"></a>RASQAL_UPDATE_GRAPH_ONE</p></td>
+<td class="enum_member_description">
+<p>the update operation applies to 1 graph</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-GRAPH-DEFAULT:CAPS"></a>RASQAL_UPDATE_GRAPH_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>the update operation applies to the default graph</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-GRAPH-NAMED:CAPS"></a>RASQAL_UPDATE_GRAPH_NAMED</p></td>
+<td class="enum_member_description">
+<p>the update operation applies to all named graphs</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-UPDATE-GRAPH-ALL:CAPS"></a>RASQAL_UPDATE_GRAPH_ALL</p></td>
+<td class="enum_member_description">
+<p>the update operation applies ALL graphs</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

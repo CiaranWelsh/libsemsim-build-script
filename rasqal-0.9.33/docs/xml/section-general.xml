@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-general">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-general.top_of_page">section-general</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-general</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-general.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-world">rasqal_free_world</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-world"><returnvalue>rasqal_world</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-world">rasqal_new_world</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-world-open">rasqal_world_open</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-world-set-log-handler">rasqal_world_set_log_handler</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-world-set-warning-level">rasqal_world_set_warning_level</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-world"><returnvalue>raptor_world</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-world-get-raptor">rasqal_world_get_raptor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-world-set-raptor">rasqal_world_set_raptor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="raptor-syntax-description"><returnvalue>raptor_syntax_description</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-world-get-query-language-description">rasqal_world_get_query_language_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="raptor-syntax-description"><returnvalue>raptor_syntax_description</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-world-get-query-results-format-description">rasqal_world_get_query_results_format_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="rasqal-generate-bnodeid-handler">*rasqal_generate_bnodeid_handler</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-world-set-generate-bnodeid-handler">rasqal_world_set_generate_bnodeid_handler</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-world-set-default-generate-bnodeid-parameters">rasqal_world_set_default_generate_bnodeid_parameters</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-world-guess-query-results-format-name">rasqal_world_guess_query_results_format_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-language-name-check">rasqal_language_name_check</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-languages-enumerate">rasqal_languages_enumerate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-alloc-memory">rasqal_alloc_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-calloc-memory">rasqal_calloc_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-memory">rasqal_free_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-feature"><returnvalue>rasqal_feature</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-feature-from-uri">rasqal_feature_from_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-feature-value-type">rasqal_feature_value_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-features-enumerate">rasqal_features_enumerate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-get-feature-count">rasqal_get_feature_count</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-general.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-world">rasqal_world</link></entry></row>
+<row><entry role="variable_type">extern const unsigned int </entry><entry role="function_name"><link linkend="rasqal-version-decimal">rasqal_version_decimal</link></entry></row>
+<row><entry role="variable_type">extern const unsigned int </entry><entry role="function_name"><link linkend="rasqal-version-major">rasqal_version_major</link></entry></row>
+<row><entry role="variable_type">extern const unsigned int </entry><entry role="function_name"><link linkend="rasqal-version-minor">rasqal_version_minor</link></entry></row>
+<row><entry role="variable_type">extern const unsigned int </entry><entry role="function_name"><link linkend="rasqal-version-release">rasqal_version_release</link></entry></row>
+<row><entry role="variable_type">extern const char * const </entry><entry role="function_name"><link linkend="rasqal-version-string">rasqal_version_string</link></entry></row>
+<row><entry role="variable_type">extern const char * const </entry><entry role="function_name"><link linkend="rasqal-copyright-string">rasqal_copyright_string</link></entry></row>
+<row><entry role="variable_type">extern const char * const </entry><entry role="function_name"><link linkend="rasqal-short-copyright-string">rasqal_short_copyright_string</link></entry></row>
+<row><entry role="variable_type">extern const char * const </entry><entry role="function_name"><link linkend="rasqal-home-url-string">rasqal_home_url_string</link></entry></row>
+<row><entry role="variable_type">extern const char * const </entry><entry role="function_name"><link linkend="rasqal-license-string">rasqal_license_string</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-feature">rasqal_feature</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-DEPRECATED:CAPS">RASQAL_DEPRECATED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-VERSION:CAPS">RASQAL_VERSION</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-VERSION-MAJOR:CAPS">RASQAL_VERSION_MAJOR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-VERSION-MINOR:CAPS">RASQAL_VERSION_MINOR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-VERSION-RELEASE:CAPS">RASQAL_VERSION_RELEASE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-VERSION-STRING:CAPS">RASQAL_VERSION_STRING</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="RASQAL-RAPTOR-VERSION:CAPS">RASQAL_RAPTOR_VERSION</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-general.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-general.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-free-world" role="function">
+<title>rasqal_free_world&#160;()</title>
+<indexterm zone="rasqal-free-world"><primary>rasqal_free_world</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_world (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>);</programlisting>
+<para>Terminate the rasqal library.</para>
+<para>Destroys a rasqal_world object and all static information.</para>
+<refsect3 id="rasqal-free-world.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-world" role="function">
+<title>rasqal_new_world&#160;()</title>
+<indexterm zone="rasqal-new-world"><primary>rasqal_new_world</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-world"><returnvalue>rasqal_world</returnvalue></link>&#160;*
+rasqal_new_world (<parameter><type>void</type></parameter>);</programlisting>
+<para>Allocate a new rasqal_world object.</para>
+<para>The rasqal_world is initialized with <link linkend="rasqal-world-open"><function>rasqal_world_open()</function></link>.
+Allocation and initialization are decoupled to allow
+changing settings on the world object before init.</para>
+<refsect3 id="rasqal-new-world.returns" role="returns">
+<title>Returns</title>
+<para> rasqal_world object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-open" role="function">
+<title>rasqal_world_open&#160;()</title>
+<indexterm zone="rasqal-world-open"><primary>rasqal_world_open</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_world_open (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>);</programlisting>
+<para>Initialise the rasqal library.</para>
+<para>Initializes a <link linkend="rasqal-world"><type>rasqal_world</type></link> object created by <link linkend="rasqal-new-world"><function>rasqal_new_world()</function></link>.
+Allocation and initialization are decoupled to allow
+changing settings on the world object before init.
+These settings include e.g. the raptor library instance set with
+<link linkend="rasqal-world-set-raptor"><function>rasqal_world_set_raptor()</function></link>.</para>
+<para>The initialized world object is used with subsequent rasqal API calls.</para>
+<refsect3 id="rasqal-world-open.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-open.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-set-log-handler" role="function">
+<title>rasqal_world_set_log_handler&#160;()</title>
+<indexterm zone="rasqal-world-set-log-handler"><primary>rasqal_world_set_log_handler</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_world_set_log_handler (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                              <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>,
+                              <parameter><link linkend="raptor-log-handler"><type>raptor_log_handler</type></link> handler</parameter>);</programlisting>
+<para>Set the log handler for this rasqal_world.</para>
+<para>Also sets the raptor log handler to the same <parameter>user_data</parameter>
+ and
+<parameter>handler</parameter>
+ via <link linkend="raptor-world-set-log-handler"><function>raptor_world_set_log_handler()</function></link>. (Rasqal 0.9.26+)</para>
+<refsect3 id="rasqal-world-set-log-handler.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data for log handler function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>handler</para></entry>
+<entry role="parameter_description"><para>log handler function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-set-warning-level" role="function">
+<title>rasqal_world_set_warning_level&#160;()</title>
+<indexterm zone="rasqal-world-set-warning-level"><primary>rasqal_world_set_warning_level</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_world_set_warning_level (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> warning_level</parameter>);</programlisting>
+<para>Set the rasqal warning reporting level</para>
+<para>The warning levels used are as follows:</para>
+<orderedlist>
+<listitem><para>Level 10 is used for serious warnings that may be errors.
+</para></listitem>
+<listitem><para>Level 30 is used for moderate style warnings.
+</para></listitem>
+<listitem><para>Level 90 is used for strict conformance warnings.
+</para></listitem>
+</orderedlist>
+<para>When this method is called to set a warning level, only warnings
+of less than <parameter>warning_level</parameter>
+ are reported.  The default warning
+level is 50.</para>
+<refsect3 id="rasqal-world-set-warning-level.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>warning_level</para></entry>
+<entry role="parameter_description"><para>warning level 0..100</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-set-warning-level.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-get-raptor" role="function">
+<title>rasqal_world_get_raptor&#160;()</title>
+<indexterm zone="rasqal-world-get-raptor"><primary>rasqal_world_get_raptor</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-world"><returnvalue>raptor_world</returnvalue></link>&#160;*
+rasqal_world_get_raptor (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>);</programlisting>
+<para>Get the <link linkend="raptor-world"><type>raptor_world</type></link> instance used by this <link linkend="rasqal-world"><type>rasqal_world</type></link>.</para>
+<refsect3 id="rasqal-world-get-raptor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-get-raptor.returns" role="returns">
+<title>Returns</title>
+<para> raptor_world object or NULL on failure (e.g. not initialized)</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-set-raptor" role="function">
+<title>rasqal_world_set_raptor&#160;()</title>
+<indexterm zone="rasqal-world-set-raptor"><primary>rasqal_world_set_raptor</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_world_set_raptor (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                         <parameter><link linkend="raptor-world"><type>raptor_world</type></link> *raptor_world_ptr</parameter>);</programlisting>
+<para>Set the <link linkend="raptor-world"><type>raptor_world</type></link> instance to be used with this <link linkend="rasqal-world"><type>rasqal_world</type></link>.</para>
+<para>If no raptor_world instance is set with this function,
+<link linkend="rasqal-world-open"><function>rasqal_world_open()</function></link> creates a new instance.</para>
+<para>Ownership of the raptor_world is not taken. If the raptor library
+instance is set with this function, <link linkend="rasqal-free-world"><function>rasqal_free_world()</function></link> will not
+free it.</para>
+<refsect3 id="rasqal-world-set-raptor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>raptor_world_ptr</para></entry>
+<entry role="parameter_description"><para>raptor_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-get-query-language-description" role="function">
+<title>rasqal_world_get_query_language_description&#160;()</title>
+<indexterm zone="rasqal-world-get-query-language-description"><primary>rasqal_world_get_query_language_description</primary></indexterm>
+<programlisting language="C">const <link linkend="raptor-syntax-description"><returnvalue>raptor_syntax_description</returnvalue></link>&#160;*
+rasqal_world_get_query_language_description
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> counter</parameter>);</programlisting>
+<para>Get query language descriptive information</para>
+<refsect3 id="rasqal-world-get-query-language-description.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>counter</para></entry>
+<entry role="parameter_description"><para>index into the list of query languages</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-get-query-language-description.returns" role="returns">
+<title>Returns</title>
+<para> description or NULL if counter is out of range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-get-query-results-format-description" role="function">
+<title>rasqal_world_get_query_results_format_description&#160;()</title>
+<indexterm zone="rasqal-world-get-query-results-format-description"><primary>rasqal_world_get_query_results_format_description</primary></indexterm>
+<programlisting language="C">const <link linkend="raptor-syntax-description"><returnvalue>raptor_syntax_description</returnvalue></link>&#160;*
+rasqal_world_get_query_results_format_description
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> counter</parameter>);</programlisting>
+<para>Get query result format descriptive syntax information</para>
+<refsect3 id="rasqal-world-get-query-results-format-description.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>counter</para></entry>
+<entry role="parameter_description"><para>index into the list of query result formats</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-get-query-results-format-description.returns" role="returns">
+<title>Returns</title>
+<para> description or NULL if counter is out of range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-generate-bnodeid-handler" role="function">
+<title>rasqal_generate_bnodeid_handler&#160;()</title>
+<indexterm zone="rasqal-generate-bnodeid-handler"><primary>rasqal_generate_bnodeid_handler</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+<phrase role="c_punctuation">(</phrase>*rasqal_generate_bnodeid_handler<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                    <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>,
+                                    <parameter>unsigned <link linkend="char"><type>char</type></link> *user_bnodeid</parameter>);</programlisting>
+<para>User handler used with <link linkend="rasqal-world-set-generate-bnodeid-handler"><function>rasqal_world_set_generate_bnodeid_handler()</function></link> to set method for generating a blank node ID.</para>
+<refsect3 id="rasqal-generate-bnodeid-handler.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world arg</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data given to </para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_bnodeid</para></entry>
+<entry role="parameter_description"><para>user blank node ID string passed in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-generate-bnodeid-handler.returns" role="returns">
+<title>Returns</title>
+<para> blank node ID string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-set-generate-bnodeid-handler" role="function">
+<title>rasqal_world_set_generate_bnodeid_handler&#160;()</title>
+<indexterm zone="rasqal-world-set-generate-bnodeid-handler"><primary>rasqal_world_set_generate_bnodeid_handler</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_world_set_generate_bnodeid_handler
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>,
+                                <parameter><link linkend="rasqal-generate-bnodeid-handler"><type>rasqal_generate_bnodeid_handler</type></link> handler</parameter>);</programlisting>
+<para>Set the generate blank node ID handler function</para>
+<para>Sets the function to generate blank node IDs.
+The handler is called with a pointer to the rasqal_world, the
+<parameter>user_data</parameter>
+ pointer and a user_bnodeid which is the value of
+a user-provided blank node identifier (may be NULL).
+It can either be returned directly as the generated value when present or
+modified.  The passed in value must be <link linkend="free"><function>free()</function></link>d if it is not used.</para>
+<para>If handler is NULL, the default method is used</para>
+<refsect3 id="rasqal-world-set-generate-bnodeid-handler.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-world"><type>rasqal_world</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data pointer for callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>handler</para></entry>
+<entry role="parameter_description"><para>generate blank ID callback function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-set-generate-bnodeid-handler.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-set-default-generate-bnodeid-parameters" role="function">
+<title>rasqal_world_set_default_generate_bnodeid_parameters&#160;()</title>
+<indexterm zone="rasqal-world-set-default-generate-bnodeid-parameters"><primary>rasqal_world_set_default_generate_bnodeid_parameters</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_world_set_default_generate_bnodeid_parameters
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="char"><type>char</type></link> *prefix</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> base</parameter>);</programlisting>
+<para>Set default bnodeid generation parameters</para>
+<para>Sets the parameters for the default algorithm used to generate
+blank node IDs.  The default algorithm uses both <parameter>prefix</parameter>
+ and <parameter>base</parameter>
+
+to generate a new identifier.  The exact identifier generated is
+not guaranteed to be a strict concatenation of <parameter>prefix</parameter>
+ and <parameter>base</parameter>
+
+but will use both parts.</para>
+<para>For finer control of the generated identifiers, use
+<link linkend="rasqal-world-set-generate-bnodeid-handler"><function>rasqal_world_set_generate_bnodeid_handler()</function></link></para>
+<para>If prefix is NULL, the default prefix is used (currently "bnodeid")
+If base is less than 1, it is initialised to 1.</para>
+<refsect3 id="rasqal-world-set-default-generate-bnodeid-parameters.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-world"><type>rasqal_world</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>prefix</para></entry>
+<entry role="parameter_description"><para>prefix string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base</para></entry>
+<entry role="parameter_description"><para>integer base identifier</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-set-default-generate-bnodeid-parameters.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-world-guess-query-results-format-name" role="function">
+<title>rasqal_world_guess_query_results_format_name&#160;()</title>
+<indexterm zone="rasqal-world-guess-query-results-format-name"><primary>rasqal_world_guess_query_results_format_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_world_guess_query_results_format_name
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *mime_type</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *buffer</parameter>,
+                                <parameter><link linkend="size-t"><type>size_t</type></link> len</parameter>,
+                                <parameter>const unsigned <link linkend="char"><type>char</type></link> *identifier</parameter>);</programlisting>
+<para>Guess a query results format name for content.</para>
+<para>Find a query results format by scoring recognition of the syntax
+by a block of characters, the content identifier or a mime type.
+The content identifier is typically a filename or URI or some
+other identifier.</para>
+<refsect3 id="rasqal-world-guess-query-results-format-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>URI identifying the syntax (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mime_type</para></entry>
+<entry role="parameter_description"><para>mime type identifying the content (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>buffer of content to guess (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len</para></entry>
+<entry role="parameter_description"><para>length of buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>identifier</para></entry>
+<entry role="parameter_description"><para>identifier of content (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-world-guess-query-results-format-name.returns" role="returns">
+<title>Returns</title>
+<para> a query results format name or NULL if no guess
+could be made</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-language-name-check" role="function">
+<title>rasqal_language_name_check&#160;()</title>
+<indexterm zone="rasqal-language-name-check"><primary>rasqal_language_name_check</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_language_name_check (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<para>Check name of a query language.</para>
+<refsect3 id="rasqal-language-name-check.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the query language name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-language-name-check.returns" role="returns">
+<title>Returns</title>
+<para> non 0 if name is a known query language</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-languages-enumerate" role="function" condition="deprecated:">
+<title>rasqal_languages_enumerate&#160;()</title>
+<indexterm zone="rasqal-languages-enumerate" role="deprecated"><primary>rasqal_languages_enumerate</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_languages_enumerate (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                            <parameter>unsigned <link linkend="int"><type>int</type></link> counter</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> **name</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> **label</parameter>,
+                            <parameter>const unsigned <link linkend="char"><type>char</type></link> **uri_string</parameter>);</programlisting>
+<warning><para><literal>rasqal_languages_enumerate</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para><parameter>deprecated</parameter>
+: Use <link linkend="rasqal-world-get-query-language-description"><function>rasqal_world_get_query_language_description()</function></link> instead.</para>
+<para>Get information on query languages.</para>
+<refsect3 id="rasqal-languages-enumerate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>counter</para></entry>
+<entry role="parameter_description"><para>index into the list of syntaxes</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>pointer to store the name of the syntax (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>label</para></entry>
+<entry role="parameter_description"><para>pointer to store syntax readable label (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri_string</para></entry>
+<entry role="parameter_description"><para>pointer to store syntax URI string (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-languages-enumerate.returns" role="returns">
+<title>Returns</title>
+<para> non 0 on failure of if counter is out of range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-alloc-memory" role="function">
+<title>rasqal_alloc_memory&#160;()</title>
+<indexterm zone="rasqal-alloc-memory"><primary>rasqal_alloc_memory</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+rasqal_alloc_memory (<parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>);</programlisting>
+<para>Allocate memory inside rasqal.</para>
+<para>Some systems require memory allocated in a library to
+be deallocated in that library.  This function allows
+memory to be allocated inside the rasqal shared library
+that can be freed inside rasqal either internally or via
+<link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link>.</para>
+<refsect3 id="rasqal-alloc-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>size of memory to allocate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-alloc-memory.returns" role="returns">
+<title>Returns</title>
+<para> the address of the allocated memory or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-calloc-memory" role="function">
+<title>rasqal_calloc_memory&#160;()</title>
+<indexterm zone="rasqal-calloc-memory"><primary>rasqal_calloc_memory</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+rasqal_calloc_memory (<parameter><link linkend="size-t"><type>size_t</type></link> nmemb</parameter>,
+                      <parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>);</programlisting>
+<para>Allocate zeroed array of items inside rasqal.</para>
+<para>Some systems require memory allocated in a library to
+be deallocated in that library.  This function allows
+memory to be allocated inside the rasqal shared library
+that can be freed inside rasqal either internally or via
+<link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link>.</para>
+<refsect3 id="rasqal-calloc-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>nmemb</para></entry>
+<entry role="parameter_description"><para>number of members</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>size of item</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-calloc-memory.returns" role="returns">
+<title>Returns</title>
+<para> the address of the allocated memory or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-memory" role="function">
+<title>rasqal_free_memory&#160;()</title>
+<indexterm zone="rasqal-free-memory"><primary>rasqal_free_memory</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_memory (<parameter><link linkend="void"><type>void</type></link> *ptr</parameter>);</programlisting>
+<para>Free memory allocated inside rasqal.</para>
+<para>Some systems require memory allocated in a library to
+be deallocated in that library.  This function allows
+memory allocated by rasqal to be freed.</para>
+<refsect3 id="rasqal-free-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ptr</para></entry>
+<entry role="parameter_description"><para>memory pointer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-feature-from-uri" role="function">
+<title>rasqal_feature_from_uri&#160;()</title>
+<indexterm zone="rasqal-feature-from-uri"><primary>rasqal_feature_from_uri</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-feature"><returnvalue>rasqal_feature</returnvalue></link>
+rasqal_feature_from_uri (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                         <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>);</programlisting>
+<para>Turn a feature URI into an feature enum.</para>
+<para>The allowed feature URIs are available via <link linkend="rasqal-features-enumerate"><function>rasqal_features_enumerate()</function></link>.</para>
+<refsect3 id="rasqal-feature-from-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>feature URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-feature-from-uri.returns" role="returns">
+<title>Returns</title>
+<para> &lt; 0 if the feature is unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-feature-value-type" role="function">
+<title>rasqal_feature_value_type&#160;()</title>
+<indexterm zone="rasqal-feature-value-type"><primary>rasqal_feature_value_type</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_feature_value_type (<parameter>const <link linkend="rasqal-feature"><type>rasqal_feature</type></link> feature</parameter>);</programlisting>
+<para>Get the type of a features.</para>
+<para>The type of the <parameter>feature</parameter>
+ is 0=integer , 1=string.  Other values are
+undefined.  Most features are integer values and use
+rasqal_query_set_feature <link linkend="rasqal-query-get-feature"><function>rasqal_query_get_feature()</function></link></para>
+<refsect3 id="rasqal-feature-value-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>rasqal query feature</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-feature-value-type.returns" role="returns">
+<title>Returns</title>
+<para> the type of the feature or &lt;0 if <parameter>feature</parameter>
+is unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-features-enumerate" role="function">
+<title>rasqal_features_enumerate&#160;()</title>
+<indexterm zone="rasqal-features-enumerate"><primary>rasqal_features_enumerate</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_features_enumerate (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                           <parameter>const <link linkend="rasqal-feature"><type>rasqal_feature</type></link> feature</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> **name</parameter>,
+                           <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> **uri</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> **label</parameter>);</programlisting>
+<para>Get list of rasqal features.</para>
+<para>If uri is not NULL, a pointer to a new raptor_uri is returned
+that must be freed by the caller with <link linkend="raptor-free-uri"><function>raptor_free_uri()</function></link>.</para>
+<refsect3 id="rasqal-features-enumerate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature enumeration (0+)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>pointer to store feature short name (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>pointer to store feature URI (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>label</para></entry>
+<entry role="parameter_description"><para>pointer to feature label (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-features-enumerate.returns" role="returns">
+<title>Returns</title>
+<para> 0 on success, &lt;0 on failure, &gt;0 if feature is unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-get-feature-count" role="function">
+<title>rasqal_get_feature_count&#160;()</title>
+<indexterm zone="rasqal-get-feature-count"><primary>rasqal_get_feature_count</primary></indexterm>
+<programlisting language="C">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_get_feature_count (<parameter><type>void</type></parameter>);</programlisting>
+<para>Get the count of features defined.</para>
+<para>This is prefered to the compile time-only symbol <link linkend="RASQAL-FEATURE-LAST:CAPS"><type>RASQAL_FEATURE_LAST</type></link>
+and returns a count of the number of features which is
+<link linkend="RASQAL-FEATURE-LAST:CAPS"><type>RASQAL_FEATURE_LAST</type></link>+1.</para>
+<refsect3 id="rasqal-get-feature-count.returns" role="returns">
+<title>Returns</title>
+<para> count of features in the <link linkend="rasqal-feature"><type>rasqal_feature</type></link> enumeration</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-general.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-world" role="typedef">
+<title>rasqal_world</title>
+<indexterm zone="rasqal-world"><primary>rasqal_world</primary></indexterm>
+<programlisting language="C">rasqal_world* world;
+</programlisting>
+<para>Rasqal world class.</para>
+</refsect2>
+<refsect2 id="rasqal-version-decimal" role="variable">
+<title>rasqal_version_decimal</title>
+<indexterm zone="rasqal-version-decimal"><primary>rasqal_version_decimal</primary></indexterm>
+<programlisting language="C">extern const unsigned int rasqal_version_decimal;
+</programlisting>
+<para>Library full version as a decimal integer.</para>
+<para>See also <link linkend="rasqal-version-string"><type>rasqal_version_string</type></link>.</para>
+</refsect2>
+<refsect2 id="rasqal-version-major" role="variable">
+<title>rasqal_version_major</title>
+<indexterm zone="rasqal-version-major"><primary>rasqal_version_major</primary></indexterm>
+<programlisting language="C">extern const unsigned int rasqal_version_major;
+</programlisting>
+<para>Library major version number as a decimal integer.</para>
+</refsect2>
+<refsect2 id="rasqal-version-minor" role="variable">
+<title>rasqal_version_minor</title>
+<indexterm zone="rasqal-version-minor"><primary>rasqal_version_minor</primary></indexterm>
+<programlisting language="C">extern const unsigned int rasqal_version_minor;
+</programlisting>
+<para>Library minor version number as a decimal integer.</para>
+</refsect2>
+<refsect2 id="rasqal-version-release" role="variable">
+<title>rasqal_version_release</title>
+<indexterm zone="rasqal-version-release"><primary>rasqal_version_release</primary></indexterm>
+<programlisting language="C">extern const unsigned int rasqal_version_release;
+</programlisting>
+<para>Library release version number as a decimal integer.</para>
+</refsect2>
+<refsect2 id="rasqal-version-string" role="variable">
+<title>rasqal_version_string</title>
+<indexterm zone="rasqal-version-string"><primary>rasqal_version_string</primary></indexterm>
+<programlisting language="C">extern const char * const rasqal_version_string;
+</programlisting>
+<para>Library full version as a string.</para>
+<para>See also <link linkend="rasqal-version-decimal"><type>rasqal_version_decimal</type></link>.</para>
+</refsect2>
+<refsect2 id="rasqal-copyright-string" role="variable">
+<title>rasqal_copyright_string</title>
+<indexterm zone="rasqal-copyright-string"><primary>rasqal_copyright_string</primary></indexterm>
+<programlisting language="C">extern const char * const rasqal_copyright_string;
+</programlisting>
+<para>Copyright string (multiple lines).</para>
+</refsect2>
+<refsect2 id="rasqal-short-copyright-string" role="variable">
+<title>rasqal_short_copyright_string</title>
+<indexterm zone="rasqal-short-copyright-string"><primary>rasqal_short_copyright_string</primary></indexterm>
+<programlisting language="C">extern const char * const rasqal_short_copyright_string;
+</programlisting>
+<para>Short copyright string (one line).</para>
+</refsect2>
+<refsect2 id="rasqal-home-url-string" role="variable">
+<title>rasqal_home_url_string</title>
+<indexterm zone="rasqal-home-url-string"><primary>rasqal_home_url_string</primary></indexterm>
+<programlisting language="C">extern const char * const rasqal_home_url_string;
+</programlisting>
+<para>Rasqal home page URL.</para>
+</refsect2>
+<refsect2 id="rasqal-license-string" role="variable">
+<title>rasqal_license_string</title>
+<indexterm zone="rasqal-license-string"><primary>rasqal_license_string</primary></indexterm>
+<programlisting language="C">extern const char * const rasqal_license_string;
+</programlisting>
+<para>Rasqal license string.</para>
+</refsect2>
+<refsect2 id="rasqal-feature" role="enum">
+<title>enum rasqal_feature</title>
+<indexterm zone="rasqal-feature"><primary>rasqal_feature</primary></indexterm>
+<para>Query features.</para>
+<para>None currently defined.</para>
+<refsect3 id="rasqal-feature.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-FEATURE-NO-NET:CAPS">RASQAL_FEATURE_NO_NET</para></entry>
+<entry role="enum_member_description"><para>Deny network requests.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-FEATURE-RAND-SEED:CAPS">RASQAL_FEATURE_RAND_SEED</para></entry>
+<entry role="enum_member_description"><para>Set <link linkend="rand"><function>rand()</function></link> / <link linkend="rand-r"><function>rand_r()</function></link> seed</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-FEATURE-LAST:CAPS">RASQAL_FEATURE_LAST</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="RASQAL-DEPRECATED:CAPS" role="macro">
+<title>RASQAL_DEPRECATED</title>
+<indexterm zone="RASQAL-DEPRECATED:CAPS"><primary>RASQAL_DEPRECATED</primary></indexterm>
+<programlisting language="C">#define RASQAL_DEPRECATED __attribute__((deprecated))
+</programlisting>
+</refsect2>
+<refsect2 id="RASQAL-VERSION:CAPS" role="macro">
+<title>RASQAL_VERSION</title>
+<indexterm zone="RASQAL-VERSION:CAPS"><primary>RASQAL_VERSION</primary></indexterm>
+<programlisting language="C">#define RASQAL_VERSION 933
+</programlisting>
+<para>Rasqal library version number</para>
+<para>Format: major * 10000 + minor * 100 + release</para>
+</refsect2>
+<refsect2 id="RASQAL-VERSION-MAJOR:CAPS" role="macro">
+<title>RASQAL_VERSION_MAJOR</title>
+<indexterm zone="RASQAL-VERSION-MAJOR:CAPS"><primary>RASQAL_VERSION_MAJOR</primary></indexterm>
+<programlisting language="C">#define RASQAL_VERSION_MAJOR 0
+</programlisting>
+<para>Rasqal library major version</para>
+</refsect2>
+<refsect2 id="RASQAL-VERSION-MINOR:CAPS" role="macro">
+<title>RASQAL_VERSION_MINOR</title>
+<indexterm zone="RASQAL-VERSION-MINOR:CAPS"><primary>RASQAL_VERSION_MINOR</primary></indexterm>
+<programlisting language="C">#define RASQAL_VERSION_MINOR 9
+</programlisting>
+<para>Rasqal library minor version</para>
+</refsect2>
+<refsect2 id="RASQAL-VERSION-RELEASE:CAPS" role="macro">
+<title>RASQAL_VERSION_RELEASE</title>
+<indexterm zone="RASQAL-VERSION-RELEASE:CAPS"><primary>RASQAL_VERSION_RELEASE</primary></indexterm>
+<programlisting language="C">#define RASQAL_VERSION_RELEASE 33
+</programlisting>
+<para>Rasqal library release</para>
+</refsect2>
+<refsect2 id="RASQAL-VERSION-STRING:CAPS" role="macro">
+<title>RASQAL_VERSION_STRING</title>
+<indexterm zone="RASQAL-VERSION-STRING:CAPS"><primary>RASQAL_VERSION_STRING</primary></indexterm>
+<programlisting language="C">#define RASQAL_VERSION_STRING "0.9.33"
+</programlisting>
+<para>Rasqal library version string</para>
+</refsect2>
+<refsect2 id="RASQAL-RAPTOR-VERSION:CAPS" role="macro">
+<title>RASQAL_RAPTOR_VERSION</title>
+<indexterm zone="RASQAL-RAPTOR-VERSION:CAPS"><primary>RASQAL_RAPTOR_VERSION</primary></indexterm>
+<programlisting language="C">#define RASQAL_RAPTOR_VERSION 20015
+</programlisting>
+<para>Version of Raptor that Rasqal was configured against.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

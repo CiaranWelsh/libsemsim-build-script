@@ -1,0 +1,7 @@
+<!ENTITY package "rasqal">
+<!ENTITY package_bugreport "http://bugs.librdf.org/">
+<!ENTITY package_name "Rasqal RDF Query Library">
+<!ENTITY package_string "Rasqal RDF Query Library 0.9.33">
+<!ENTITY package_tarname "rasqal">
+<!ENTITY package_url "">
+<!ENTITY package_version "0.9.33">

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-data">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-data.top_of_page">section-data</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-data</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-data.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-data-graph-from-data-graph">rasqal_new_data_graph_from_data_graph</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-data-graph-from-iostream">rasqal_new_data_graph_from_iostream</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-data-graph-from-uri">rasqal_new_data_graph_from_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-data-graph">rasqal_free_data_graph</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-data-graph-print">rasqal_data_graph_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-data.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="rasqal-data-graph">rasqal_data_graph</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-data-graph-flags">rasqal_data_graph_flags</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-data.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-data.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-data-graph-from-data-graph" role="function">
+<title>rasqal_new_data_graph_from_data_graph&#160;()</title>
+<indexterm zone="rasqal-new-data-graph-from-data-graph"><primary>rasqal_new_data_graph_from_data_graph</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+rasqal_new_data_graph_from_data_graph (<parameter><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> *dg</parameter>);</programlisting>
+<para>Copy Constructor - create a new <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object from an existing <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object.</para>
+<refsect3 id="rasqal-new-data-graph-from-data-graph.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dg</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object to copy or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-data-graph-from-data-graph.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object or NULL if <parameter>dg</parameter>
+was NULL.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-data-graph-from-iostream" role="function">
+<title>rasqal_new_data_graph_from_iostream&#160;()</title>
+<indexterm zone="rasqal-new-data-graph-from-iostream"><primary>rasqal_new_data_graph_from_iostream</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+rasqal_new_data_graph_from_iostream (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                     <parameter><link linkend="raptor-iostream"><type>raptor_iostream</type></link> *iostr</parameter>,
+                                     <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *base_uri</parameter>,
+                                     <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *name_uri</parameter>,
+                                     <parameter>unsigned <link linkend="int"><type>int</type></link> flags</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *format_type</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *format_name</parameter>,
+                                     <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *format_uri</parameter>);</programlisting>
+<para>Constructor - create a new <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> from iostream content</para>
+<para>The <parameter>name_uri</parameter>
+ is used when the flags are <link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link>.</para>
+<para>The <parameter>base_uri</parameter>
+ is used to provide the Raptor parser a base URI.  If
+a base URI is required but none is given, the parsing will fail
+and the query that uses this data source will fail.</para>
+<refsect3 id="rasqal-new-data-graph-from-iostream.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>iostr</para></entry>
+<entry role="parameter_description"><para>source graph format iostream</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base_uri</para></entry>
+<entry role="parameter_description"><para>base URI for iostream content</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name_uri</para></entry>
+<entry role="parameter_description"><para>name of graph (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para><link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link> or <link linkend="RASQAL-DATA-GRAPH-BACKGROUND:CAPS"><literal>RASQAL_DATA_GRAPH_BACKGROUND</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_type</para></entry>
+<entry role="parameter_description"><para>MIME Type of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_name</para></entry>
+<entry role="parameter_description"><para>Raptor parser Name of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_uri</para></entry>
+<entry role="parameter_description"><para>URI of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-data-graph-from-iostream.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-data-graph-from-uri" role="function">
+<title>rasqal_new_data_graph_from_uri&#160;()</title>
+<indexterm zone="rasqal-new-data-graph-from-uri"><primary>rasqal_new_data_graph_from_uri</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+rasqal_new_data_graph_from_uri (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *name_uri</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> flags</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *format_type</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *format_name</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *format_uri</parameter>);</programlisting>
+<para>Constructor - create a new <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link>.</para>
+<para>The name_uri is only used when the flags are <link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link>.</para>
+<refsect3 id="rasqal-new-data-graph-from-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>source URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name_uri</para></entry>
+<entry role="parameter_description"><para>name of graph (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para><link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link> or <link linkend="RASQAL-DATA-GRAPH-BACKGROUND:CAPS"><literal>RASQAL_DATA_GRAPH_BACKGROUND</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_type</para></entry>
+<entry role="parameter_description"><para>MIME Type of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_name</para></entry>
+<entry role="parameter_description"><para>Raptor parser Name of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_uri</para></entry>
+<entry role="parameter_description"><para>URI of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-data-graph-from-uri.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-data-graph" role="function">
+<title>rasqal_free_data_graph&#160;()</title>
+<indexterm zone="rasqal-free-data-graph"><primary>rasqal_free_data_graph</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_data_graph (<parameter><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> *dg</parameter>);</programlisting>
+<para>Destructor - destroy a <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object.</para>
+<refsect3 id="rasqal-free-data-graph.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dg</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-data-graph-print" role="function">
+<title>rasqal_data_graph_print&#160;()</title>
+<indexterm zone="rasqal-data-graph-print"><primary>rasqal_data_graph_print</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_data_graph_print (<parameter><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> *dg</parameter>,
+                         <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a Rasqal data graph in a debug format.</para>
+<para>The print debug format may change in any release.</para>
+<refsect3 id="rasqal-data-graph-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>dg</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>the FILE* handle to print to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-data-graph-print.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-data.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-data-graph" role="struct">
+<title>rasqal_data_graph</title>
+<indexterm zone="rasqal-data-graph"><primary>rasqal_data_graph</primary></indexterm>
+<programlisting language="C">typedef struct {
+  rasqal_world* world;
+  raptor_uri* uri;
+  raptor_uri* name_uri;
+  unsigned int flags;
+  char* format_type;
+  char* format_name;
+  raptor_uri* format_uri;
+  raptor_iostream* iostr;
+  raptor_uri* base_uri;
+  int usage;
+} rasqal_data_graph;
+</programlisting>
+<para>A source of RDF data for querying. </para>
+<para>If <parameter>iostr</parameter>
+ is present, the graph can be constructed by parsing the
+iostream and using <parameter>base_uri</parameter>
+ as a base uri. Otherwise the graph
+can be constructed from the graph at URI <parameter>uri</parameter>
+.</para>
+<para>In either case the <parameter>name_uri</parameter>
+ is the graph name as long as <parameter>flags</parameter>
+
+is <link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link></para>
+<refsect3 id="rasqal-data-graph.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="rasqal-world"><type>rasqal_world</type></link>&#160;*<structfield id="rasqal-data-graph.world">world</structfield>;</para></entry>
+<entry role="struct_member_description"><para>rasqal_world object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-uri"><type>raptor_uri</type></link>&#160;*<structfield id="rasqal-data-graph.uri">uri</structfield>;</para></entry>
+<entry role="struct_member_description"><para>source URI</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-uri"><type>raptor_uri</type></link>&#160;*<structfield id="rasqal-data-graph.name-uri">name_uri</structfield>;</para></entry>
+<entry role="struct_member_description"><para>name of graph for <link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>unsigned&#160;<link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-data-graph.flags">flags</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="RASQAL-DATA-GRAPH-NAMED:CAPS"><literal>RASQAL_DATA_GRAPH_NAMED</literal></link> or <link linkend="RASQAL-DATA-GRAPH-BACKGROUND:CAPS"><literal>RASQAL_DATA_GRAPH_BACKGROUND</literal></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="char"><type>char</type></link>&#160;*<structfield id="rasqal-data-graph.format-type">format_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>MIME Type of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="char"><type>char</type></link>&#160;*<structfield id="rasqal-data-graph.format-name">format_name</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Raptor parser Name of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-uri"><type>raptor_uri</type></link>&#160;*<structfield id="rasqal-data-graph.format-uri">format_uri</structfield>;</para></entry>
+<entry role="struct_member_description"><para>URI of data format at <parameter>uri</parameter>
+(or NULL)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-iostream"><type>raptor_iostream</type></link>&#160;*<structfield id="rasqal-data-graph.iostr">iostr</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Raptor iostream for content, overriding <parameter>uri</parameter>
+if present (or NULL)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="raptor-uri"><type>raptor_uri</type></link>&#160;*<structfield id="rasqal-data-graph.base-uri">base_uri</structfield>;</para></entry>
+<entry role="struct_member_description"><para>base URI for reading from iostream</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="int"><type>int</type></link>&#160;<structfield id="rasqal-data-graph.usage">usage</structfield>;</para></entry>
+<entry role="struct_member_description"><para>usage count of this object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="rasqal-data-graph-flags" role="enum">
+<title>enum rasqal_data_graph_flags</title>
+<indexterm zone="rasqal-data-graph-flags"><primary>rasqal_data_graph_flags</primary></indexterm>
+<para>Flags for the type of <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link>.</para>
+<para>These are used by <link linkend="rasqal-new-data-graph-from-uri"><function>rasqal_new_data_graph_from_uri()</function></link> and
+<link linkend="rasqal-new-data-graph-from-iostream"><function>rasqal_new_data_graph_from_iostream()</function></link>.  See <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link>.</para>
+<refsect3 id="rasqal-data-graph-flags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-DATA-GRAPH-NONE:CAPS">RASQAL_DATA_GRAPH_NONE</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-DATA-GRAPH-NAMED:CAPS">RASQAL_DATA_GRAPH_NAMED</para></entry>
+<entry role="enum_member_description"><para>Graphs with a source and name.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-DATA-GRAPH-BACKGROUND:CAPS">RASQAL_DATA_GRAPH_BACKGROUND</para></entry>
+<entry role="enum_member_description"><para>Graphs with a source only.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-query-results-formatter">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-query-results-formatter.top_of_page">section-query_results_formatter</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-query_results_formatter</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-query-results-formatter.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-results-formats-check">rasqal_query_results_formats_check</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-results-formats-check2">rasqal_query_results_formats_check2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-query-results-formatter"><returnvalue>rasqal_query_results_formatter</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-query-results-formatter">rasqal_new_query_results_formatter</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-query-results-formatter"><returnvalue>rasqal_query_results_formatter</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-query-results-formatter-for-content">rasqal_new_query_results_formatter_for_content</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-query-results-formatter">rasqal_free_query_results_formatter</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-results-formatter-read">rasqal_query_results_formatter_read</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-results-formatter-write">rasqal_query_results_formatter_write</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-query-results-formatter.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-query-results-formatter">rasqal_query_results_formatter</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-query-results-format-flags">rasqal_query_results_format_flags</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-query-results-formatter.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-query-results-formatter.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-query-results-formats-check" role="function" condition="deprecated:">
+<title>rasqal_query_results_formats_check&#160;()</title>
+<indexterm zone="rasqal-query-results-formats-check" role="deprecated"><primary>rasqal_query_results_formats_check</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_results_formats_check (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                    <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *mime_type</parameter>,
+                                    <parameter><link linkend="int"><type>int</type></link> flags</parameter>);</programlisting>
+<warning><para><literal>rasqal_query_results_formats_check</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Check if a query results formatter exists for the requested format.</para>
+<para><parameter>Deprecated</parameter>
+: use <link linkend="rasqal-query-results-formats-check2"><function>rasqal_query_results_formats_check2()</function></link> since the
+implementation of this function returned an inverted boolean result.</para>
+<refsect3 id="rasqal-query-results-formats-check.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the query results format name (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> query results format uri (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mime_type</para></entry>
+<entry role="parameter_description"><para>mime type name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>bitmask of flags to signify that format is needed for reading (<link linkend="RASQAL-QUERY-RESULTS-FORMAT-FLAG-READER:CAPS"><type>RASQAL_QUERY_RESULTS_FORMAT_FLAG_READER</type></link> ) or writing ( <link linkend="RASQAL-QUERY-RESULTS-FORMAT-FLAG-WRITER:CAPS"><type>RASQAL_QUERY_RESULTS_FORMAT_FLAG_WRITER</type></link> )</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-results-formats-check.returns" role="returns">
+<title>Returns</title>
+<para> 0 if a formatter exists.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-results-formats-check2" role="function">
+<title>rasqal_query_results_formats_check2&#160;()</title>
+<indexterm zone="rasqal-query-results-formats-check2"><primary>rasqal_query_results_formats_check2</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_results_formats_check2 (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                     <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *mime_type</parameter>,
+                                     <parameter><link linkend="int"><type>int</type></link> flags</parameter>);</programlisting>
+<para>Check if a query results formatter exists for the requested format.</para>
+<refsect3 id="rasqal-query-results-formats-check2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the query results format name (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> query results format uri (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mime_type</para></entry>
+<entry role="parameter_description"><para>mime type name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>bitmask of flags to signify that format is needed for reading (<link linkend="RASQAL-QUERY-RESULTS-FORMAT-FLAG-READER:CAPS"><type>RASQAL_QUERY_RESULTS_FORMAT_FLAG_READER</type></link> ) or writing ( <link linkend="RASQAL-QUERY-RESULTS-FORMAT-FLAG-WRITER:CAPS"><type>RASQAL_QUERY_RESULTS_FORMAT_FLAG_WRITER</type></link> )</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-results-formats-check2.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if a formatter exists.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-query-results-formatter" role="function">
+<title>rasqal_new_query_results_formatter&#160;()</title>
+<indexterm zone="rasqal-new-query-results-formatter"><primary>rasqal_new_query_results_formatter</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query-results-formatter"><returnvalue>rasqal_query_results_formatter</returnvalue></link>&#160;*
+rasqal_new_query_results_formatter (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *mime_type</parameter>,
+                                    <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *format_uri</parameter>);</programlisting>
+<para>Constructor - create a new rasqal_query_results_formatter for an identified format.</para>
+<para>A query results format can be found by name, mime type or URI, all
+of which are optional.  If multiple fields are given, the first
+match is given that matches the name, URI, mime_type in that
+order.  The default query results format will be used if all are
+format identifying fields are NULL.</para>
+<para>See <link linkend="rasqal-world-get-query-results-format-description"><function>rasqal_world_get_query_results_format_description()</function></link> for
+obtaining the supported format URIs at run time.</para>
+<refsect3 id="rasqal-new-query-results-formatter.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the query results format name (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mime_type</para></entry>
+<entry role="parameter_description"><para>the query results format mime type (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> query results format uri (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-query-results-formatter.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-new-query-results-formatter-for-content" role="function">
+<title>rasqal_new_query_results_formatter_for_content&#160;()</title>
+<indexterm zone="rasqal-new-query-results-formatter-for-content"><primary>rasqal_new_query_results_formatter_for_content</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query-results-formatter"><returnvalue>rasqal_query_results_formatter</returnvalue></link>&#160;*
+rasqal_new_query_results_formatter_for_content
+                               (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *uri</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *mime_type</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *buffer</parameter>,
+                                <parameter><link linkend="size-t"><type>size_t</type></link> len</parameter>,
+                                <parameter>const unsigned <link linkend="char"><type>char</type></link> *identifier</parameter>);</programlisting>
+<para>Constructor - create a new queryresults formatter for an identified format.</para>
+<para>Uses <link linkend="rasqal-world-guess-query-results-format-name"><function>rasqal_world_guess_query_results_format_name()</function></link> to find a
+query results formatter by scoring recognition of the syntax by a
+block of characters, the content identifier or a mime type.  The
+content identifier is typically a filename or URI or some other
+identifier.</para>
+<refsect3 id="rasqal-new-query-results-formatter-for-content.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>URI identifying the syntax (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mime_type</para></entry>
+<entry role="parameter_description"><para>mime type identifying the content (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>buffer of content to guess (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len</para></entry>
+<entry role="parameter_description"><para>length of buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>identifier</para></entry>
+<entry role="parameter_description"><para>identifier of content (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-query-results-formatter-for-content.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-query-results-formatter" role="function">
+<title>rasqal_free_query_results_formatter&#160;()</title>
+<indexterm zone="rasqal-free-query-results-formatter"><primary>rasqal_free_query_results_formatter</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_query_results_formatter (<parameter><link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> *formatter</parameter>);</programlisting>
+<para>Destructor - destroy a <link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> object.</para>
+<refsect3 id="rasqal-free-query-results-formatter.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>formatter</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-results-formatter-read" role="function">
+<title>rasqal_query_results_formatter_read&#160;()</title>
+<indexterm zone="rasqal-query-results-formatter-read"><primary>rasqal_query_results_formatter_read</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_results_formatter_read (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                                     <parameter><link linkend="raptor-iostream"><type>raptor_iostream</type></link> *iostr</parameter>,
+                                     <parameter><link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> *formatter</parameter>,
+                                     <parameter><link linkend="rasqal-query-results"><type>rasqal_query_results</type></link> *results</parameter>,
+                                     <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *base_uri</parameter>);</programlisting>
+<para>Read the query results using the given formatter from an iostream</para>
+<para>See <link linkend="rasqal-world-get-query-results-format-description"><function>rasqal_world_get_query_results_format_description()</function></link> for
+obtaining the supported format URIs at run time.</para>
+<refsect3 id="rasqal-query-results-formatter-read.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>iostr</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-iostream"><type>raptor_iostream</type></link> to read the query from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>formatter</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>results</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query-results"><type>rasqal_query_results</type></link> query results format</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base_uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> base URI of the input format</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-results-formatter-read.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-results-formatter-write" role="function">
+<title>rasqal_query_results_formatter_write&#160;()</title>
+<indexterm zone="rasqal-query-results-formatter-write"><primary>rasqal_query_results_formatter_write</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_results_formatter_write (<parameter><link linkend="raptor-iostream"><type>raptor_iostream</type></link> *iostr</parameter>,
+                                      <parameter><link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> *formatter</parameter>,
+                                      <parameter><link linkend="rasqal-query-results"><type>rasqal_query_results</type></link> *results</parameter>,
+                                      <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *base_uri</parameter>);</programlisting>
+<para>Write the query results using the given formatter to an iostream</para>
+<para>Note that after calling this method, the query results will be
+empty and <link linkend="rasqal-query-results-finished"><function>rasqal_query_results_finished()</function></link> will return true (non-0)</para>
+<para>See <link linkend="rasqal-world-get-query-results-format-description"><function>rasqal_world_get_query_results_format_description()</function></link> for
+obtaining the supported format URIs at run time.</para>
+<refsect3 id="rasqal-query-results-formatter-write.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>iostr</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-iostream"><type>raptor_iostream</type></link> to write the query to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>formatter</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query-results-formatter"><type>rasqal_query_results_formatter</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>results</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query-results"><type>rasqal_query_results</type></link> query results format</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base_uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> base URI of the output format (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-results-formatter-write.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-query-results-formatter.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-query-results-formatter" role="typedef">
+<title>rasqal_query_results_formatter</title>
+<indexterm zone="rasqal-query-results-formatter"><primary>rasqal_query_results_formatter</primary></indexterm>
+<programlisting language="C">rasqal_graph_query_results_formatter* query_results_formatter;
+</programlisting>
+<para>Rasqal query results formatter class.</para>
+</refsect2>
+<refsect2 id="rasqal-query-results-format-flags" role="enum">
+<title>enum rasqal_query_results_format_flags</title>
+<indexterm zone="rasqal-query-results-format-flags"><primary>rasqal_query_results_format_flags</primary></indexterm>
+<para>Bitflags for <link linkend="rasqal-query-results-formats-check"><function>rasqal_query_results_formats_check()</function></link> to find formats with features.</para>
+<refsect3 id="rasqal-query-results-format-flags.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-RESULTS-FORMAT-FLAG-READER:CAPS">RASQAL_QUERY_RESULTS_FORMAT_FLAG_READER</para></entry>
+<entry role="enum_member_description"><para>format can be read.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-RESULTS-FORMAT-FLAG-WRITER:CAPS">RASQAL_QUERY_RESULTS_FORMAT_FLAG_WRITER</para></entry>
+<entry role="enum_member_description"><para>format can be written.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

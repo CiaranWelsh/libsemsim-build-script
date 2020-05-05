@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>section-variable: Rasqal RDF Query Library Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Rasqal RDF Query Library Manual">
+<link rel="up" href="reference-manual.html" title="Part I. Reference Manual">
+<link rel="prev" href="rasqal-section-triples-source.html" title="section-triples_source">
+<link rel="next" href="rasqal-section-variables-table.html" title="section-variables-table">
+<meta name="generator" content="GTK-Doc V1.27 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#rasqal-section-variable.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="reference-manual.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="rasqal-section-triples-source.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="rasqal-section-variables-table.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="rasqal-section-variable"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="rasqal-section-variable.top_of_page"></a>section-variable</span></h2>
+<p>section-variable</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="rasqal-section-variable.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="returnvalue">rasqal_variable</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="rasqal-section-variable.html#rasqal-new-variable-from-variable" title="rasqal_new_variable_from_variable ()">rasqal_new_variable_from_variable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="rasqal-section-variable.html#rasqal-free-variable" title="rasqal_free_variable ()">rasqal_free_variable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">int</span>
+</td>
+<td class="function_name">
+<a class="link" href="rasqal-section-variable.html#rasqal-variable-print" title="rasqal_variable_print ()">rasqal_variable_print</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="rasqal-section-variable.html#rasqal-variable-set-value" title="rasqal_variable_set_value ()">rasqal_variable_set_value</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-variable.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable">rasqal_variable</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="rasqal-section-variable.html#rasqal-variable-type" title="enum rasqal_variable_type">rasqal_variable_type</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-variable.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-variable.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="rasqal-new-variable-from-variable"></a><h3>rasqal_new_variable_from_variable ()</h3>
+<pre class="programlisting"><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="returnvalue">rasqal_variable</span></a> *
+rasqal_new_variable_from_variable (<em class="parameter"><code><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> *v</code></em>);</pre>
+<p>Copy Constructor - Create a new Rasqal variable from an existing one</p>
+<p>This adds a new reference to the variable, it does not do a deep copy</p>
+<div class="refsect3">
+<a name="rasqal-new-variable-from-variable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>v</p></td>
+<td class="parameter_description"><p><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> to copy</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rasqal-new-variable-from-variable.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> or NULL on failure.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-free-variable"></a><h3>rasqal_free_variable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rasqal_free_variable (<em class="parameter"><code><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> *v</code></em>);</pre>
+<p>Destructor - Destroy a Rasqal variable object.</p>
+<div class="refsect3">
+<a name="rasqal-free-variable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>v</p></td>
+<td class="parameter_description"><p><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-variable-print"></a><h3>rasqal_variable_print ()</h3>
+<pre class="programlisting"><span class="returnvalue">int</span>
+rasqal_variable_print (<em class="parameter"><code><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> *v</code></em>,
+                       <em class="parameter"><code><span class="type">FILE</span> *fh</code></em>);</pre>
+<p>Print a Rasqal variable in a debug format.</p>
+<p>The print debug format may change in any release.</p>
+<div class="refsect3">
+<a name="rasqal-variable-print.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>v</p></td>
+<td class="parameter_description"><p>the <a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fh</p></td>
+<td class="parameter_description"><p>the FILE* handle to print to</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="rasqal-variable-print.returns"></a><h4>Returns</h4>
+<p> non-0 on failure</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-variable-set-value"></a><h3>rasqal_variable_set_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+rasqal_variable_set_value (<em class="parameter"><code><a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> *v</code></em>,
+                           <em class="parameter"><code><a class="link" href="rasqal-section-literal.html#rasqal-literal" title="rasqal_literal"><span class="type">rasqal_literal</span></a> *l</code></em>);</pre>
+<p>Set the value of a Rasqal variable.</p>
+<p>The variable value is an input parameter and is copied in, not shared.
+If the variable value is NULL, any existing value is deleted.</p>
+<div class="refsect3">
+<a name="rasqal-variable-set-value.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>v</p></td>
+<td class="parameter_description"><p>the <a class="link" href="rasqal-section-variable.html#rasqal-variable" title="rasqal_variable"><span class="type">rasqal_variable</span></a> object</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>l</p></td>
+<td class="parameter_description"><p>the <a class="link" href="rasqal-section-literal.html#rasqal-literal" title="rasqal_literal"><span class="type">rasqal_literal</span></a> value to set (or NULL)</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="rasqal-section-variable.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="rasqal-variable"></a><h3>rasqal_variable</h3>
+<pre class="programlisting">typedef struct {
+  rasqal_variables_table* vars_table;
+  const char * name;
+  rasqal_literal* value;
+  int offset;
+  rasqal_variable_type type;
+  struct rasqal_expression_s* expression;
+  void *user_data;
+  int usage;
+} rasqal_variable;
+</pre>
+<p>Binding between a variable name and a value.</p>
+<p>Includes internal field <em class="parameter"><code>offset</code></em>
+ for recording the offset into the
+(internal) rasqal_query variables array.</p>
+<div class="refsect3">
+<a name="rasqal-variable.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="struct_members_name">
+<col class="struct_members_description">
+<col width="200px" class="struct_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="rasqal-section-variables-table.html#rasqal-variables-table" title="rasqal_variables_table"><span class="type">rasqal_variables_table</span></a> *<em class="structfield"><code><a name="rasqal-variable.vars-table"></a>vars_table</code></em>;</p></td>
+<td class="struct_member_description"><p>variables table that owns this variable</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>const <span class="type">char</span> *<em class="structfield"><code><a name="rasqal-variable.name"></a>name</code></em>;</p></td>
+<td class="struct_member_description"><p>Variable name.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="rasqal-section-literal.html#rasqal-literal" title="rasqal_literal"><span class="type">rasqal_literal</span></a> *<em class="structfield"><code><a name="rasqal-variable.value"></a>value</code></em>;</p></td>
+<td class="struct_member_description"><p>Variable value or NULL if unbound.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="rasqal-variable.offset"></a>offset</code></em>;</p></td>
+<td class="struct_member_description"><p>Internal.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><a class="link" href="rasqal-section-variable.html#rasqal-variable-type" title="enum rasqal_variable_type"><span class="type">rasqal_variable_type</span></a> <em class="structfield"><code><a name="rasqal-variable.type"></a>type</code></em>;</p></td>
+<td class="struct_member_description"><p>Variable type.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p>struct <span class="type">rasqal_expression_s</span> *<em class="structfield"><code><a name="rasqal-variable.expression"></a>expression</code></em>;</p></td>
+<td class="struct_member_description"><p>Expression when the variable is a computed SELECT expression </p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">void</span> *<em class="structfield"><code><a name="rasqal-variable.user-data"></a>user_data</code></em>;</p></td>
+<td class="struct_member_description"><p>Pointer to user data associated with a variable.  This is not used by rasqal.</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+<tr>
+<td class="struct_member_name"><p><span class="type">int</span> <em class="structfield"><code><a name="rasqal-variable.usage"></a>usage</code></em>;</p></td>
+<td class="struct_member_description"><p>reference count</p></td>
+<td class="struct_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rasqal-variable-type"></a><h3>enum rasqal_variable_type</h3>
+<p>Rasqal variable types.</p>
+<p>ANONYMOUS can be used in queries but cannot be returned in a
+result.</p>
+<div class="refsect3">
+<a name="rasqal-variable-type.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-VARIABLE-TYPE-UNKNOWN:CAPS"></a>RASQAL_VARIABLE_TYPE_UNKNOWN</p></td>
+<td class="enum_member_description">
+<p>Internal.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-VARIABLE-TYPE-NORMAL:CAPS"></a>RASQAL_VARIABLE_TYPE_NORMAL</p></td>
+<td class="enum_member_description">
+<p>The regular variable type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="RASQAL-VARIABLE-TYPE-ANONYMOUS:CAPS"></a>RASQAL_VARIABLE_TYPE_ANONYMOUS</p></td>
+<td class="enum_member_description">
+<p>Anonymous variable type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.27</div>
+</body>
+</html>

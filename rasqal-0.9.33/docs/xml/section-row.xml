@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-row">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-row.top_of_page">section-row</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-row</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-row.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-row"><returnvalue>rasqal_row</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-row-for-size">rasqal_new_row_for_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-row">rasqal_free_row</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-row-set-value-at">rasqal_row_set_value_at</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-row.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-row">rasqal_row</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-row.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-row.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-row-for-size" role="function">
+<title>rasqal_new_row_for_size&#160;()</title>
+<indexterm zone="rasqal-new-row-for-size"><primary>rasqal_new_row_for_size</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-row"><returnvalue>rasqal_row</returnvalue></link>&#160;*
+rasqal_new_row_for_size (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                         <parameter><link linkend="int"><type>int</type></link> size</parameter>);</programlisting>
+<para>Constructor - Create a new query result row of a given size</para>
+<refsect3 id="rasqal-new-row-for-size.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>width of row</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-row-for-size.returns" role="returns">
+<title>Returns</title>
+<para> a new query result row or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-row" role="function">
+<title>rasqal_free_row&#160;()</title>
+<indexterm zone="rasqal-free-row"><primary>rasqal_free_row</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_row (<parameter><link linkend="rasqal-row"><type>rasqal_row</type></link> *row</parameter>);</programlisting>
+<para>Destructor - Free a query result row object.</para>
+<refsect3 id="rasqal-free-row.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>row</para></entry>
+<entry role="parameter_description"><para>query result row</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-row-set-value-at" role="function">
+<title>rasqal_row_set_value_at&#160;()</title>
+<indexterm zone="rasqal-row-set-value-at"><primary>rasqal_row_set_value_at</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_row_set_value_at (<parameter><link linkend="rasqal-row"><type>rasqal_row</type></link> *row</parameter>,
+                         <parameter><link linkend="int"><type>int</type></link> offset</parameter>,
+                         <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *value</parameter>);</programlisting>
+<para>Set the value of a variable in a query result row</para>
+<para>Any existing row value is freed and the literal <parameter>value</parameter>
+ passed in
+is copied.</para>
+<refsect3 id="rasqal-row-set-value-at.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>row</para></entry>
+<entry role="parameter_description"><para>query result row</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>offset into row (column number)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>literal value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-row-set-value-at.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-row.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-row" role="typedef">
+<title>rasqal_row</title>
+<indexterm zone="rasqal-row"><primary>rasqal_row</primary></indexterm>
+<programlisting language="C">typedef struct rasqal_row_s rasqal_row;
+</programlisting>
+<para>Rasqal Result Row class.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

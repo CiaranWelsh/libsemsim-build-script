@@ -1,0 +1,2181 @@
+<MACRO>
+<NAME>RASQAL_VERSION</NAME>
+#define RASQAL_VERSION 933
+</MACRO>
+<MACRO>
+<NAME>RASQAL_VERSION_STRING</NAME>
+#define RASQAL_VERSION_STRING "0.9.33"
+</MACRO>
+<MACRO>
+<NAME>RASQAL_VERSION_MAJOR</NAME>
+#define RASQAL_VERSION_MAJOR 0
+</MACRO>
+<MACRO>
+<NAME>RASQAL_VERSION_MINOR</NAME>
+#define RASQAL_VERSION_MINOR 9
+</MACRO>
+<MACRO>
+<NAME>RASQAL_VERSION_RELEASE</NAME>
+#define RASQAL_VERSION_RELEASE 33
+</MACRO>
+<MACRO>
+<NAME>RASQAL_API</NAME>
+#      define RASQAL_API
+</MACRO>
+<MACRO>
+<NAME>RASQAL_DEPRECATED</NAME>
+#define RASQAL_DEPRECATED __attribute__((deprecated))
+</MACRO>
+<VARIABLE>
+<NAME>rasqal_short_copyright_string</NAME>
+extern const char * const rasqal_short_copyright_string;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_copyright_string</NAME>
+extern const char * const rasqal_copyright_string;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_version_string</NAME>
+extern const char * const rasqal_version_string;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_version_major</NAME>
+extern const unsigned int rasqal_version_major;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_version_minor</NAME>
+extern const unsigned int rasqal_version_minor;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_version_release</NAME>
+extern const unsigned int rasqal_version_release;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_version_decimal</NAME>
+extern const unsigned int rasqal_version_decimal;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_license_string</NAME>
+extern const char * const rasqal_license_string;
+</VARIABLE>
+<VARIABLE>
+<NAME>rasqal_home_url_string</NAME>
+extern const char * const rasqal_home_url_string;
+</VARIABLE>
+<MACRO>
+<NAME>RASQAL_RAPTOR_VERSION</NAME>
+#define RASQAL_RAPTOR_VERSION 20015
+</MACRO>
+<MACRO>
+<NAME>RASQAL_WORLD_DECLARED</NAME>
+#define RASQAL_WORLD_DECLARED 1
+</MACRO>
+<TYPEDEF>
+<NAME>rasqal_world</NAME>
+typedef struct rasqal_world_s rasqal_world;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>rasqal_query</NAME>
+typedef struct rasqal_query_s rasqal_query;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>rasqal_query_results</NAME>
+typedef struct rasqal_query_results_s rasqal_query_results;
+</TYPEDEF>
+<MACRO>
+<NAME>RASQAL_QUERY_RESULTS_FORMATTER_DECLARED</NAME>
+#define RASQAL_QUERY_RESULTS_FORMATTER_DECLARED 1
+</MACRO>
+<TYPEDEF>
+<NAME>rasqal_query_results_formatter</NAME>
+typedef struct rasqal_query_results_formatter_s rasqal_query_results_formatter;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>rasqal_literal</NAME>
+typedef struct rasqal_literal_s rasqal_literal;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>rasqal_graph_pattern</NAME>
+typedef struct rasqal_graph_pattern_s rasqal_graph_pattern;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>rasqal_variables_table</NAME>
+typedef struct rasqal_variables_table_s rasqal_variables_table;
+</TYPEDEF>
+<ENUM>
+<NAME>rasqal_feature</NAME>
+typedef enum {
+  RASQAL_FEATURE_NO_NET,
+  RASQAL_FEATURE_RAND_SEED,
+  RASQAL_FEATURE_LAST = RASQAL_FEATURE_RAND_SEED
+} rasqal_feature;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_prefix</NAME>
+typedef struct {
+  rasqal_world* world;
+  const char * prefix;
+  raptor_uri* uri;
+  int declared;
+  int depth;
+} rasqal_prefix;
+</STRUCT>
+<ENUM>
+<NAME>rasqal_variable_type</NAME>
+typedef enum {
+  RASQAL_VARIABLE_TYPE_UNKNOWN   = 0,
+  RASQAL_VARIABLE_TYPE_NORMAL    = 1,
+  RASQAL_VARIABLE_TYPE_ANONYMOUS = 2
+} rasqal_variable_type;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_variable</NAME>
+typedef struct {
+  rasqal_variables_table* vars_table;
+  const char * name;
+  rasqal_literal* value;
+  int offset;
+  rasqal_variable_type type;
+  struct rasqal_expression_s* expression;
+  void *user_data;
+  int usage;
+} rasqal_variable;
+</STRUCT>
+<ENUM>
+<NAME>rasqal_data_graph_flags</NAME>
+typedef enum {
+  RASQAL_DATA_GRAPH_NONE  = 0,
+  RASQAL_DATA_GRAPH_NAMED = 1,
+  RASQAL_DATA_GRAPH_BACKGROUND = 2
+} rasqal_data_graph_flags;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_data_graph</NAME>
+typedef struct {
+  rasqal_world* world;
+  raptor_uri* uri;
+  raptor_uri* name_uri;
+  unsigned int flags;
+  char* format_type;
+  char* format_name;
+  raptor_uri* format_uri;
+  raptor_iostream* iostr;
+  raptor_uri* base_uri;
+  int usage;
+} rasqal_data_graph;
+</STRUCT>
+<ENUM>
+<NAME>rasqal_literal_type</NAME>
+typedef enum {
+  /* internal */
+  RASQAL_LITERAL_UNKNOWN,
+  RASQAL_LITERAL_BLANK,
+  RASQAL_LITERAL_URI,
+  RASQAL_LITERAL_STRING,
+  RASQAL_LITERAL_XSD_STRING,
+  RASQAL_LITERAL_BOOLEAN,
+  RASQAL_LITERAL_INTEGER,
+  RASQAL_LITERAL_FLOAT,
+  RASQAL_LITERAL_DOUBLE,
+  RASQAL_LITERAL_DECIMAL,
+  RASQAL_LITERAL_DATETIME,
+  /* internal */
+  RASQAL_LITERAL_FIRST_XSD = RASQAL_LITERAL_XSD_STRING,
+  /* internal */
+  RASQAL_LITERAL_LAST_XSD = RASQAL_LITERAL_DATETIME,
+  RASQAL_LITERAL_UDT,
+  RASQAL_LITERAL_PATTERN,
+  RASQAL_LITERAL_QNAME,
+  RASQAL_LITERAL_VARIABLE,
+  /* internal */
+  RASQAL_LITERAL_INTEGER_SUBTYPE,
+  RASQAL_LITERAL_DATE,
+  /* internal */
+  RASQAL_LITERAL_LAST = RASQAL_LITERAL_DATE
+} rasqal_literal_type;
+</ENUM>
+<MACRO>
+<NAME>RASQAL_LITERAL_UDT_DEFINED</NAME>
+#define RASQAL_LITERAL_UDT_DEFINED 1
+</MACRO>
+<TYPEDEF>
+<NAME>rasqal_row</NAME>
+typedef struct rasqal_row_s rasqal_row;
+</TYPEDEF>
+<TYPEDEF>
+<NAME>rasqal_xsd_decimal</NAME>
+typedef struct rasqal_xsd_decimal_s rasqal_xsd_decimal;
+</TYPEDEF>
+<MACRO>
+<NAME>RASQAL_XSD_DATETIME_NO_TZ</NAME>
+#define RASQAL_XSD_DATETIME_NO_TZ (9999)
+</MACRO>
+<STRUCT>
+<NAME>rasqal_xsd_date</NAME>
+typedef struct {
+  signed int year;
+  /* the following fields are integer values not characters */
+  unsigned char month;
+  unsigned char day;
+  signed short timezone_minutes;
+  time_t time_on_timeline;
+  char have_tz;
+} rasqal_xsd_date;
+</STRUCT>
+<STRUCT>
+<NAME>rasqal_xsd_datetime</NAME>
+typedef struct {
+  signed int year;
+  unsigned char month;
+  unsigned char day;
+  /* the following fields are integer values not characters */
+  signed char hour;
+  signed char minute;
+  signed char second;
+  signed int microseconds;
+  signed short timezone_minutes;
+  time_t time_on_timeline;
+  char have_tz;
+} rasqal_xsd_datetime;
+</STRUCT>
+<STRUCT>
+<NAME>rasqal_literal_s</NAME>
+struct rasqal_literal_s {
+  rasqal_world *world;
+
+  int usage;
+
+  rasqal_literal_type type;
+
+  /* UTF-8 string, pattern, qname, blank, double, float, decimal, datetime */
+  const char * string;
+  unsigned int string_len;
+  
+  union {
+    /* integer and boolean types */
+    int integer;
+    /* double and float */
+    double floating;
+    /* uri (can be temporarily NULL if a qname, see flags below) */
+    raptor_uri* uri;
+    /* variable */
+    rasqal_variable* variable;
+    /* decimal */
+    rasqal_xsd_decimal* decimal;
+    /* datetime  */
+    rasqal_xsd_datetime* datetime;
+    /* date  */
+    rasqal_xsd_date* date;
+  } value;
+
+  /* for string */
+  char *language;
+  raptor_uri *datatype;
+
+  /* various flags for literal types:
+   *  pattern  regex flags
+   *  string   datatype of qname
+   *  uri      qname of URI not yet expanded (temporary)
+   */
+  const char * flags;
+
+  rasqal_literal_type parent_type;
+
+  int valid;
+};
+</STRUCT>
+<ENUM>
+<NAME>rasqal_op</NAME>
+typedef enum {
+  /* internal */
+  RASQAL_EXPR_UNKNOWN,
+  RASQAL_EXPR_AND,
+  RASQAL_EXPR_OR,
+  RASQAL_EXPR_EQ,
+  RASQAL_EXPR_NEQ,
+  RASQAL_EXPR_LT,
+  RASQAL_EXPR_GT,
+  RASQAL_EXPR_LE,
+  RASQAL_EXPR_GE,
+  RASQAL_EXPR_UMINUS,
+  RASQAL_EXPR_PLUS,
+  RASQAL_EXPR_MINUS,
+  RASQAL_EXPR_STAR,
+  RASQAL_EXPR_SLASH,
+  RASQAL_EXPR_REM,
+  RASQAL_EXPR_STR_EQ,
+  RASQAL_EXPR_STR_NEQ,
+  RASQAL_EXPR_STR_MATCH,
+  RASQAL_EXPR_STR_NMATCH,
+  RASQAL_EXPR_TILDE,
+  RASQAL_EXPR_BANG,
+  RASQAL_EXPR_LITERAL,
+  RASQAL_EXPR_FUNCTION,
+  RASQAL_EXPR_BOUND,
+  RASQAL_EXPR_STR,
+  RASQAL_EXPR_LANG,
+  RASQAL_EXPR_DATATYPE,
+  RASQAL_EXPR_ISURI,
+  RASQAL_EXPR_ISBLANK,
+  RASQAL_EXPR_ISLITERAL,
+  RASQAL_EXPR_CAST,
+  RASQAL_EXPR_ORDER_COND_ASC,
+  RASQAL_EXPR_ORDER_COND_DESC,
+  RASQAL_EXPR_LANGMATCHES,
+  RASQAL_EXPR_REGEX,
+  RASQAL_EXPR_GROUP_COND_ASC,
+  RASQAL_EXPR_GROUP_COND_DESC,
+  RASQAL_EXPR_COUNT,
+  RASQAL_EXPR_VARSTAR,
+  RASQAL_EXPR_SAMETERM,
+  RASQAL_EXPR_SUM,
+  RASQAL_EXPR_AVG,
+  RASQAL_EXPR_MIN,
+  RASQAL_EXPR_MAX,
+  RASQAL_EXPR_COALESCE,
+  RASQAL_EXPR_IF,
+  RASQAL_EXPR_URI,
+  RASQAL_EXPR_IRI,
+  RASQAL_EXPR_STRLANG,
+  RASQAL_EXPR_STRDT,
+  RASQAL_EXPR_BNODE,
+  RASQAL_EXPR_GROUP_CONCAT,
+  RASQAL_EXPR_SAMPLE,
+  RASQAL_EXPR_IN,
+  RASQAL_EXPR_NOT_IN,
+  RASQAL_EXPR_ISNUMERIC,
+  RASQAL_EXPR_YEAR,
+  RASQAL_EXPR_MONTH,
+  RASQAL_EXPR_DAY,
+  RASQAL_EXPR_HOURS,
+  RASQAL_EXPR_MINUTES,
+  RASQAL_EXPR_SECONDS,
+  RASQAL_EXPR_TIMEZONE,
+  RASQAL_EXPR_CURRENT_DATETIME,
+  RASQAL_EXPR_NOW,
+  RASQAL_EXPR_FROM_UNIXTIME,
+  RASQAL_EXPR_TO_UNIXTIME,
+  RASQAL_EXPR_CONCAT,
+  RASQAL_EXPR_STRLEN,
+  RASQAL_EXPR_SUBSTR,
+  RASQAL_EXPR_UCASE,
+  RASQAL_EXPR_LCASE,
+  RASQAL_EXPR_STRSTARTS,
+  RASQAL_EXPR_STRENDS,
+  RASQAL_EXPR_CONTAINS,
+  RASQAL_EXPR_ENCODE_FOR_URI,
+  RASQAL_EXPR_TZ,
+  RASQAL_EXPR_RAND,
+  RASQAL_EXPR_ABS,
+  RASQAL_EXPR_ROUND,
+  RASQAL_EXPR_CEIL,
+  RASQAL_EXPR_FLOOR,
+  RASQAL_EXPR_MD5,
+  RASQAL_EXPR_SHA1,
+  RASQAL_EXPR_SHA224,
+  RASQAL_EXPR_SHA256,
+  RASQAL_EXPR_SHA384,
+  RASQAL_EXPR_SHA512,
+  RASQAL_EXPR_STRBEFORE,
+  RASQAL_EXPR_STRAFTER,
+  RASQAL_EXPR_REPLACE,
+  RASQAL_EXPR_UUID,
+  RASQAL_EXPR_STRUUID,
+  /* internal */
+  RASQAL_EXPR_LAST = RASQAL_EXPR_STRUUID
+} rasqal_op;
+</ENUM>
+<ENUM>
+<NAME>rasqal_expression_flags</NAME>
+typedef enum {
+  RASQAL_EXPR_FLAG_DISTINCT = 1,
+  RASQAL_EXPR_FLAG_AGGREGATE = 2
+} rasqal_expression_flags;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_expression_s</NAME>
+struct rasqal_expression_s {
+  rasqal_world* world;
+
+  int usage;
+  
+  rasqal_op op;
+
+  struct rasqal_expression_s* arg1;
+  struct rasqal_expression_s* arg2;
+  struct rasqal_expression_s* arg3;
+  rasqal_literal* literal;
+  unsigned char *value;
+
+  raptor_uri* name;
+  raptor_sequence* args;
+
+  raptor_sequence* params;
+  unsigned int flags;
+  struct rasqal_expression_s* arg4;
+};
+</STRUCT>
+<TYPEDEF>
+<NAME>rasqal_expression</NAME>
+typedef struct rasqal_expression_s rasqal_expression;
+</TYPEDEF>
+<STRUCT>
+<NAME>rasqal_triple</NAME>
+typedef struct {
+  rasqal_literal* subject;
+  rasqal_literal* predicate;
+  rasqal_literal* object;
+  rasqal_literal* origin;
+  unsigned int flags;
+} rasqal_triple;
+</STRUCT>
+<ENUM>
+<NAME>rasqal_pattern_flags</NAME>
+typedef enum {
+  RASQAL_PATTERN_FLAGS_OPTIONAL = 1,
+
+  RASQAL_PATTERN_FLAGS_LAST     = RASQAL_PATTERN_FLAGS_OPTIONAL
+} rasqal_pattern_flags;
+</ENUM>
+<USER_FUNCTION>
+<NAME>rasqal_generate_bnodeid_handler</NAME>
+<RETURNS>char *</RETURNS>
+rasqal_world* world, void *user_data, unsigned char *user_bnodeid
+</USER_FUNCTION>
+<ENUM>
+<NAME>rasqal_query_verb</NAME>
+typedef enum {
+  /* internal */
+  RASQAL_QUERY_VERB_UNKNOWN   = 0,
+  RASQAL_QUERY_VERB_SELECT    = 1,
+  RASQAL_QUERY_VERB_CONSTRUCT = 2,
+  RASQAL_QUERY_VERB_DESCRIBE  = 3,
+  RASQAL_QUERY_VERB_ASK       = 4,
+  RASQAL_QUERY_VERB_DELETE    = 5,
+  RASQAL_QUERY_VERB_INSERT    = 6,
+  RASQAL_QUERY_VERB_UPDATE    = 7,
+
+  /* internal */
+  RASQAL_QUERY_VERB_LAST = RASQAL_QUERY_VERB_UPDATE
+} rasqal_query_verb;
+</ENUM>
+<ENUM>
+<NAME>rasqal_query_results_type</NAME>
+typedef enum {
+  RASQAL_QUERY_RESULTS_BINDINGS,
+  RASQAL_QUERY_RESULTS_BOOLEAN,
+  RASQAL_QUERY_RESULTS_GRAPH,
+  RASQAL_QUERY_RESULTS_SYNTAX,
+  RASQAL_QUERY_RESULTS_UNKNOWN,
+  RASQAL_QUERY_RESULTS_LAST = RASQAL_QUERY_RESULTS_UNKNOWN
+} rasqal_query_results_type;
+</ENUM>
+<ENUM>
+<NAME>rasqal_update_type</NAME>
+typedef enum {
+  /* internal */
+  RASQAL_UPDATE_TYPE_UNKNOWN   = 0,
+  RASQAL_UPDATE_TYPE_CLEAR     = 1,
+  RASQAL_UPDATE_TYPE_CREATE    = 2,
+  RASQAL_UPDATE_TYPE_DROP      = 3,
+  RASQAL_UPDATE_TYPE_LOAD      = 4,
+  RASQAL_UPDATE_TYPE_UPDATE    = 5,
+  RASQAL_UPDATE_TYPE_ADD       = 6,
+  RASQAL_UPDATE_TYPE_MOVE      = 7,
+  RASQAL_UPDATE_TYPE_COPY      = 8,
+
+  /* internal */
+  RASQAL_UPDATE_TYPE_LAST = RASQAL_UPDATE_TYPE_COPY
+} rasqal_update_type;
+</ENUM>
+<ENUM>
+<NAME>rasqal_update_flags</NAME>
+typedef enum {
+  RASQAL_UPDATE_FLAGS_SILENT = 1,
+  RASQAL_UPDATE_FLAGS_DATA = 2
+} rasqal_update_flags;
+</ENUM>
+<ENUM>
+<NAME>rasqal_update_graph_applies</NAME>
+typedef enum {
+  RASQAL_UPDATE_GRAPH_ONE = 0,
+  RASQAL_UPDATE_GRAPH_DEFAULT = 1,
+  RASQAL_UPDATE_GRAPH_NAMED = 2,
+  RASQAL_UPDATE_GRAPH_ALL = 3
+} rasqal_update_graph_applies;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_update_operation</NAME>
+typedef struct {
+  rasqal_update_type type;
+
+  raptor_uri* graph_uri;
+
+  raptor_uri* document_uri;
+
+  raptor_sequence* insert_templates;
+
+  raptor_sequence* delete_templates;
+
+  rasqal_graph_pattern* where;
+
+  int flags;
+
+  rasqal_update_graph_applies applies;
+} rasqal_update_operation;
+</STRUCT>
+<ENUM>
+<NAME>rasqal_graph_pattern_operator</NAME>
+typedef enum {
+  RASQAL_GRAPH_PATTERN_OPERATOR_UNKNOWN   = 0,
+  RASQAL_GRAPH_PATTERN_OPERATOR_BASIC     = 1,
+  RASQAL_GRAPH_PATTERN_OPERATOR_OPTIONAL  = 2,
+  RASQAL_GRAPH_PATTERN_OPERATOR_UNION     = 3,
+  RASQAL_GRAPH_PATTERN_OPERATOR_GROUP     = 4,
+  RASQAL_GRAPH_PATTERN_OPERATOR_GRAPH     = 5,
+  RASQAL_GRAPH_PATTERN_OPERATOR_FILTER    = 6,
+  RASQAL_GRAPH_PATTERN_OPERATOR_LET       = 7,
+  RASQAL_GRAPH_PATTERN_OPERATOR_SELECT    = 8,
+  RASQAL_GRAPH_PATTERN_OPERATOR_SERVICE   = 9,
+  RASQAL_GRAPH_PATTERN_OPERATOR_MINUS     = 10,
+  RASQAL_GRAPH_PATTERN_OPERATOR_VALUES    = 11,
+
+  RASQAL_GRAPH_PATTERN_OPERATOR_LAST = RASQAL_GRAPH_PATTERN_OPERATOR_VALUES
+} rasqal_graph_pattern_operator;
+</ENUM>
+<USER_FUNCTION>
+<NAME>rasqal_graph_pattern_visit_fn</NAME>
+<RETURNS>int </RETURNS>
+rasqal_query* query, rasqal_graph_pattern* gp, void *user_data
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_world</NAME>
+<RETURNS>rasqal_world  *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_open</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_world</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_world* world
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_set_raptor</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_world* world, raptor_world* raptor_world_ptr
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_get_raptor</NAME>
+<RETURNS>raptor_world  *</RETURNS>
+rasqal_world* world
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_set_log_handler</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_world* world, void *user_data, raptor_log_handler handler
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_set_default_generate_bnodeid_parameters</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, char *prefix, int base
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_set_generate_bnodeid_handler</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, void *user_data, rasqal_generate_bnodeid_handler handler
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_set_warning_level</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, unsigned int warning_level
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_get_query_results_format_description</NAME>
+<RETURNS>const raptor_syntax_description * </RETURNS>
+rasqal_world* world, unsigned int counter
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_guess_query_results_format_name</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_world* world, raptor_uri *uri, const char *mime_type, const char * buffer, size_t len, const unsigned char *identifier
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_features_enumerate</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, const rasqal_feature feature, const char **name, raptor_uri **uri, const char **label
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_get_feature_count</NAME>
+<RETURNS>unsigned int  </RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_feature_from_uri</NAME>
+<RETURNS>rasqal_feature  </RETURNS>
+rasqal_world* world, raptor_uri *uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_feature_value_type</NAME>
+<RETURNS>int  </RETURNS>
+const rasqal_feature feature
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_world_get_query_language_description</NAME>
+<RETURNS>const raptor_syntax_description * </RETURNS>
+rasqal_world* world, unsigned int counter
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_languages_enumerate</NAME>
+<DEPRECATED/>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, unsigned int counter, const char **name, const char **label, const unsigned char **uri_string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_language_name_check</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_query</NAME>
+<RETURNS>rasqal_query * </RETURNS>
+rasqal_world* world, const char *name, const char * uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_query</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_name</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_label</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_feature</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_feature feature, int value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_feature_string</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query *query, rasqal_feature feature, const char * value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_feature</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query *query, rasqal_feature feature
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_feature_string</NAME>
+<RETURNS>const unsigned char * </RETURNS>
+rasqal_query *query, rasqal_feature feature
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_verb</NAME>
+<RETURNS>rasqal_query_verb  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_wildcard</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_wildcard</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, int wildcard
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_distinct</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_distinct</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, int distinct_mode
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_explain</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_explain</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, int is_explain
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_limit</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_limit</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, int limit
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_offset</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_offset</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, int offset
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_add_data_graph</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_data_graph* data_graph
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_add_data_graphs</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, raptor_sequence* data_graphs
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_data_graph_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_data_graph</NAME>
+<RETURNS>rasqal_data_graph * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_dataset_contains_named_graph</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, raptor_uri *graph_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_add_variable</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_variable* var
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_bound_variable_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_describe_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_anonymous_variable_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_all_variable_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_variable</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_has_variable2</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_variable_type type, const char * name
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_has_variable</NAME>
+<DEPRECATED/>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, const char * name
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_variable2</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_variable_type type, const char * name, rasqal_literal* value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_variable</NAME>
+<DEPRECATED/>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, const char * name, rasqal_literal* value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_triple_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_triple</NAME>
+<RETURNS>rasqal_triple * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_add_prefix</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_prefix* prefix
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_prefix_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_prefix</NAME>
+<RETURNS>rasqal_prefix * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_order_conditions_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_order_condition</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_group_conditions_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_group_condition</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_having_conditions_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_having_condition</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_construct_triples_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_construct_triple</NAME>
+<RETURNS>rasqal_triple * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_graph_pattern_visit</NAME>
+<DEPRECATED/>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, rasqal_graph_pattern_visit_fn visit_fn, void* data
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_graph_pattern_visit2</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_graph_pattern_visit_fn visit_fn, void* data
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_write</NAME>
+<RETURNS>int  </RETURNS>
+raptor_iostream* iostr, rasqal_query* query, raptor_uri* format_uri, raptor_uri* base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_update_operations_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_update_operation</NAME>
+<RETURNS>rasqal_update_operation * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_store_results</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, int store_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_query_graph_pattern</NAME>
+<RETURNS>rasqal_graph_pattern * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_graph_pattern_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_graph_pattern</NAME>
+<RETURNS>rasqal_graph_pattern * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_add_sub_graph_pattern</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_graph_pattern* graph_pattern, rasqal_graph_pattern* sub_graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_triple</NAME>
+<RETURNS>rasqal_triple * </RETURNS>
+rasqal_graph_pattern* graph_pattern, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_sub_graph_pattern_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_sub_graph_pattern</NAME>
+<RETURNS>rasqal_graph_pattern * </RETURNS>
+rasqal_graph_pattern* graph_pattern, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_operator</NAME>
+<RETURNS>rasqal_graph_pattern_operator  </RETURNS>
+rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_operator_as_string</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_graph_pattern_operator op
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_graph_pattern* gp, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_set_filter_expression</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_graph_pattern* gp, rasqal_expression* expr
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_filter_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_graph_pattern* gp
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_visit</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, rasqal_graph_pattern *gp, rasqal_graph_pattern_visit_fn fn, void* user_data
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_index</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_graph_pattern* gp
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_variable_bound_in</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_graph_pattern *gp, rasqal_variable *v
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_origin</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_variable</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_service</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_flattened_triples</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query, rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_graph_pattern_get_triples</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query, rasqal_graph_pattern* graph_pattern
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_verb_as_string</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_query_verb verb
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_prepare</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, const char * query_string, raptor_uri *base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_execute</NAME>
+<RETURNS>rasqal_query_results * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_user_data</NAME>
+<RETURNS>void * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_set_user_data</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query* query, void *user_data
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_bindings_variables_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_bindings_variable</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_bindings_rows_sequence</NAME>
+<RETURNS>raptor_sequence * </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_bindings_row</NAME>
+<RETURNS>rasqal_row * </RETURNS>
+rasqal_query* query, int idx
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_get_result_type</NAME>
+<RETURNS>rasqal_query_results_type  </RETURNS>
+rasqal_query* query
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_query_results2</NAME>
+<RETURNS>rasqal_query_results * </RETURNS>
+rasqal_world* world, rasqal_query* query, rasqal_query_results_type type
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_query_results</NAME>
+<DEPRECATED/>
+<RETURNS>rasqal_query_results * </RETURNS>
+rasqal_world* world, rasqal_query* query, rasqal_query_results_type type, rasqal_variables_table* vars_table
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_query_results_from_string</NAME>
+<RETURNS>rasqal_query_results * </RETURNS>
+rasqal_world* world, rasqal_query_results_type type, raptor_uri* base_uri, const char* string, size_t string_len
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_query_results</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_query</NAME>
+<RETURNS>rasqal_query * </RETURNS>
+rasqal_query_results* query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_type</NAME>
+<RETURNS>rasqal_query_results_type  </RETURNS>
+rasqal_query_results* query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_type_label</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_query_results_type type
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_is_bindings</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_count</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_next</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_finished</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_bindings</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results, const unsigned char ***names, rasqal_literal ***values
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_binding_value</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_query_results *query_results, int offset
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_binding_name</NAME>
+<RETURNS>const unsigned char * </RETURNS>
+rasqal_query_results *query_results, int offset
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_binding_value_by_name</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_query_results *query_results, const char * name
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_bindings_count</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_add_row</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results* query_results, rasqal_row* row
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_row_by_offset</NAME>
+<RETURNS>rasqal_row * </RETURNS>
+rasqal_query_results* query_results, int result_offset
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_is_boolean</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_boolean</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_is_graph</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_get_triple</NAME>
+<RETURNS>raptor_statement * </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_next_triple</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results *query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_is_syntax</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results* query_results
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_write</NAME>
+<RETURNS>int  </RETURNS>
+raptor_iostream *iostr, rasqal_query_results *results, const char* name, const char* mime_type, raptor_uri *format_uri, raptor_uri *base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_read</NAME>
+<RETURNS>int  </RETURNS>
+raptor_iostream *iostr, rasqal_query_results *results, const char* name, const char* mime_type, raptor_uri *format_uri, raptor_uri *base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_rewind</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query_results* query_results
+</FUNCTION>
+<ENUM>
+<NAME>rasqal_query_results_format_flags</NAME>
+typedef enum {
+  RASQAL_QUERY_RESULTS_FORMAT_FLAG_READER = 1,
+  RASQAL_QUERY_RESULTS_FORMAT_FLAG_WRITER = 2
+} rasqal_query_results_format_flags;
+</ENUM>
+<FUNCTION>
+<NAME>rasqal_query_results_formats_check2</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, const char *name, raptor_uri* uri, const char *mime_type, int flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_formats_check</NAME>
+<DEPRECATED/>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, const char *name, raptor_uri* uri, const char *mime_type, int flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_query_results_formatter</NAME>
+<RETURNS>rasqal_query_results_formatter * </RETURNS>
+rasqal_world* world, const char *name, const char *mime_type, raptor_uri* format_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_query_results_formatter_for_content</NAME>
+<RETURNS>rasqal_query_results_formatter * </RETURNS>
+rasqal_world* world, raptor_uri *uri, const char *mime_type, const char * buffer, size_t len, const unsigned char *identifier
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_query_results_formatter</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_query_results_formatter* formatter
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_formatter_write</NAME>
+<RETURNS>int  </RETURNS>
+raptor_iostream *iostr, rasqal_query_results_formatter* formatter, rasqal_query_results* results, raptor_uri *base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_results_formatter_read</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, raptor_iostream *iostr, rasqal_query_results_formatter* formatter, rasqal_query_results* results, raptor_uri *base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_iostream_write_escaped_counted_string</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_query* query, raptor_iostream* iostr, const unsigned char* string, size_t len
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_query_escape_counted_string</NAME>
+<RETURNS>unsigned char * </RETURNS>
+rasqal_query* query, const char * string, size_t len, size_t* output_len_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_data_graph_from_uri</NAME>
+<RETURNS>rasqal_data_graph * </RETURNS>
+rasqal_world* world, raptor_uri* uri, raptor_uri* name_uri, unsigned int flags, const char* format_type, const char* format_name, raptor_uri* format_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_data_graph_from_iostream</NAME>
+<RETURNS>rasqal_data_graph * </RETURNS>
+rasqal_world* world, raptor_iostream* iostr, raptor_uri* base_uri, raptor_uri* name_uri, unsigned int flags, const char* format_type, const char* format_name, raptor_uri* format_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_data_graph_from_data_graph</NAME>
+<RETURNS>rasqal_data_graph * </RETURNS>
+rasqal_data_graph* dg
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_data_graph</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_data_graph* dg
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_data_graph_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_data_graph* dg, FILE* fh
+</FUNCTION>
+<ENUM>
+<NAME>rasqal_compare_flags</NAME>
+typedef enum {
+  RASQAL_COMPARE_NOCASE = 1,
+  RASQAL_COMPARE_XQUERY = 2,
+  RASQAL_COMPARE_RDF    = 4,
+  RASQAL_COMPARE_URI    = 8,
+  RASQAL_COMPARE_SAMETERM = 16
+} rasqal_compare_flags;
+</ENUM>
+<TYPEDEF>
+<NAME>rasqal_random</NAME>
+typedef struct rasqal_random_s rasqal_random;
+</TYPEDEF>
+<STRUCT>
+<NAME>rasqal_evaluation_context</NAME>
+typedef struct {
+  rasqal_world *world;
+  raptor_uri* base_uri;
+  raptor_locator *locator;
+  int flags;
+  unsigned int seed;
+  rasqal_random* random;
+} rasqal_evaluation_context;
+</STRUCT>
+<FUNCTION>
+<NAME>rasqal_new_0op_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_1op_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_2op_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg1, rasqal_expression* arg2
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_3op_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg1,  rasqal_expression* arg2, rasqal_expression* arg3
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_4op_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg1, rasqal_expression* arg2, rasqal_expression* arg3, rasqal_expression* arg4
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_string_op_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg1, rasqal_literal* literal
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_literal_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_literal* literal
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_function_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, raptor_uri* name, raptor_sequence* args, raptor_sequence* params, unsigned int flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_aggregate_function_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg1, raptor_sequence* params, unsigned int flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_cast_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, raptor_uri* name, rasqal_expression *value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_expr_seq_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, raptor_sequence* args
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_set_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, rasqal_op op, rasqal_expression* arg1, raptor_sequence* args
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_group_concat_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_world* world, unsigned int flags, raptor_sequence* args, rasqal_literal* separator
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_expression_from_expression</NAME>
+<RETURNS>rasqal_expression * </RETURNS>
+rasqal_expression* e
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_expression</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_expression* e
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_print_op</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_expression* e, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_expression* e, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_evaluate</NAME>
+<DEPRECATED/>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world *world, raptor_locator *locator, rasqal_expression* e, int flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_evaluate2</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_expression *e, rasqal_evaluation_context* eval_context, int *error_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_op_label</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_op op
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_compare</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_expression* e1, rasqal_expression* e2, int flags, int* error_p
+</FUNCTION>
+<USER_FUNCTION>
+<NAME>rasqal_expression_visit_fn</NAME>
+<RETURNS>int </RETURNS>
+void *user_data, rasqal_expression *e
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>rasqal_expression_visit</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_expression* e, rasqal_expression_visit_fn fn, void *user_data
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_evaluation_context</NAME>
+<RETURNS>rasqal_evaluation_context * </RETURNS>
+rasqal_world* world, raptor_locator* locator, int flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_evaluation_context</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_evaluation_context* eval_context
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_evaluation_context_set_base_uri</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_evaluation_context* eval_context, raptor_uri *base_uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_evaluation_context_set_rand_seed</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_evaluation_context* eval_context, unsigned int seed
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_integer_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, rasqal_literal_type type, int integer
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_numeric_literal_from_long</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, rasqal_literal_type type, long value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_typed_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, rasqal_literal_type type, const unsigned char* string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_double_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, double d
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_floating_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world *world, rasqal_literal_type type, double d
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_float_literal</NAME>
+<DEPRECATED/>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, float f
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_uri_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, raptor_uri* uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_pattern_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, const char * pattern, const char *flags
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_string_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, const char * string, const char *language, raptor_uri *datatype, const unsigned char *datatype_qname
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_simple_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, rasqal_literal_type type, const char * string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_boolean_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, int value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_variable_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, rasqal_variable *variable
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_decimal_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, const char * string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_decimal_literal_from_decimal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, const char * string, rasqal_xsd_decimal* decimal
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_datetime_literal_from_datetime</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_world* world, rasqal_xsd_datetime* dt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_literal_from_literal</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_literal</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_literal* l, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_type_label</NAME>
+<RETURNS>const char * </RETURNS>
+rasqal_literal_type type
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_print_type</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_literal* l, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_as_variable</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_as_counted_string</NAME>
+<RETURNS>const unsigned char * </RETURNS>
+rasqal_literal* l, size_t *len_p, int flags, int *error_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_as_string</NAME>
+<RETURNS>const unsigned char * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_as_string_flags</NAME>
+<RETURNS>const unsigned char * </RETURNS>
+rasqal_literal* l, int flags, int *error_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_as_node</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_datatype</NAME>
+<RETURNS>raptor_uri * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_value</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_compare</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_literal* l1, rasqal_literal* l2, int flags, int *error_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_equals</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_literal* l1, rasqal_literal* l2
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_same_term</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_literal* l1, rasqal_literal* l2
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_get_rdf_term_type</NAME>
+<RETURNS>rasqal_literal_type  </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_get_type</NAME>
+<RETURNS>rasqal_literal_type  </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_get_language</NAME>
+<RETURNS>char * </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_literal_is_rdf_literal</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_prefix</NAME>
+<RETURNS>rasqal_prefix * </RETURNS>
+rasqal_world* world, const unsigned char* prefix, raptor_uri* uri
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_prefix</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_prefix* p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_prefix_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_prefix* p, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_row_for_size</NAME>
+<RETURNS>rasqal_row * </RETURNS>
+rasqal_world* world, int size
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_row</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_row* row
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_row_set_value_at</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_row* row, int offset, rasqal_literal* value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_triple</NAME>
+<RETURNS>rasqal_triple * </RETURNS>
+rasqal_literal* subject, rasqal_literal* predicate, rasqal_literal* object
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_triple_from_triple</NAME>
+<RETURNS>rasqal_triple * </RETURNS>
+rasqal_triple* t
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_triple</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_triple* t
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_triple_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_triple* t, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_triple_set_origin</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_triple* t, rasqal_literal *l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_triple_get_origin</NAME>
+<RETURNS>rasqal_literal * </RETURNS>
+rasqal_triple* t
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_variable_from_variable</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_variable* v
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_variable</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_variable* v
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variable_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_variable* v, FILE* fh
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variable_set_value</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_variable* v, rasqal_literal* l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_variables_table</NAME>
+<RETURNS>rasqal_variables_table * </RETURNS>
+rasqal_world* world
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_variables_table</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_variables_table* vt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variables_table_add</NAME>
+<DEPRECATED/>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_variables_table* vt, rasqal_variable_type type, const char * name, rasqal_literal *value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variables_table_add2</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_variables_table* vt, rasqal_variable_type type, const char * name, size_t name_len, rasqal_literal *value
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variables_table_add_variable</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_variables_table* vt, rasqal_variable* variable
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variables_table_get_by_name</NAME>
+<RETURNS>rasqal_variable * </RETURNS>
+rasqal_variables_table* vt, rasqal_variable_type type, const char * name
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_variables_table_contains</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_variables_table* vt, rasqal_variable_type type, const char * name
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_memory</NAME>
+<RETURNS>void  </RETURNS>
+void *ptr
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_alloc_memory</NAME>
+<RETURNS>void * </RETURNS>
+size_t size
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_calloc_memory</NAME>
+<RETURNS>void * </RETURNS>
+size_t nmemb, size_t size
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_xsd_decimal</NAME>
+<RETURNS>rasqal_xsd_decimal * </RETURNS>
+rasqal_world* world
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_xsd_decimal</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_xsd_decimal* dec
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_set_string</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* dec, const char* string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_get_double</NAME>
+<RETURNS>double  </RETURNS>
+rasqal_xsd_decimal* dec
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_get_long</NAME>
+<RETURNS>long  </RETURNS>
+rasqal_xsd_decimal* dec, int* error_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_as_string</NAME>
+<RETURNS>char * </RETURNS>
+rasqal_xsd_decimal* dec
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_as_counted_string</NAME>
+<RETURNS>char * </RETURNS>
+rasqal_xsd_decimal* dec, size_t* len_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_set_long</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* dec, long l
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_set_double</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* dec, double d
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_print</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* dec, FILE* stream
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_add</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a, rasqal_xsd_decimal* b
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_subtract</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a, rasqal_xsd_decimal* b
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_multiply</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a, rasqal_xsd_decimal* b
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_divide</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a, rasqal_xsd_decimal* b
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_negate</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_compare</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* a, rasqal_xsd_decimal* b
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_equals</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* a, rasqal_xsd_decimal* b
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_is_zero</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* d
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_abs</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_round</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_ceil</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_decimal_floor</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_decimal* result, rasqal_xsd_decimal* a
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_xsd_date</NAME>
+<RETURNS>rasqal_xsd_date * </RETURNS>
+rasqal_world* world, const char *date_string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_xsd_date</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_xsd_date* d
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_date_to_counted_string</NAME>
+<RETURNS>char * </RETURNS>
+const rasqal_xsd_date *date, size_t *len_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_date_to_string</NAME>
+<RETURNS>char * </RETURNS>
+const rasqal_xsd_date *d
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_date_equals</NAME>
+<RETURNS>int  </RETURNS>
+const rasqal_xsd_date *d1, const rasqal_xsd_date *d2, int *incomparible_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_date_compare</NAME>
+<RETURNS>int  </RETURNS>
+const rasqal_xsd_date *d1, const rasqal_xsd_date *d2, int *incomparible_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_xsd_datetime</NAME>
+<RETURNS>rasqal_xsd_datetime * </RETURNS>
+rasqal_world* world, const char *datetime_string
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_xsd_datetime_from_unixtime</NAME>
+<RETURNS>rasqal_xsd_datetime * </RETURNS>
+rasqal_world* world, time_t secs
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_xsd_datetime_from_timeval</NAME>
+<RETURNS>rasqal_xsd_datetime * </RETURNS>
+rasqal_world* world, struct timeval *tv
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_new_xsd_datetime_from_xsd_date</NAME>
+<RETURNS>rasqal_xsd_datetime * </RETURNS>
+rasqal_world* world, rasqal_xsd_date *date
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_xsd_datetime</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_xsd_datetime* dt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_to_counted_string</NAME>
+<RETURNS>char * </RETURNS>
+const rasqal_xsd_datetime *dt, size_t *len_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_to_string</NAME>
+<RETURNS>char * </RETURNS>
+const rasqal_xsd_datetime *dt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_equals2</NAME>
+<RETURNS>int  </RETURNS>
+const rasqal_xsd_datetime *dt1, const rasqal_xsd_datetime *dt2, int *incomparible_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_equals</NAME>
+<DEPRECATED/>
+<RETURNS>int  </RETURNS>
+const rasqal_xsd_datetime *dt1, const rasqal_xsd_datetime *dt2
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_compare2</NAME>
+<RETURNS>int  </RETURNS>
+const rasqal_xsd_datetime *dt1, const rasqal_xsd_datetime *dt2, int *incomparible_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_compare</NAME>
+<DEPRECATED/>
+<RETURNS>int  </RETURNS>
+const rasqal_xsd_datetime *dt1, const rasqal_xsd_datetime *dt2
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_get_seconds_as_decimal</NAME>
+<RETURNS>rasqal_xsd_decimal * </RETURNS>
+rasqal_world* world, rasqal_xsd_datetime* dt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_set_from_timeval</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_datetime *dt, struct timeval *tv
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_set_from_unixtime</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_xsd_datetime* dt, time_t clock
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_get_as_unixtime</NAME>
+<RETURNS>time_t  </RETURNS>
+rasqal_xsd_datetime* dt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_get_as_timeval</NAME>
+<RETURNS>struct timeval * </RETURNS>
+rasqal_xsd_datetime *dt
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_get_timezone_as_counted_string</NAME>
+<RETURNS>char * </RETURNS>
+rasqal_xsd_datetime *dt, size_t *len_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_xsd_datetime_get_tz_as_counted_string</NAME>
+<RETURNS>char * </RETURNS>
+rasqal_xsd_datetime* dt, size_t *len_p
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_regex_replace</NAME>
+<RETURNS>char * </RETURNS>
+rasqal_world* world, raptor_locator* locator, const char* pattern, const char* regex_flags, const char* subject, size_t subject_len, const char* replace, size_t replace_len, size_t* result_len_p
+</FUNCTION>
+<TYPEDEF>
+<NAME>rasqal_service</NAME>
+typedef struct rasqal_service_s rasqal_service;
+</TYPEDEF>
+<FUNCTION>
+<NAME>rasqal_new_service</NAME>
+<RETURNS>rasqal_service * </RETURNS>
+rasqal_world* world, raptor_uri* service_uri, const unsigned char* query_string, raptor_sequence* data_graphs
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_free_service</NAME>
+<RETURNS>void  </RETURNS>
+rasqal_service* svc
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_service_execute</NAME>
+<RETURNS>rasqal_query_results * </RETURNS>
+rasqal_service* svc
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_service_set_www</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_service* svc, raptor_www* www
+</FUNCTION>
+<FUNCTION>
+<NAME>rasqal_service_set_format</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_service* svc, const char *format
+</FUNCTION>
+<ENUM>
+<NAME>rasqal_triple_parts</NAME>
+typedef enum {
+  RASQAL_TRIPLE_NONE     = 0,
+  RASQAL_TRIPLE_SUBJECT  = 1,
+  RASQAL_TRIPLE_PREDICATE= 2,
+  RASQAL_TRIPLE_OBJECT   = 4,
+  RASQAL_TRIPLE_ORIGIN   = 8,
+  RASQAL_TRIPLE_GRAPH    = RASQAL_TRIPLE_ORIGIN,
+  RASQAL_TRIPLE_SPO      = RASQAL_TRIPLE_SUBJECT | RASQAL_TRIPLE_PREDICATE | RASQAL_TRIPLE_OBJECT,
+  RASQAL_TRIPLE_SPOG     = RASQAL_TRIPLE_SPO | RASQAL_TRIPLE_GRAPH
+} rasqal_triple_parts;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_triples_match_s</NAME>
+struct rasqal_triples_match_s {
+  rasqal_world *world;
+
+  void *user_data;
+
+  rasqal_triple_parts (*bind_match)(struct rasqal_triples_match_s* rtm, void *user_data, rasqal_variable *bindings[4], rasqal_triple_parts parts);
+
+  void (*next_match)(struct rasqal_triples_match_s* rtm, void *user_data);
+
+  int (*is_end)(struct rasqal_triples_match_s* rtm, void *user_data);
+
+  void (*finish)(struct rasqal_triples_match_s* rtm, void *user_data);
+
+  int is_exact;
+
+  int finished;
+};
+</STRUCT>
+<TYPEDEF>
+<NAME>rasqal_triples_match</NAME>
+typedef struct rasqal_triples_match_s rasqal_triples_match;
+</TYPEDEF>
+<STRUCT>
+<NAME>rasqal_triple_meta</NAME>
+typedef struct {
+  /* triple (subject, predicate, object) and origin */
+  rasqal_variable* bindings[4];
+
+  rasqal_triples_match *triples_match;
+
+  void *context;
+
+  rasqal_triple_parts parts;
+
+  int is_exact;
+
+  int executed;
+} rasqal_triple_meta;
+</STRUCT>
+<MACRO>
+<NAME>RASQAL_TRIPLES_SOURCE_MIN_VERSION</NAME>
+#define RASQAL_TRIPLES_SOURCE_MIN_VERSION 1
+</MACRO>
+<MACRO>
+<NAME>RASQAL_TRIPLES_SOURCE_MAX_VERSION</NAME>
+#define RASQAL_TRIPLES_SOURCE_MAX_VERSION 2
+</MACRO>
+<ENUM>
+<NAME>rasqal_triples_source_feature</NAME>
+typedef enum {
+  RASQAL_TRIPLES_SOURCE_FEATURE_NONE,
+  RASQAL_TRIPLES_SOURCE_FEATURE_IOSTREAM_DATA_GRAPH
+} rasqal_triples_source_feature;
+</ENUM>
+<STRUCT>
+<NAME>rasqal_triples_source_s</NAME>
+struct rasqal_triples_source_s {
+  int version;
+  
+  rasqal_query* query;
+
+  void *user_data;
+
+  /* API v1 */
+  int (*init_triples_match)(rasqal_triples_match* rtm, struct rasqal_triples_source_s* rts, void *user_data, rasqal_triple_meta *m, rasqal_triple *t);
+
+  int (*triple_present)(struct rasqal_triples_source_s* rts, void *user_data, rasqal_triple *t);
+
+  void (*free_triples_source)(void *user_data);
+
+  /* API v2 onwards */
+  int (*support_feature)(void *user_data, rasqal_triples_source_feature feature);
+};
+</STRUCT>
+<TYPEDEF>
+<NAME>rasqal_triples_source</NAME>
+typedef struct rasqal_triples_source_s rasqal_triples_source;
+</TYPEDEF>
+<MACRO>
+<NAME>RASQAL_TRIPLES_SOURCE_FACTORY_MIN_VERSION</NAME>
+#define RASQAL_TRIPLES_SOURCE_FACTORY_MIN_VERSION 1
+</MACRO>
+<MACRO>
+<NAME>RASQAL_TRIPLES_SOURCE_FACTORY_MAX_VERSION</NAME>
+#define RASQAL_TRIPLES_SOURCE_FACTORY_MAX_VERSION 3
+</MACRO>
+<USER_FUNCTION>
+<NAME>rasqal_triples_error_handler</NAME>
+<RETURNS>void </RETURNS>
+rasqal_query* query, raptor_locator* locator, const char* message
+</USER_FUNCTION>
+<USER_FUNCTION>
+<NAME>rasqal_triples_error_handler2</NAME>
+<RETURNS>void </RETURNS>
+rasqal_world* world, raptor_locator* locator, const char* message
+</USER_FUNCTION>
+<STRUCT>
+<NAME>rasqal_triples_source_factory</NAME>
+typedef struct {
+  int version;
+  
+  void *user_data;
+  size_t user_data_size;
+
+  /* API v1 */
+  int (*new_triples_source)(rasqal_query* query, void *factory_user_data, void *user_data, rasqal_triples_source* rts);
+  /* API v2 onwards */
+  int (*init_triples_source)(rasqal_query* query, void *factory_user_data, void *user_data, rasqal_triples_source* rts, rasqal_triples_error_handler handler);
+  /* API v3 onwards */
+  int (*init_triples_source2)(rasqal_world* world, raptor_sequence* data_graphs, void *factory_user_data, void *user_data, rasqal_triples_source *rts, rasqal_triples_error_handler2 handler, unsigned int flags);
+} rasqal_triples_source_factory;
+</STRUCT>
+<USER_FUNCTION>
+<NAME>rasqal_triples_source_factory_register_fn</NAME>
+<RETURNS>int </RETURNS>
+rasqal_triples_source_factory *factory
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>rasqal_set_triples_source_factory</NAME>
+<RETURNS>int  </RETURNS>
+rasqal_world* world, rasqal_triples_source_factory_register_fn register_fn, void* user_data
+</FUNCTION>
+<MACRO>
+<NAME>GIT_VERSION</NAME>
+#define GIT_VERSION "unknown"
+</MACRO>
+<FUNCTION>
+<NAME>rasqal_ssort_r</NAME>
+<RETURNS>int</RETURNS>
+void* base, size_t nel, size_t width, raptor_data_compare_arg_handler comp, void* arg
+</FUNCTION>
+<MACRO>
+<NAME>sv_new</NAME>
+#define sv_new rasqal_sv_new
+</MACRO>
+<MACRO>
+<NAME>sv_free</NAME>
+#define sv_free rasqal_sv_free
+</MACRO>
+<MACRO>
+<NAME>sv_set_option</NAME>
+#define sv_set_option rasqal_sv_set_option
+</MACRO>
+<MACRO>
+<NAME>sv_get_line</NAME>
+#define sv_get_line rasqal_sv_get_line
+</MACRO>
+<MACRO>
+<NAME>sv_get_header</NAME>
+#define sv_get_header rasqal_sv_get_header
+</MACRO>
+<MACRO>
+<NAME>sv_parse_chunk</NAME>
+#define sv_parse_chunk rasqal_sv_parse_chunk
+</MACRO>
+<MACRO>
+<NAME>SV_DEBUG</NAME>
+#define SV_DEBUG 1
+</MACRO>

@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-graph-pattern">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-graph-pattern.top_of_page">section-graph_pattern</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-graph_pattern</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-graph-pattern.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-add-sub-graph-pattern">rasqal_graph_pattern_add_sub_graph_pattern</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-filter-expression">rasqal_graph_pattern_get_filter_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-set-filter-expression">rasqal_graph_pattern_set_filter_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-flattened-triples">rasqal_graph_pattern_get_flattened_triples</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-index">rasqal_graph_pattern_get_index</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-graph-pattern-operator"><returnvalue>rasqal_graph_pattern_operator</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-operator">rasqal_graph_pattern_get_operator</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-origin">rasqal_graph_pattern_get_origin</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-graph-pattern"><returnvalue>rasqal_graph_pattern</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-sub-graph-pattern">rasqal_graph_pattern_get_sub_graph_pattern</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-sub-graph-pattern-sequence">rasqal_graph_pattern_get_sub_graph_pattern_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-triple"><returnvalue>rasqal_triple</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-triple">rasqal_graph_pattern_get_triple</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-triples">rasqal_graph_pattern_get_triples</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-service">rasqal_graph_pattern_get_service</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-get-variable">rasqal_graph_pattern_get_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-operator-as-string">rasqal_graph_pattern_operator_as_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-print">rasqal_graph_pattern_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-variable-bound-in">rasqal_graph_pattern_variable_bound_in</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="rasqal-graph-pattern-visit-fn">*rasqal_graph_pattern_visit_fn</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-visit">rasqal_graph_pattern_visit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-graph-pattern.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-graph-pattern">rasqal_graph_pattern</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-graph-pattern-operator">rasqal_graph_pattern_operator</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-graph-pattern.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-graph-pattern.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-graph-pattern-add-sub-graph-pattern" role="function">
+<title>rasqal_graph_pattern_add_sub_graph_pattern&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-add-sub-graph-pattern"><primary>rasqal_graph_pattern_add_sub_graph_pattern</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_graph_pattern_add_sub_graph_pattern
+                               (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>,
+                                <parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *sub_graph_pattern</parameter>);</programlisting>
+<para>Add a sub graph pattern to a graph pattern.</para>
+<refsect3 id="rasqal-graph-pattern-add-sub-graph-pattern.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para>graph pattern to add to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sub_graph_pattern</para></entry>
+<entry role="parameter_description"><para>graph pattern to add inside</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-add-sub-graph-pattern.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-filter-expression" role="function">
+<title>rasqal_graph_pattern_get_filter_expression&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-filter-expression"><primary>rasqal_graph_pattern_get_filter_expression</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_filter_expression
+                               (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>);</programlisting>
+<para>Get a filter graph pattern's constraint expression</para>
+<refsect3 id="rasqal-graph-pattern-get-filter-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-filter-expression.returns" role="returns">
+<title>Returns</title>
+<para> expression or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-set-filter-expression" role="function">
+<title>rasqal_graph_pattern_set_filter_expression&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-set-filter-expression"><primary>rasqal_graph_pattern_set_filter_expression</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_graph_pattern_set_filter_expression
+                               (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>,
+                                <parameter><link linkend="rasqal-expression"><type>rasqal_expression</type></link> *expr</parameter>);</programlisting>
+<para>Set a filter graph pattern constraint expression</para>
+<refsect3 id="rasqal-graph-pattern-set-filter-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>expr</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-expression"><type>rasqal_expression</type></link> expr - ownership taken</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-set-filter-expression.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-flattened-triples" role="function">
+<title>rasqal_graph_pattern_get_flattened_triples&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-flattened-triples"><primary>rasqal_graph_pattern_get_flattened_triples</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_flattened_triples
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                <parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the triples inside a tree of graph patterns (BASIC + GRAPH) as a single sequence with GRAPHs turned into triple origin.</para>
+<para>The returned sequence and all the <link linkend="rasqal-triple"><type>rasqal_triple</type></link> in it are owned
+by the caller (hold references).</para>
+<refsect3 id="rasqal-graph-pattern-get-flattened-triples.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para>graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-flattened-triples.returns" role="returns">
+<title>Returns</title>
+<para> new sequence of <link linkend="raptor-triple"><type>raptor_triple</type></link> or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-index" role="function">
+<title>rasqal_graph_pattern_get_index&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-index"><primary>rasqal_graph_pattern_get_index</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_graph_pattern_get_index (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>);</programlisting>
+<para>Get the graph pattern absolute index in the array of graph patterns.</para>
+<para>The graph pattern index is assigned when <link linkend="rasqal-query-prepare"><function>rasqal_query_prepare()</function></link> is
+run on a query containing a graph pattern.</para>
+<refsect3 id="rasqal-graph-pattern-get-index.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-index.returns" role="returns">
+<title>Returns</title>
+<para> index or &lt;0 if no index has been assigned yet</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-operator" role="function">
+<title>rasqal_graph_pattern_get_operator&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-operator"><primary>rasqal_graph_pattern_get_operator</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-graph-pattern-operator"><returnvalue>rasqal_graph_pattern_operator</returnvalue></link>
+rasqal_graph_pattern_get_operator (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the graph pattern operator .</para>
+<para>The operator for the given graph pattern. See also
+<link linkend="rasqal-graph-pattern-operator-as-string"><function>rasqal_graph_pattern_operator_as_string()</function></link>.</para>
+<refsect3 id="rasqal-graph-pattern-get-operator.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-operator.returns" role="returns">
+<title>Returns</title>
+<para> graph pattern operator</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-origin" role="function">
+<title>rasqal_graph_pattern_get_origin&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-origin"><primary>rasqal_graph_pattern_get_origin</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_origin (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the graph pattern literal for
+<link linkend="RASQAL-GRAPH-PATTERN-OPERATOR-GRAPH:CAPS"><type>RASQAL_GRAPH_PATTERN_OPERATOR_GRAPH</type></link> graph pattern</para>
+<refsect3 id="rasqal-graph-pattern-get-origin.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-origin.returns" role="returns">
+<title>Returns</title>
+<para> graph literal parameter or NULL if wrong graph pattern type or not defined</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-sub-graph-pattern" role="function">
+<title>rasqal_graph_pattern_get_sub_graph_pattern&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-sub-graph-pattern"><primary>rasqal_graph_pattern_get_sub_graph_pattern</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-graph-pattern"><returnvalue>rasqal_graph_pattern</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_sub_graph_pattern
+                               (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a sub-graph pattern inside a graph pattern.</para>
+<refsect3 id="rasqal-graph-pattern-get-sub-graph-pattern.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence of sub graph_patterns in the graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-sub-graph-pattern.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> or NULL if out of range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-sub-graph-pattern-sequence" role="function">
+<title>rasqal_graph_pattern_get_sub_graph_pattern_sequence&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-sub-graph-pattern-sequence"><primary>rasqal_graph_pattern_get_sub_graph_pattern_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_sub_graph_pattern_sequence
+                               (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the sequence of graph patterns inside a graph pattern .</para>
+<refsect3 id="rasqal-graph-pattern-get-sub-graph-pattern-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-sub-graph-pattern-sequence.returns" role="returns">
+<title>Returns</title>
+<para>  a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-triple" role="function">
+<title>rasqal_graph_pattern_get_triple&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-triple"><primary>rasqal_graph_pattern_get_triple</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-triple"><returnvalue>rasqal_triple</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_triple (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>,
+                                 <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a triple inside a graph pattern.</para>
+<refsect3 id="rasqal-graph-pattern-get-triple.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence of triples in the graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-triple.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="rasqal-triple"><type>rasqal_triple</type></link> or NULL if out of range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-triples" role="function">
+<title>rasqal_graph_pattern_get_triples&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-triples"><primary>rasqal_graph_pattern_get_triples</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_triples (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                  <parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the triples inside this graph pattern (if any).</para>
+<para>The returned sequence and all the <link linkend="rasqal-triple"><type>rasqal_triple</type></link> in it are owned
+by the caller (hold references).</para>
+<refsect3 id="rasqal-graph-pattern-get-triples.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para>graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-triples.returns" role="returns">
+<title>Returns</title>
+<para> new sequence of <link linkend="raptor-triple"><type>raptor_triple</type></link> or NULL on failure or no triples</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-service" role="function">
+<title>rasqal_graph_pattern_get_service&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-service"><primary>rasqal_graph_pattern_get_service</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-literal"><returnvalue>rasqal_literal</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_service (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the literal for <link linkend="RASQAL-GRAPH-PATTERN-OPERATOR-SERVICE:CAPS"><type>RASQAL_GRAPH_PATTERN_OPERATOR_SERVICE</type></link> graph pattern</para>
+<refsect3 id="rasqal-graph-pattern-get-service.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-service.returns" role="returns">
+<title>Returns</title>
+<para> graph variable or NULL if wrong graph pattern or not defined</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-get-variable" role="function">
+<title>rasqal_graph_pattern_get_variable&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-get-variable"><primary>rasqal_graph_pattern_get_variable</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_graph_pattern_get_variable (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *graph_pattern</parameter>);</programlisting>
+<para>Get the variable for <link linkend="RASQAL-GRAPH-PATTERN-OPERATOR-LET:CAPS"><type>RASQAL_GRAPH_PATTERN_OPERATOR_LET</type></link> graph pattern</para>
+<refsect3 id="rasqal-graph-pattern-get-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>graph_pattern</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-get-variable.returns" role="returns">
+<title>Returns</title>
+<para> graph variable or NULL if wrong graph pattern or not defined</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-operator-as-string" role="function">
+<title>rasqal_graph_pattern_operator_as_string&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-operator-as-string"><primary>rasqal_graph_pattern_operator_as_string</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_graph_pattern_operator_as_string
+                               (<parameter><link linkend="rasqal-graph-pattern-operator"><type>rasqal_graph_pattern_operator</type></link> op</parameter>);</programlisting>
+<para>Get a string for the query verb.</para>
+<refsect3 id="rasqal-graph-pattern-operator-as-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>op</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-graph-pattern-operator"><type>rasqal_graph_pattern_operator</type></link> verb of the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-operator-as-string.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a shared string label for the query verb</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-print" role="function">
+<title>rasqal_graph_pattern_print&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-print"><primary>rasqal_graph_pattern_print</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_graph_pattern_print (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>,
+                            <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> in a debug format.</para>
+<para>The print debug format may change in any release.</para>
+<refsect3 id="rasqal-graph-pattern-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>the FILE* handle to print to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-print.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-variable-bound-in" role="function">
+<title>rasqal_graph_pattern_variable_bound_in&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-variable-bound-in"><primary>rasqal_graph_pattern_variable_bound_in</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_graph_pattern_variable_bound_in
+                               (<parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>,
+                                <parameter><link linkend="rasqal-variable"><type>rasqal_variable</type></link> *v</parameter>);</programlisting>
+<para>Is the variable bound in this graph pattern (not including children)?</para>
+<refsect3 id="rasqal-graph-pattern-variable-bound-in.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para>graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>v</para></entry>
+<entry role="parameter_description"><para>variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-variable-bound-in.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if variable is bound in the given graph pattern.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-visit-fn" role="function">
+<title>rasqal_graph_pattern_visit_fn&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-visit-fn"><primary>rasqal_graph_pattern_visit_fn</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*rasqal_graph_pattern_visit_fn<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                  <parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>,
+                                  <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>);</programlisting>
+<para>User function to visit an graph_pattern and operate on it with
+<link linkend="rasqal-graph-pattern-visit"><function>rasqal_graph_pattern_visit()</function></link> or <link linkend="rasqal-query-graph-pattern-visit"><function>rasqal_query_graph_pattern_visit()</function></link></para>
+<refsect3 id="rasqal-graph-pattern-visit-fn.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> containing the graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para>current graph_pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data passed in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-visit-fn.returns" role="returns">
+<title>Returns</title>
+<para> non-0 to truncate the visit</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-graph-pattern-visit" role="function">
+<title>rasqal_graph_pattern_visit&#160;()</title>
+<indexterm zone="rasqal-graph-pattern-visit"><primary>rasqal_graph_pattern_visit</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_graph_pattern_visit (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                            <parameter><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> *gp</parameter>,
+                            <parameter><link linkend="rasqal-graph-pattern-visit-fn"><type>rasqal_graph_pattern_visit_fn</type></link> fn</parameter>,
+                            <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>);</programlisting>
+<para>Visit a user function over a <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link></para>
+<para>If the user function <parameter>fn</parameter>
+ returns 0, the visit is truncated.</para>
+<refsect3 id="rasqal-graph-pattern-visit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> to operate on</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>gp</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> graph pattern</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fn</para></entry>
+<entry role="parameter_description"><para>pointer to function to apply that takes user data and graph pattern parameters</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data for applied function </para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-graph-pattern-visit.returns" role="returns">
+<title>Returns</title>
+<para> 0 if the visit was truncated.</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-graph-pattern.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-graph-pattern" role="typedef">
+<title>rasqal_graph_pattern</title>
+<indexterm zone="rasqal-graph-pattern"><primary>rasqal_graph_pattern</primary></indexterm>
+<programlisting language="C">rasqal_graph_pattern* graph_pattern;
+</programlisting>
+<para>Rasqal graph pattern class.</para>
+</refsect2>
+<refsect2 id="rasqal-graph-pattern-operator" role="enum">
+<title>enum rasqal_graph_pattern_operator</title>
+<indexterm zone="rasqal-graph-pattern-operator"><primary>rasqal_graph_pattern_operator</primary></indexterm>
+<para>Graph pattern operators</para>
+<refsect3 id="rasqal-graph-pattern-operator.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-UNKNOWN:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-BASIC:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_BASIC</para></entry>
+<entry role="enum_member_description"><para>Just triple patterns and constraints.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-OPTIONAL:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_OPTIONAL</para></entry>
+<entry role="enum_member_description"><para>Set of graph patterns (ANDed) and constraints.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-UNION:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_UNION</para></entry>
+<entry role="enum_member_description"><para>Set of graph patterns (UNIONed) and constraints.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-GROUP:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_GROUP</para></entry>
+<entry role="enum_member_description"><para>Set of graph patterns (ANDed) and constraints.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-GRAPH:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_GRAPH</para></entry>
+<entry role="enum_member_description"><para>A graph term + a graph pattern and constraints.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-FILTER:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_FILTER</para></entry>
+<entry role="enum_member_description"><para>A filter graph pattern with an expression</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-LET:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_LET</para></entry>
+<entry role="enum_member_description"><para>LET ?var := Expression (LAQRS)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-SELECT:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_SELECT</para></entry>
+<entry role="enum_member_description"><para>SELECT graph pattern</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-SERVICE:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_SERVICE</para></entry>
+<entry role="enum_member_description"><para>SERVICE graph pattern</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-MINUS:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_MINUS</para></entry>
+<entry role="enum_member_description"><para>MINUS graph pattern</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-VALUES:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_VALUES</para></entry>
+<entry role="enum_member_description"><para>VALUES graph pattern</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-GRAPH-PATTERN-OPERATOR-LAST:CAPS">RASQAL_GRAPH_PATTERN_OPERATOR_LAST</para></entry>
+<entry role="enum_member_description"><para>Internal.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

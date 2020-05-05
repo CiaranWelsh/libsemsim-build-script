@@ -1,0 +1,16 @@
+GIT_VERSION
+SV_DEBUG
+rasqal_literal_s
+rasqal_ssort_r
+rasqal_triples_match_s
+rasqal_triples_source_s
+sv_free
+sv_get_header
+sv_get_line
+sv_new
+sv_parse_chunk
+sv_set_option
+rasqal_new_numeric_literal_from_long(value)
+rasqal_triples_match(is_exact, finished)
+rasqal_triples_source(version, support_feature)
+rasqal_xsd_decimal_set_long(l)

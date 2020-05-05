@@ -1,0 +1,2074 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" [
+<!ENTITY version SYSTEM "version.xml">
+]>
+<refentry id="rasqal-section-query">
+<refmeta>
+<refentrytitle role="top_of_page" id="rasqal-section-query.top_of_page">section-query</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>RASQAL Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>section-query</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="rasqal-section-query.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="rasqal-query"><returnvalue>rasqal_query</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-new-query">rasqal_new_query</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-free-query">rasqal_free_query</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-add-data-graph">rasqal_query_add_data_graph</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-add-data-graphs">rasqal_query_add_data_graphs</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-add-prefix">rasqal_query_add_prefix</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-add-variable">rasqal_query_add_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-dataset-contains-named-graph">rasqal_query_dataset_contains_named_graph</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-query-results"><returnvalue>rasqal_query_results</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-execute">rasqal_query_execute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-all-variable-sequence">rasqal_query_get_all_variable_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-anonymous-variable-sequence">rasqal_query_get_anonymous_variable_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-row"><returnvalue>rasqal_row</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-bindings-row">rasqal_query_get_bindings_row</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-bindings-rows-sequence">rasqal_query_get_bindings_rows_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-bindings-variable">rasqal_query_get_bindings_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-bindings-variables-sequence">rasqal_query_get_bindings_variables_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-bound-variable-sequence">rasqal_query_get_bound_variable_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-triple"><returnvalue>rasqal_triple</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-construct-triple">rasqal_query_get_construct_triple</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-construct-triples-sequence">rasqal_query_get_construct_triples_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-data-graph">rasqal_query_get_data_graph</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-data-graph-sequence">rasqal_query_get_data_graph_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-describe-sequence">rasqal_query_get_describe_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-distinct">rasqal_query_get_distinct</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-explain">rasqal_query_get_explain</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-group-condition">rasqal_query_get_group_condition</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-group-conditions-sequence">rasqal_query_get_group_conditions_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-graph-pattern"><returnvalue>rasqal_graph_pattern</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-graph-pattern">rasqal_query_get_graph_pattern</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-graph-pattern-sequence">rasqal_query_get_graph_pattern_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-having-condition">rasqal_query_get_having_condition</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-having-conditions-sequence">rasqal_query_get_having_conditions_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-label">rasqal_query_get_label</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-limit">rasqal_query_get_limit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-name">rasqal_query_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-offset">rasqal_query_get_offset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-order-condition">rasqal_query_get_order_condition</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-order-conditions-sequence">rasqal_query_get_order_conditions_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-prefix"><returnvalue>rasqal_prefix</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-prefix">rasqal_query_get_prefix</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-prefix-sequence">rasqal_query_get_prefix_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-graph-pattern"><returnvalue>rasqal_graph_pattern</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-query-graph-pattern">rasqal_query_get_query_graph_pattern</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-triple"><returnvalue>rasqal_triple</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-triple">rasqal_query_get_triple</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-triple-sequence">rasqal_query_get_triple_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-user-data">rasqal_query_get_user_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-variable">rasqal_query_get_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-query-verb"><returnvalue>rasqal_query_verb</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-verb">rasqal_query_get_verb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-wildcard">rasqal_query_get_wildcard</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-has-variable2">rasqal_query_has_variable2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-has-variable">rasqal_query_has_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-prepare">rasqal_query_prepare</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-print">rasqal_query_print</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-graph-pattern-visit2">rasqal_query_graph_pattern_visit2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-graph-pattern-visit">rasqal_query_graph_pattern_visit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-distinct">rasqal_query_set_distinct</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-explain">rasqal_query_set_explain</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-limit">rasqal_query_set_limit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-offset">rasqal_query_set_offset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-user-data">rasqal_query_set_user_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-variable2">rasqal_query_set_variable2</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-variable">rasqal_query_set_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-store-results">rasqal_query_set_store_results</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-wildcard">rasqal_query_set_wildcard</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-verb-as-string">rasqal_query_verb_as_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-write">rasqal_query_write</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-iostream-write-escaped-counted-string">rasqal_query_iostream_write_escaped_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-escape-counted-string">rasqal_query_escape_counted_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-feature">rasqal_query_set_feature</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-set-feature-string">rasqal_query_set_feature_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-feature">rasqal_query_get_feature</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-feature-string">rasqal_query_get_feature_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-query-results-type"><returnvalue>rasqal_query_results_type</returnvalue></link>
+</entry><entry role="function_name"><link linkend="rasqal-query-get-result-type">rasqal_query_get_result_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="rasqal-update-operation"><returnvalue>rasqal_update_operation</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-update-operation">rasqal_query_get_update_operation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="rasqal-query-get-update-operations-sequence">rasqal_query_get_update_operations_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="rasqal-section-query.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="rasqal-query-verb">rasqal_query_verb</link></entry></row>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="rasqal-query">rasqal_query</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="rasqal-section-query.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="rasqal-section-query.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="rasqal-new-query" role="function">
+<title>rasqal_new_query&#160;()</title>
+<indexterm zone="rasqal-new-query"><primary>rasqal_new_query</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query"><returnvalue>rasqal_query</returnvalue></link>&#160;*
+rasqal_new_query (<parameter><link linkend="rasqal-world"><type>rasqal_world</type></link> *world</parameter>,
+                  <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                  <parameter>const <link linkend="char"><type>char</type></link> *uri</parameter>);</programlisting>
+<para>Constructor - create a new rasqal_query object.</para>
+<para>A query language can be named or identified by a URI, either
+of which is optional.  The default query language will be used
+if both are NULL.  rasqal_world_get_query_language_description returns
+the description of the known names, labels, MIME types and URIs.</para>
+<refsect3 id="rasqal-new-query.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>world</para></entry>
+<entry role="parameter_description"><para>rasqal_world object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the query language name (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> language uri (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-new-query.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="rasqal-query"><type>rasqal_query</type></link> object or NULL on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-free-query" role="function">
+<title>rasqal_free_query&#160;()</title>
+<indexterm zone="rasqal-free-query"><primary>rasqal_free_query</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_free_query (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Destructor - destroy a <link linkend="rasqal-query"><type>rasqal_query</type></link> object.</para>
+<refsect3 id="rasqal-free-query.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-add-data-graph" role="function">
+<title>rasqal_query_add_data_graph&#160;()</title>
+<indexterm zone="rasqal-query-add-data-graph"><primary>rasqal_query_add_data_graph</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_add_data_graph (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                             <parameter><link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> *data_graph</parameter>);</programlisting>
+<para>Add a data graph to the query.</para>
+<refsect3 id="rasqal-query-add-data-graph.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_graph</para></entry>
+<entry role="parameter_description"><para>data graph</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-add-data-graph.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-add-data-graphs" role="function">
+<title>rasqal_query_add_data_graphs&#160;()</title>
+<indexterm zone="rasqal-query-add-data-graphs"><primary>rasqal_query_add_data_graphs</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_add_data_graphs (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                              <parameter><link linkend="raptor-sequence"><type>raptor_sequence</type></link> *data_graphs</parameter>);</programlisting>
+<para>Add a set of data graphs to the query.</para>
+<para>The objects in the passed-in <parameter>data_graphs</parameter>
+ sequence becomes owne by the query.
+The <parameter>data_graphs</parameter>
+ sequence itself is freed and must not be used after this call.</para>
+<refsect3 id="rasqal-query-add-data-graphs.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data_graphs</para></entry>
+<entry role="parameter_description"><para>sequence of <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-add-data-graphs.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-add-prefix" role="function">
+<title>rasqal_query_add_prefix&#160;()</title>
+<indexterm zone="rasqal-query-add-prefix"><primary>rasqal_query_add_prefix</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_add_prefix (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                         <parameter><link linkend="rasqal-prefix"><type>rasqal_prefix</type></link> *prefix</parameter>);</programlisting>
+<para>Add a namespace prefix to the query.</para>
+<para>If the prefix has already been used, the old URI will be overridden.</para>
+<refsect3 id="rasqal-query-add-prefix.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>prefix</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-prefix"><type>rasqal_prefix</type></link> namespace prefix, URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-add-prefix.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-add-variable" role="function">
+<title>rasqal_query_add_variable&#160;()</title>
+<indexterm zone="rasqal-query-add-variable"><primary>rasqal_query_add_variable</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_add_variable (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                           <parameter><link linkend="rasqal-variable"><type>rasqal_variable</type></link> *var</parameter>);</programlisting>
+<para>Add a projected (named) variable to the query.</para>
+<para>See also <link linkend="rasqal-query-set-variable"><function>rasqal_query_set_variable()</function></link> which assigns or removes a value to
+a previously added variable in the query.</para>
+<refsect3 id="rasqal-query-add-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>var</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variable"><type>rasqal_variable</type></link> variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-add-variable.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-dataset-contains-named-graph" role="function">
+<title>rasqal_query_dataset_contains_named_graph&#160;()</title>
+<indexterm zone="rasqal-query-dataset-contains-named-graph"><primary>rasqal_query_dataset_contains_named_graph</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_dataset_contains_named_graph
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *graph_uri</parameter>);</programlisting>
+<para>Test if the query dataset contains a named graph</para>
+<refsect3 id="rasqal-query-dataset-contains-named-graph.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>graph_uri</para></entry>
+<entry role="parameter_description"><para>query URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-dataset-contains-named-graph.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the dataset contains a named graph</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-execute" role="function">
+<title>rasqal_query_execute&#160;()</title>
+<indexterm zone="rasqal-query-execute"><primary>rasqal_query_execute</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query-results"><returnvalue>rasqal_query_results</returnvalue></link>&#160;*
+rasqal_query_execute (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Excute a query - run and return results.</para>
+<refsect3 id="rasqal-query-execute.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-execute.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-query-results"><type>rasqal_query_results</type></link> structure or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-all-variable-sequence" role="function">
+<title>rasqal_query_get_all_variable_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-all-variable-sequence"><primary>rasqal_query_get_all_variable_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_all_variable_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of all variables mentioned in the query.</para>
+<refsect3 id="rasqal-query-get-all-variable-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-all-variable-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-variable"><type>rasqal_variable</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-anonymous-variable-sequence" role="function">
+<title>rasqal_query_get_anonymous_variable_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-anonymous-variable-sequence"><primary>rasqal_query_get_anonymous_variable_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_anonymous_variable_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of anonymous variables mentioned in the query.</para>
+<refsect3 id="rasqal-query-get-anonymous-variable-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-anonymous-variable-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-variable"><type>rasqal_variable</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-bindings-row" role="function">
+<title>rasqal_query_get_bindings_row&#160;()</title>
+<indexterm zone="rasqal-query-get-bindings-row"><primary>rasqal_query_get_bindings_row</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-row"><returnvalue>rasqal_row</returnvalue></link>&#160;*
+rasqal_query_get_bindings_row (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                               <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a rasqal_row* in the sequence of BINDINGS block result rows</para>
+<refsect3 id="rasqal-query-get-bindings-row.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-bindings-row.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="raptor-row"><type>raptor_row</type></link> pointers</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-bindings-rows-sequence" role="function">
+<title>rasqal_query_get_bindings_rows_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-bindings-rows-sequence"><primary>rasqal_query_get_bindings_rows_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_bindings_rows_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of BINDINGS block result rows</para>
+<refsect3 id="rasqal-query-get-bindings-rows-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-bindings-rows-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="raptor-row"><type>raptor_row</type></link> pointers</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-bindings-variable" role="function">
+<title>rasqal_query_get_bindings_variable&#160;()</title>
+<indexterm zone="rasqal-query-get-bindings-variable"><primary>rasqal_query_get_bindings_variable</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_query_get_bindings_variable (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                    <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a rasqal_variable* in the sequence of BINDINGS block variables</para>
+<refsect3 id="rasqal-query-get-bindings-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-bindings-variable.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="raptor-variable"><type>raptor_variable</type></link> pointers</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-bindings-variables-sequence" role="function">
+<title>rasqal_query_get_bindings_variables_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-bindings-variables-sequence"><primary>rasqal_query_get_bindings_variables_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_bindings_variables_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of BINDINGS block variables</para>
+<refsect3 id="rasqal-query-get-bindings-variables-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-bindings-variables-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="raptor-variable"><type>raptor_variable</type></link> pointers</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-bound-variable-sequence" role="function">
+<title>rasqal_query_get_bound_variable_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-bound-variable-sequence"><primary>rasqal_query_get_bound_variable_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_bound_variable_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of projected variables in the query.</para>
+<para>This returns the sequence of variables that are explicitly chosen
+via SELECT in SPARQL.  Or all variables mentioned with SELECT *</para>
+<refsect3 id="rasqal-query-get-bound-variable-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-bound-variable-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-variable"><type>rasqal_variable</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-construct-triple" role="function">
+<title>rasqal_query_get_construct_triple&#160;()</title>
+<indexterm zone="rasqal-query-get-construct-triple"><primary>rasqal_query_get_construct_triple</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-triple"><returnvalue>rasqal_triple</returnvalue></link>&#160;*
+rasqal_query_get_construct_triple (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                   <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a triple in the sequence of construct triples.</para>
+<refsect3 id="rasqal-query-get-construct-triple.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-construct-triple.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-triple"><type>rasqal_triple</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-construct-triples-sequence" role="function">
+<title>rasqal_query_get_construct_triples_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-construct-triples-sequence"><primary>rasqal_query_get_construct_triples_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_construct_triples_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of triples for a construct.</para>
+<refsect3 id="rasqal-query-get-construct-triples-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-construct-triples-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-triple"><type>rasqal_triple</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-data-graph" role="function">
+<title>rasqal_query_get_data_graph&#160;()</title>
+<indexterm zone="rasqal-query-get-data-graph"><primary>rasqal_query_get_data_graph</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-data-graph"><returnvalue>rasqal_data_graph</returnvalue></link>&#160;*
+rasqal_query_get_data_graph (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                             <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a rasqal_data_graph* in the sequence of data_graphs.</para>
+<refsect3 id="rasqal-query-get-data-graph.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-data-graph.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-data-graph"><type>rasqal_data_graph</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-data-graph-sequence" role="function">
+<title>rasqal_query_get_data_graph_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-data-graph-sequence"><primary>rasqal_query_get_data_graph_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_data_graph_sequence (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of data_graph URIs.</para>
+<refsect3 id="rasqal-query-get-data-graph-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-data-graph-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="raptor-uri"><type>raptor_uri</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-describe-sequence" role="function">
+<title>rasqal_query_get_describe_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-describe-sequence"><primary>rasqal_query_get_describe_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_describe_sequence (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of literals described in the query.</para>
+<para>This returns the sequence of literals (constants or variables) that are
+explicitly chosen via DESCRIBE in SPARQL.</para>
+<refsect3 id="rasqal-query-get-describe-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-describe-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-literal"><type>rasqal_literal</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-distinct" role="function">
+<title>rasqal_query_get_distinct&#160;()</title>
+<indexterm zone="rasqal-query-get-distinct"><primary>rasqal_query_get_distinct</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_get_distinct (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the query distinct mode</para>
+<para>See <link linkend="rasqal-query-set-distinct"><function>rasqal_query_set_distinct()</function></link> for the distinct modes.</para>
+<refsect3 id="rasqal-query-get-distinct.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-distinct.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the results should be distinct</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-explain" role="function">
+<title>rasqal_query_get_explain&#160;()</title>
+<indexterm zone="rasqal-query-get-explain"><primary>rasqal_query_get_explain</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_get_explain (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the query explain results flag.</para>
+<refsect3 id="rasqal-query-get-explain.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-explain.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the results should be explain</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-group-condition" role="function">
+<title>rasqal_query_get_group_condition&#160;()</title>
+<indexterm zone="rasqal-query-get-group-condition"><primary>rasqal_query_get_group_condition</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_query_get_group_condition (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                  <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a query grouping expression in the sequence of query grouping conditions.</para>
+<refsect3 id="rasqal-query-get-group-condition.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-group-condition.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-expression"><type>rasqal_expression</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-group-conditions-sequence" role="function">
+<title>rasqal_query_get_group_conditions_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-group-conditions-sequence"><primary>rasqal_query_get_group_conditions_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_group_conditions_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of query grouping conditions.</para>
+<refsect3 id="rasqal-query-get-group-conditions-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-group-conditions-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-graph-pattern" role="function">
+<title>rasqal_query_get_graph_pattern&#160;()</title>
+<indexterm zone="rasqal-query-get-graph-pattern"><primary>rasqal_query_get_graph_pattern</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-graph-pattern"><returnvalue>rasqal_graph_pattern</returnvalue></link>&#160;*
+rasqal_query_get_graph_pattern (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a graph_pattern in the sequence of graph_pattern expressions in the top query graph pattern.</para>
+<refsect3 id="rasqal-query-get-graph-pattern.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-graph-pattern.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-graph-pattern-sequence" role="function">
+<title>rasqal_query_get_graph_pattern_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-graph-pattern-sequence"><primary>rasqal_query_get_graph_pattern_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_graph_pattern_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of graph_patterns expressions inside the top query graph pattern.</para>
+<refsect3 id="rasqal-query-get-graph-pattern-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-graph-pattern-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-having-condition" role="function">
+<title>rasqal_query_get_having_condition&#160;()</title>
+<indexterm zone="rasqal-query-get-having-condition"><primary>rasqal_query_get_having_condition</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_query_get_having_condition (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                   <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a query having expression in the sequence of query havinging conditions.</para>
+<refsect3 id="rasqal-query-get-having-condition.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-having-condition.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-expression"><type>rasqal_expression</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-having-conditions-sequence" role="function">
+<title>rasqal_query_get_having_conditions_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-having-conditions-sequence"><primary>rasqal_query_get_having_conditions_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_having_conditions_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of query having conditions.</para>
+<refsect3 id="rasqal-query-get-having-conditions-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-having-conditions-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-label" role="function">
+<title>rasqal_query_get_label&#160;()</title>
+<indexterm zone="rasqal-query-get-label"><primary>rasqal_query_get_label</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_query_get_label (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get a readable label for the query language.</para>
+<refsect3 id="rasqal-query-get-label.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-label.returns" role="returns">
+<title>Returns</title>
+<para> shared string label value</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-limit" role="function">
+<title>rasqal_query_get_limit&#160;()</title>
+<indexterm zone="rasqal-query-get-limit"><primary>rasqal_query_get_limit</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_get_limit (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the query-specified limit on results.</para>
+<para>This is the limit given in the query on the number of results allowed.</para>
+<refsect3 id="rasqal-query-get-limit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-limit.returns" role="returns">
+<title>Returns</title>
+<para> integer &gt;=0 if a limit is given, otherwise &lt;0</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-name" role="function">
+<title>rasqal_query_get_name&#160;()</title>
+<indexterm zone="rasqal-query-get-name"><primary>rasqal_query_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_query_get_name (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get a short name for the query language.</para>
+<refsect3 id="rasqal-query-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-name.returns" role="returns">
+<title>Returns</title>
+<para> shared string label value</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-offset" role="function">
+<title>rasqal_query_get_offset&#160;()</title>
+<indexterm zone="rasqal-query-get-offset"><primary>rasqal_query_get_offset</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_get_offset (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the query-specified offset on results.</para>
+<para>This is the offset given in the query on the number of results
+allowed.  It is only guaranteed to work after the query is
+prepared and before it is executed.</para>
+<refsect3 id="rasqal-query-get-offset.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-offset.returns" role="returns">
+<title>Returns</title>
+<para> integer &gt;=0 if a offset is given, otherwise &lt;0</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-order-condition" role="function">
+<title>rasqal_query_get_order_condition&#160;()</title>
+<indexterm zone="rasqal-query-get-order-condition"><primary>rasqal_query_get_order_condition</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-expression"><returnvalue>rasqal_expression</returnvalue></link>&#160;*
+rasqal_query_get_order_condition (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                  <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a query ordering expression in the sequence of query ordering conditions.</para>
+<refsect3 id="rasqal-query-get-order-condition.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-order-condition.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-expression"><type>rasqal_expression</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-order-conditions-sequence" role="function">
+<title>rasqal_query_get_order_conditions_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-order-conditions-sequence"><primary>rasqal_query_get_order_conditions_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_order_conditions_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of query ordering conditions.</para>
+<refsect3 id="rasqal-query-get-order-conditions-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-order-conditions-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-expression"><type>rasqal_expression</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-prefix" role="function">
+<title>rasqal_query_get_prefix&#160;()</title>
+<indexterm zone="rasqal-query-get-prefix"><primary>rasqal_query_get_prefix</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-prefix"><returnvalue>rasqal_prefix</returnvalue></link>&#160;*
+rasqal_query_get_prefix (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                         <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a prefix in the sequence of namespsace prefixes in the query.</para>
+<refsect3 id="rasqal-query-get-prefix.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-prefix.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-prefix"><type>rasqal_prefix</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-prefix-sequence" role="function">
+<title>rasqal_query_get_prefix_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-prefix-sequence"><primary>rasqal_query_get_prefix_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_prefix_sequence (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of namespace prefixes in the query.</para>
+<refsect3 id="rasqal-query-get-prefix-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-prefix-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-prefix"><type>rasqal_prefix</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-query-graph-pattern" role="function">
+<title>rasqal_query_get_query_graph_pattern&#160;()</title>
+<indexterm zone="rasqal-query-get-query-graph-pattern"><primary>rasqal_query_get_query_graph_pattern</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-graph-pattern"><returnvalue>rasqal_graph_pattern</returnvalue></link>&#160;*
+rasqal_query_get_query_graph_pattern (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the top query graph pattern.</para>
+<refsect3 id="rasqal-query-get-query-graph-pattern.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-query-graph-pattern.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-graph-pattern"><type>rasqal_graph_pattern</type></link> of the top query graph pattern</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-triple" role="function">
+<title>rasqal_query_get_triple&#160;()</title>
+<indexterm zone="rasqal-query-get-triple"><primary>rasqal_query_get_triple</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-triple"><returnvalue>rasqal_triple</returnvalue></link>&#160;*
+rasqal_query_get_triple (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                         <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a triple in the sequence of matching triples in the query.</para>
+<refsect3 id="rasqal-query-get-triple.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-triple.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-triple"><type>rasqal_triple</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-triple-sequence" role="function">
+<title>rasqal_query_get_triple_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-triple-sequence"><primary>rasqal_query_get_triple_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_triple_sequence (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of matching triples in the query.</para>
+<refsect3 id="rasqal-query-get-triple-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-triple-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-triple"><type>rasqal_triple</type></link> pointers.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-user-data" role="function">
+<title>rasqal_query_get_user_data&#160;()</title>
+<indexterm zone="rasqal-query-get-user-data"><primary>rasqal_query_get_user_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+rasqal_query_get_user_data (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get query user data.</para>
+<refsect3 id="rasqal-query-get-user-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-user-data.returns" role="returns">
+<title>Returns</title>
+<para> user data as set by <link linkend="rasqal-query-set-user-data"><function>rasqal_query_set_user_data()</function></link></para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-variable" role="function">
+<title>rasqal_query_get_variable&#160;()</title>
+<indexterm zone="rasqal-query-get-variable"><primary>rasqal_query_get_variable</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-variable"><returnvalue>rasqal_variable</returnvalue></link>&#160;*
+rasqal_query_get_variable (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                           <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a variable in the query</para>
+<refsect3 id="rasqal-query-get-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-variable.returns" role="returns">
+<title>Returns</title>
+<para> pointer to shared <link linkend="rasqal-variable"><type>rasqal_variable</type></link> or NULL if out of range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-verb" role="function">
+<title>rasqal_query_get_verb&#160;()</title>
+<indexterm zone="rasqal-query-get-verb"><primary>rasqal_query_get_verb</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query-verb"><returnvalue>rasqal_query_verb</returnvalue></link>
+rasqal_query_get_verb (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the query verb.</para>
+<refsect3 id="rasqal-query-get-verb.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-verb.returns" role="returns">
+<title>Returns</title>
+<para> the operating verb of the query of type rasqal_query_verb</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-wildcard" role="function">
+<title>rasqal_query_get_wildcard&#160;()</title>
+<indexterm zone="rasqal-query-get-wildcard"><primary>rasqal_query_get_wildcard</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_get_wildcard (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the query verb is wildcard flag.</para>
+<refsect3 id="rasqal-query-get-wildcard.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-wildcard.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the query verb was a wildcard (such as SELECT *)</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-has-variable2" role="function">
+<title>rasqal_query_has_variable2&#160;()</title>
+<indexterm zone="rasqal-query-has-variable2"><primary>rasqal_query_has_variable2</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_has_variable2 (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                            <parameter><link linkend="rasqal-variable-type"><type>rasqal_variable_type</type></link> type</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<para>Find if the named variable of the given type is in the query</para>
+<para>Note that looking up for any type <link linkend="RASQAL-VARIABLE-TYPE-UNKNOWN:CAPS"><type>RASQAL_VARIABLE_TYPE_UNKNOWN</type></link>
+may a name match but for any type so in cases where the query has
+both a named and anonymous (extensional) variable, an arbitrary one
+will be returned.</para>
+<refsect3 id="rasqal-query-has-variable2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the variable type to match or <link linkend="RASQAL-VARIABLE-TYPE-UNKNOWN:CAPS"><type>RASQAL_VARIABLE_TYPE_UNKNOWN</type></link> for any.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>variable name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-has-variable2.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the variable name was found.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-has-variable" role="function" condition="deprecated:">
+<title>rasqal_query_has_variable&#160;()</title>
+<indexterm zone="rasqal-query-has-variable" role="deprecated"><primary>rasqal_query_has_variable</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_has_variable (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<warning><para><literal>rasqal_query_has_variable</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Find if the named variable is in the query (of any type)</para>
+<para><parameter>Deprecated</parameter>
+: Use <link linkend="rasqal-query-has-variable2"><function>rasqal_query_has_variable2()</function></link> with the variable type arg</para>
+<refsect3 id="rasqal-query-has-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>variable name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-has-variable.returns" role="returns">
+<title>Returns</title>
+<para> non-0 if the variable name was found.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-prepare" role="function">
+<title>rasqal_query_prepare&#160;()</title>
+<indexterm zone="rasqal-query-prepare"><primary>rasqal_query_prepare</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_prepare (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                      <parameter>const <link linkend="char"><type>char</type></link> *query_string</parameter>,
+                      <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *base_uri</parameter>);</programlisting>
+<para>Prepare a query - typically parse it.</para>
+<para>Some query languages may require a base URI to resolve any
+relative URIs in the query string.  If this is not given,
+the current directory in the filesystem is used as the base URI.</para>
+<para>The query string may be NULL in which case it is not parsed
+and the query parts may be created by API calls such as
+rasqal_query_add_source etc.</para>
+<refsect3 id="rasqal-query-prepare.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query_string</para></entry>
+<entry role="parameter_description"><para>the query string (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base_uri</para></entry>
+<entry role="parameter_description"><para>base URI of query string (optional)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-prepare.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-print" role="function">
+<title>rasqal_query_print&#160;()</title>
+<indexterm zone="rasqal-query-print"><primary>rasqal_query_print</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_print (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                    <parameter><link linkend="FILE:CAPS"><type>FILE</type></link> *fh</parameter>);</programlisting>
+<para>Print a query in a debug format.</para>
+<refsect3 id="rasqal-query-print.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fh</para></entry>
+<entry role="parameter_description"><para>the FILE* handle to print to.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-print.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-graph-pattern-visit2" role="function">
+<title>rasqal_query_graph_pattern_visit2&#160;()</title>
+<indexterm zone="rasqal-query-graph-pattern-visit2"><primary>rasqal_query_graph_pattern_visit2</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_graph_pattern_visit2 (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                   <parameter><link linkend="rasqal-graph-pattern-visit-fn"><type>rasqal_graph_pattern_visit_fn</type></link> visit_fn</parameter>,
+                                   <parameter><link linkend="void"><type>void</type></link> *data</parameter>);</programlisting>
+<para>Visit all graph patterns in a query with a user function <parameter>visit_fn</parameter>
+.</para>
+<para>See also <link linkend="rasqal-graph-pattern-visit"><function>rasqal_graph_pattern_visit()</function></link>.</para>
+<refsect3 id="rasqal-query-graph-pattern-visit2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>visit_fn</para></entry>
+<entry role="parameter_description"><para>user function to operate on</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>user data to pass to function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-graph-pattern-visit2.returns" role="returns">
+<title>Returns</title>
+<para> result from visit function <parameter>visit_fn</parameter>
+if it returns non-0</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-graph-pattern-visit" role="function" condition="deprecated:">
+<title>rasqal_query_graph_pattern_visit&#160;()</title>
+<indexterm zone="rasqal-query-graph-pattern-visit" role="deprecated"><primary>rasqal_query_graph_pattern_visit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_graph_pattern_visit (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                  <parameter><link linkend="rasqal-graph-pattern-visit-fn"><type>rasqal_graph_pattern_visit_fn</type></link> visit_fn</parameter>,
+                                  <parameter><link linkend="void"><type>void</type></link> *data</parameter>);</programlisting>
+<warning><para><literal>rasqal_query_graph_pattern_visit</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Visit all graph patterns in a query with a user function <parameter>visit_fn</parameter>
+.</para>
+<para><parameter>Deprecated</parameter>
+: use <link linkend="rasqal-query-graph-pattern-visit2"><function>rasqal_query_graph_pattern_visit2()</function></link> that returns the <parameter>visit_fn</parameter>
+ status code.</para>
+<para>See also <link linkend="rasqal-graph-pattern-visit"><function>rasqal_graph_pattern_visit()</function></link>.</para>
+<refsect3 id="rasqal-query-graph-pattern-visit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>visit_fn</para></entry>
+<entry role="parameter_description"><para>user function to operate on</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>user data to pass to function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-distinct" role="function">
+<title>rasqal_query_set_distinct&#160;()</title>
+<indexterm zone="rasqal-query-set-distinct"><primary>rasqal_query_set_distinct</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_set_distinct (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                           <parameter><link linkend="int"><type>int</type></link> distinct_mode</parameter>);</programlisting>
+<para>Set the query distinct results mode.</para>
+<para>The allowed <parameter>distinct_mode</parameter>
+ values are:
+0 if not given
+1 if DISTINCT: ensure solutions are unique
+2 if SPARQL REDUCED: permit elimination of some non-unique solutions</para>
+<refsect3 id="rasqal-query-set-distinct.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>distinct_mode</para></entry>
+<entry role="parameter_description"><para>distinct mode</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-explain" role="function">
+<title>rasqal_query_set_explain&#160;()</title>
+<indexterm zone="rasqal-query-set-explain"><primary>rasqal_query_set_explain</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_set_explain (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                          <parameter><link linkend="int"><type>int</type></link> is_explain</parameter>);</programlisting>
+<para>Set the query explain results flag.</para>
+<refsect3 id="rasqal-query-set-explain.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>is_explain</para></entry>
+<entry role="parameter_description"><para>non-0 if explain</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-limit" role="function">
+<title>rasqal_query_set_limit&#160;()</title>
+<indexterm zone="rasqal-query-set-limit"><primary>rasqal_query_set_limit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_set_limit (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                        <parameter><link linkend="int"><type>int</type></link> limit</parameter>);</programlisting>
+<para>Set the query-specified limit on results.</para>
+<para>This is the limit given in the query on the number of results
+allowed.  It is only guaranteed to work after the query is
+prepared and before it is executed.</para>
+<refsect3 id="rasqal-query-set-limit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>limit</para></entry>
+<entry role="parameter_description"><para>the limit on results, &gt;=0 to set a limit, &lt;0 to have no limit</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-offset" role="function">
+<title>rasqal_query_set_offset&#160;()</title>
+<indexterm zone="rasqal-query-set-offset"><primary>rasqal_query_set_offset</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_set_offset (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                         <parameter><link linkend="int"><type>int</type></link> offset</parameter>);</programlisting>
+<para>Set the query-specified offset on results.</para>
+<para>This is the offset given in the query on the number of results allowed.</para>
+<refsect3 id="rasqal-query-set-offset.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>offset for results, &gt;=0 to set an offset, &lt;0 to have no offset</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-user-data" role="function">
+<title>rasqal_query_set_user_data&#160;()</title>
+<indexterm zone="rasqal-query-set-user-data"><primary>rasqal_query_set_user_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_set_user_data (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                            <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>);</programlisting>
+<para>Set the query user data.</para>
+<refsect3 id="rasqal-query-set-user-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>some user data to associate with the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-variable2" role="function">
+<title>rasqal_query_set_variable2&#160;()</title>
+<indexterm zone="rasqal-query-set-variable2"><primary>rasqal_query_set_variable2</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_set_variable2 (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                            <parameter><link linkend="rasqal-variable-type"><type>rasqal_variable_type</type></link> type</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                            <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *value</parameter>);</programlisting>
+<para>Bind an existing typed variable to a value to the query.</para>
+<para>See also <link linkend="rasqal-query-add-variable"><function>rasqal_query_add_variable()</function></link> which adds a new binding variable
+and must be called before this method is invoked.</para>
+<refsect3 id="rasqal-query-set-variable2.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the variable type to match or <link linkend="RASQAL-VARIABLE-TYPE-UNKNOWN:CAPS"><type>RASQAL_VARIABLE_TYPE_UNKNOWN</type></link> for any.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variable"><type>rasqal_variable</type></link> variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> value to set or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-set-variable2.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-variable" role="function" condition="deprecated:">
+<title>rasqal_query_set_variable&#160;()</title>
+<indexterm zone="rasqal-query-set-variable" role="deprecated"><primary>rasqal_query_set_variable</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_set_variable (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                           <parameter><link linkend="rasqal-literal"><type>rasqal_literal</type></link> *value</parameter>);</programlisting>
+<warning><para><literal>rasqal_query_set_variable</literal> is deprecated and should not be used in newly-written code.</para></warning>
+<para>Bind an existing named (selected) variable to a value to the query.</para>
+<para><parameter>Deprecated</parameter>
+ for <link linkend="rasqal-query-set-variable2"><function>rasqal_query_set_variable2()</function></link> that includes a type
+arg.  This function only sets named variables of type
+<link linkend="RASQAL-VARIABLE-TYPE-NORMAL:CAPS"><type>RASQAL_VARIABLE_TYPE_NORMAL</type></link></para>
+<refsect3 id="rasqal-query-set-variable.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-variable"><type>rasqal_variable</type></link> variable</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-literal"><type>rasqal_literal</type></link> value to set or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-set-variable.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-store-results" role="function">
+<title>rasqal_query_set_store_results&#160;()</title>
+<indexterm zone="rasqal-query-set-store-results"><primary>rasqal_query_set_store_results</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_set_store_results (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                <parameter><link linkend="int"><type>int</type></link> store_results</parameter>);</programlisting>
+<para>Request that query results are stored during execution</para>
+<para>When called after a <link linkend="rasqal-query-prepare"><function>rasqal_query_prepare()</function></link>, this tells
+<link linkend="rasqal-query-execute"><function>rasqal_query_execute()</function></link> to execute the entire query immediately
+rather than generate them lazily, and store all the results in
+memory.  The results will then be available for reading multiple
+times using <link linkend="rasqal-query-results-rewind"><function>rasqal_query_results_rewind()</function></link> to move back to the
+start of the result object.  If called after preparation, returns
+failure.</para>
+<refsect3 id="rasqal-query-set-store-results.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>store_results</para></entry>
+<entry role="parameter_description"><para>store results flag</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-set-store-results.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-wildcard" role="function">
+<title>rasqal_query_set_wildcard&#160;()</title>
+<indexterm zone="rasqal-query-set-wildcard"><primary>rasqal_query_set_wildcard</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+rasqal_query_set_wildcard (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                           <parameter><link linkend="int"><type>int</type></link> wildcard</parameter>);</programlisting>
+<para>Set the query projection wildcard flag</para>
+<refsect3 id="rasqal-query-set-wildcard.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>wildcard</para></entry>
+<entry role="parameter_description"><para>wildcard</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-verb-as-string" role="function">
+<title>rasqal_query_verb_as_string&#160;()</title>
+<indexterm zone="rasqal-query-verb-as-string"><primary>rasqal_query_verb_as_string</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_query_verb_as_string (<parameter><link linkend="rasqal-query-verb"><type>rasqal_query_verb</type></link> verb</parameter>);</programlisting>
+<para>Get a string for the query verb.</para>
+<refsect3 id="rasqal-query-verb-as-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>verb</para></entry>
+<entry role="parameter_description"><para>the <link linkend="rasqal-query-verb"><type>rasqal_query_verb</type></link> verb of the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-verb-as-string.returns" role="returns">
+<title>Returns</title>
+<para> pointer to a shared string label for the query verb</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-write" role="function">
+<title>rasqal_query_write&#160;()</title>
+<indexterm zone="rasqal-query-write"><primary>rasqal_query_write</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_write (<parameter><link linkend="raptor-iostream"><type>raptor_iostream</type></link> *iostr</parameter>,
+                    <parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                    <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *format_uri</parameter>,
+                    <parameter><link linkend="raptor-uri"><type>raptor_uri</type></link> *base_uri</parameter>);</programlisting>
+<para>Write a query to an iostream in a specified format.</para>
+<para>The supported URIs for the format_uri are:</para>
+<para>Default: SPARQL Query Language 2006-04-06
+http://www.w3.org/TR/2006/CR-rdf-sparql-query-20060406/</para>
+<refsect3 id="rasqal-query-write.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>iostr</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-iostream"><type>raptor_iostream</type></link> to write the query to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> pointer.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format_uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> describing the format to write (or NULL for default)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>base_uri</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-uri"><type>raptor_uri</type></link> base URI of the output format</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-write.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-iostream-write-escaped-counted-string" role="function">
+<title>rasqal_query_iostream_write_escaped_counted_string&#160;()</title>
+<indexterm zone="rasqal-query-iostream-write-escaped-counted-string"><primary>rasqal_query_iostream_write_escaped_counted_string</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_iostream_write_escaped_counted_string
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                <parameter><link linkend="raptor-iostream"><type>raptor_iostream</type></link> *iostr</parameter>,
+                                <parameter>const unsigned <link linkend="char"><type>char</type></link> *string</parameter>,
+                                <parameter><link linkend="size-t"><type>size_t</type></link> len</parameter>);</programlisting>
+<para>Write a string to an iostream in escaped form suitable for the query string.</para>
+<refsect3 id="rasqal-query-iostream-write-escaped-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>iostr</para></entry>
+<entry role="parameter_description"><para><link linkend="raptor-iostream"><type>raptor_iostream</type></link> to write the escaped string to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>string to escape</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len</para></entry>
+<entry role="parameter_description"><para>Length of string to escape</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-iostream-write-escaped-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> non-0 on failure</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-escape-counted-string" role="function">
+<title>rasqal_query_escape_counted_string&#160;()</title>
+<indexterm zone="rasqal-query-escape-counted-string"><primary>rasqal_query_escape_counted_string</primary></indexterm>
+<programlisting language="C">unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_query_escape_counted_string (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>,
+                                    <parameter><link linkend="size-t"><type>size_t</type></link> len</parameter>,
+                                    <parameter><link linkend="size-t"><type>size_t</type></link> *output_len_p</parameter>);</programlisting>
+<para>Convert a string into an escaped form suitable for the query string.</para>
+<para>The returned string must be freed by the caller with
+<link linkend="rasqal-free-memory"><function>rasqal_free_memory()</function></link></para>
+<refsect3 id="rasqal-query-escape-counted-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>string to escape</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>len</para></entry>
+<entry role="parameter_description"><para>Length of string to escape</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>output_len_p</para></entry>
+<entry role="parameter_description"><para>Pointer to store length of output string (or NULL)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-escape-counted-string.returns" role="returns">
+<title>Returns</title>
+<para> the escaped string or NULL on failure.</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-feature" role="function">
+<title>rasqal_query_set_feature&#160;()</title>
+<indexterm zone="rasqal-query-set-feature"><primary>rasqal_query_set_feature</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_set_feature (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                          <parameter><link linkend="rasqal-feature"><type>rasqal_feature</type></link> feature</parameter>,
+                          <parameter><link linkend="int"><type>int</type></link> value</parameter>);</programlisting>
+<para>Set various query features.</para>
+<para>The allowed features are available via <link linkend="rasqal-features-enumerate"><function>rasqal_features_enumerate()</function></link>.</para>
+<refsect3 id="rasqal-query-set-feature.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature to set from enumerated <link linkend="rasqal-feature"><type>rasqal_feature</type></link> values</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>integer feature value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-set-feature.returns" role="returns">
+<title>Returns</title>
+<para> non 0 on failure or if the feature is unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-set-feature-string" role="function">
+<title>rasqal_query_set_feature_string&#160;()</title>
+<indexterm zone="rasqal-query-set-feature-string"><primary>rasqal_query_set_feature_string</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_set_feature_string (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                 <parameter><link linkend="rasqal-feature"><type>rasqal_feature</type></link> feature</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *value</parameter>);</programlisting>
+<para>Set query features with string values.</para>
+<para>The allowed features are available via <link linkend="rasqal-features-enumerate"><function>rasqal_features_enumerate()</function></link>.
+If the feature type is integer, the value is interpreted as an integer.</para>
+<refsect3 id="rasqal-query-set-feature-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature to set from enumerated <link linkend="rasqal-feature"><type>rasqal_feature</type></link> values</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>feature value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-set-feature-string.returns" role="returns">
+<title>Returns</title>
+<para> non 0 on failure or if the feature is unknown</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-feature" role="function">
+<title>rasqal_query_get_feature&#160;()</title>
+<indexterm zone="rasqal-query-get-feature"><primary>rasqal_query_get_feature</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+rasqal_query_get_feature (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                          <parameter><link linkend="rasqal-feature"><type>rasqal_feature</type></link> feature</parameter>);</programlisting>
+<para>Get various query features.</para>
+<para>The allowed features are available via <link linkend="rasqal-features-enumerate"><function>rasqal_features_enumerate()</function></link>.</para>
+<para>Note: no feature value is negative</para>
+<refsect3 id="rasqal-query-get-feature.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature to get value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-feature.returns" role="returns">
+<title>Returns</title>
+<para> feature value or &lt; 0 for an illegal feature</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-feature-string" role="function">
+<title>rasqal_query_get_feature_string&#160;()</title>
+<indexterm zone="rasqal-query-get-feature-string"><primary>rasqal_query_get_feature_string</primary></indexterm>
+<programlisting language="C">const unsigned <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+rasqal_query_get_feature_string (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                 <parameter><link linkend="rasqal-feature"><type>rasqal_feature</type></link> feature</parameter>);</programlisting>
+<para>Get query features with string values.</para>
+<para>The allowed features are available via <link linkend="rasqal-features-enumerate"><function>rasqal_features_enumerate()</function></link>.
+If a string is returned, it must be freed by the caller.</para>
+<refsect3 id="rasqal-query-get-feature-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature to get value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-feature-string.returns" role="returns">
+<title>Returns</title>
+<para> feature value or NULL for an illegal feature or no value</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-result-type" role="function">
+<title>rasqal_query_get_result_type&#160;()</title>
+<indexterm zone="rasqal-query-get-result-type"><primary>rasqal_query_get_result_type</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-query-results-type"><returnvalue>rasqal_query_results_type</returnvalue></link>
+rasqal_query_get_result_type (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the result type expected from executing the query.</para>
+<para>This function is only valid after <link linkend="rasqal-query-prepare"><function>rasqal_query_prepare()</function></link> has been
+run on the query and will return <link linkend="RASQAL-QUERY-RESULTS-UNKNOWN:CAPS"><type>RASQAL_QUERY_RESULTS_UNKNOWN</type></link> if
+called before preparation.</para>
+<refsect3 id="rasqal-query-get-result-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-result-type.returns" role="returns">
+<title>Returns</title>
+<para> result type or <link linkend="RASQAL-QUERY-RESULTS-UNKNOWN:CAPS"><type>RASQAL_QUERY_RESULTS_UNKNOWN</type></link> if not known or on error</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-update-operation" role="function">
+<title>rasqal_query_get_update_operation&#160;()</title>
+<indexterm zone="rasqal-query-get-update-operation"><primary>rasqal_query_get_update_operation</primary></indexterm>
+<programlisting language="C"><link linkend="rasqal-update-operation"><returnvalue>rasqal_update_operation</returnvalue></link>&#160;*
+rasqal_query_get_update_operation (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>,
+                                   <parameter><link linkend="int"><type>int</type></link> idx</parameter>);</programlisting>
+<para>Get a query update operation in the sequence of update operations</para>
+<refsect3 id="rasqal-query-get-update-operation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>index into the sequence (0 or larger)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-update-operation.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="rasqal-update-operation"><type>rasqal_update_operation</type></link> pointer or NULL if out of the sequence range</para>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query-get-update-operations-sequence" role="function">
+<title>rasqal_query_get_update_operations_sequence&#160;()</title>
+<indexterm zone="rasqal-query-get-update-operations-sequence"><primary>rasqal_query_get_update_operations_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="raptor-sequence"><returnvalue>raptor_sequence</returnvalue></link>&#160;*
+rasqal_query_get_update_operations_sequence
+                               (<parameter><link linkend="rasqal-query"><type>rasqal_query</type></link> *query</parameter>);</programlisting>
+<para>Get the sequence of update operations</para>
+<refsect3 id="rasqal-query-get-update-operations-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para><link linkend="rasqal-query"><type>rasqal_query</type></link> query object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="rasqal-query-get-update-operations-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="raptor-sequence"><type>raptor_sequence</type></link> of <link linkend="rasqal-update-operation"><type>rasqal_update_operation</type></link> pointers.</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="rasqal-section-query.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="rasqal-query-verb" role="enum">
+<title>enum rasqal_query_verb</title>
+<indexterm zone="rasqal-query-verb"><primary>rasqal_query_verb</primary></indexterm>
+<para>Query main operation verbs describing the major type of query
+being performed.</para>
+<refsect3 id="rasqal-query-verb.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-UNKNOWN:CAPS">RASQAL_QUERY_VERB_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>Internal</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-SELECT:CAPS">RASQAL_QUERY_VERB_SELECT</para></entry>
+<entry role="enum_member_description"><para>SPARQL query select verb. </para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-CONSTRUCT:CAPS">RASQAL_QUERY_VERB_CONSTRUCT</para></entry>
+<entry role="enum_member_description"><para>SPARQL query construct verb.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-DESCRIBE:CAPS">RASQAL_QUERY_VERB_DESCRIBE</para></entry>
+<entry role="enum_member_description"><para>SPARQL query describe verb.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-ASK:CAPS">RASQAL_QUERY_VERB_ASK</para></entry>
+<entry role="enum_member_description"><para>SPARQL query ask verb.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-DELETE:CAPS">RASQAL_QUERY_VERB_DELETE</para></entry>
+<entry role="enum_member_description"><para>LAQRS query delete verb.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-INSERT:CAPS">RASQAL_QUERY_VERB_INSERT</para></entry>
+<entry role="enum_member_description"><para>LAQRS query insert verb.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-UPDATE:CAPS">RASQAL_QUERY_VERB_UPDATE</para></entry>
+<entry role="enum_member_description"><para>SPARQL 1.1 (draft) update operation</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="RASQAL-QUERY-VERB-LAST:CAPS">RASQAL_QUERY_VERB_LAST</para></entry>
+<entry role="enum_member_description"><para>Internal</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="rasqal-query" role="typedef">
+<title>rasqal_query</title>
+<indexterm zone="rasqal-query"><primary>rasqal_query</primary></indexterm>
+<programlisting language="C">rasqal_graph_query* query;
+</programlisting>
+<para>Rasqal query class.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>
